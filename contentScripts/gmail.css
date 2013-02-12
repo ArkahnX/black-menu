@@ -1,0 +1,960 @@
+﻿/* welcome to the css content script for the gmail mobile web app. */
+/* this file is still a work in process. If you want to help me, or know more about this, you can contact me via email: ccbjeurissen@gmail.com */
+
+	/* main elements */
+		/* change scrollbars */
+			::-webkit-scrollbar {
+				height: 16px;
+				width: 12px;
+				}
+			::-webkit-scrollbar-button {
+				height: 0;
+				width: 0;
+				}
+			::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+				display: block;
+				}
+			::-webkit-scrollbar-button:vertical:start:increment,::-webkit-scrollbar-button:vertical:end:decrement {
+				display: none;
+				}
+			::-webkit-scrollbar-track:vertical,::-webkit-scrollbar-track:horizontal,::-webkit-scrollbar-thumb:vertical,::-webkit-scrollbar-thumb:horizontal,::-webkit-scrollbar-track:vertical, ::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+				border-style: solid;
+				border-color: transparent;
+				}
+			::-webkit-scrollbar-thumb {
+				-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+				background-clip: padding-box;
+				background-color: rgba(0,0,0,.2);
+				min-height: 28px;
+				padding-top: 100px;
+				}
+			::-webkit-scrollbar-thumb:hover {
+				-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+				background-color: rgba(0,0,0,.4);
+				}
+			::-webkit-scrollbar-thumb:active {
+				-webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,.35);
+				background-color: rgba(0,0,0,.5);
+				}
+			::-webkit-scrollbar-thumb:vertical {
+				border-width: 0;
+				border-left-width: 0px;
+				}
+			::-webkit-scrollbar-thumb:horizontal {
+				border-width: 0;
+				border-top-width: 5px;
+				}
+			::-webkit-scrollbar-track:vertical {
+				border-left-width: 1px;
+				border-right-width: 1px;
+				}
+			::-webkit-scrollbar-track:horizontal {
+				border-bottom: 1px;
+				border-top: 6px;
+				}
+			::-webkit-scrollbar-thumb:vertical {
+				border-width: 0;
+				border-left-width: 1px;
+				border-right-width: 1px;
+				}
+			::-webkit-scrollbar-thumb:horizontal {
+				border-width: 0;
+				border-bottom: 1px;
+				border-top: 6px;
+				}
+			::-webkit-scrollbar-track:hover {
+				-webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+				background-color: rgba(0,0,0,.05);
+				}
+			::-webkit-scrollbar-track:active {
+				-webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14),inset -1px -1px 0 rgba(0,0,0,.07);
+				background-color: rgba(0,0,0,.05);
+				}
+		/* body */
+		body {
+			height: auto !important;
+			min-height: auto !important;
+			/* change visibility of the body to visible, so the gadget will be displayed */
+			visibility: visible !important;
+			/* disable scrolling for the body */
+			overflow-y: auto !important;
+			}
+			
+		/* googlebar */
+		#gb {
+			/* hide the google bar */
+			display: none !important;
+			}
+		
+		/* loading transition elements */
+		#apploadingdiv, #viewsloadingdiv  {
+			/* disable loading transition */
+			display: none !important;
+			}
+			
+		/* footer */
+		.yi{
+			/* hide the footer */
+			display: none !important;
+			}
+		/* navbar shadow elements */
+		.vc {
+			/* remove the navbar shadow */
+			display:none !Important;
+			}
+			
+		/* button containers */
+			.xc, .yc {
+				/* change vertical position of the buttons */
+				padding-top: 8px !important;
+				}
+			.xc {
+				/* change horizontal position of the left button container */
+				left: 1px !important;
+				}	
+			
+		/* floating action toolbar */
+			
+			/* actionbar container */
+			.qr {
+				height: 42px !important;
+				/* change the horizontal position */
+				right: 70px !important;
+				/* change the vertical position */
+				margin-top: -8px !important;
+				/* change background color to hide the inbox title */
+				background-color: white !important;
+				/* disable the animation */
+				-webkit-transform: none !important;
+				}
+			/* actionbar firstChild */
+			.qr>div:first-child {
+				height: 44px !important;
+				margin-top: 0px !important;
+				/* remove the border image */
+				-webkit-border-image: none !important;
+				}
+			/* dropdown menu */
+			.qr>div:first-child>ul {
+				margin-top: 9px !important;
+				}
+			/* count of selected items */
+			.qr>div:first-child>div:first-child.or {
+				display: none !important;
+				}
+			/* button elements */
+			.qr>div:first-child>div {
+				border-radius: 2px !important;
+				background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+				-webkit-user-select: none !important;
+				border: 1px solid #ccc !important;
+				min-height: 27px !important;
+				outline: none !important;
+				min-width: 40px !important;
+				box-sizing:border-box !important;
+				}	
+			.qr>div:first-child>div:hover{
+				box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+				}
+			.qr>div:first-child>div:focus{
+				outline: none !important;
+				}
+			.qr>div:first-child>div:active{
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+				-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+				background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+				}
+			/* button icons */
+				/* all icons */
+				.qr>div:first-child>div>div {
+					height: 21px !important;
+					width: 21px !important;
+					opacity: 0.55 !important;
+					}
+				.qr>div:first-child>div:hover>div {
+					opacity: 0.9 !important;
+					}
+				/* archive icon */
+				.qr>div:first-child>div[onclick="_e(event, 'f', 1)"]>div {
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -21px !important;
+					font-size: 0px !important;
+					padding: 0 !important;
+					}
+				/* delete icon */
+				.qr .rd{
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -42px !important;
+					}
+				/* dropdown icon */
+					/* normal */
+					.qr .ih{
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
+						}
+					/* active */
+					.qr .jh{
+						-webkit-transform: rotate(180deg);
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
+						}
+				/* cancel icon */
+				.qr .Co{
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px 0px !important;
+					margin: 0px !important;
+					}
+			
+	/* inbox view */
+	
+		/* inbox view container */
+		#tl_ {
+			background-color: transparent !important;
+			}
+	
+		/* navbar */
+		
+			/* navbar container */
+			#tltbt {
+				border-bottom: 1px solid #E5E5E5 !important;
+				background: #fff !important;
+				/* move the navbar below the searchbox that will be positioned at the top (see "searchbox") */
+				top: 44px !important;
+				}
+			/* navbar searchbutton */
+			[onclick="_e(event, 'j')"] {
+				/* hide the search button */
+				display: none !important;
+				}
+			/* navbar inbox name */
+			#tltbt>.Zi {
+				color: #333 !important;
+				cursor: default !important;
+				}
+				
+			/* navbar buttons, wc is the left button container, xc is the right button container */
+
+				/* button elements */
+				#tltbt>.xc>div {
+					border-radius: 2px !important;
+					background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+					-webkit-user-select: none !important;
+					border: 1px solid #ccc !important;
+					min-height: 27px !important;
+					outline: none !important;
+					min-width: 40px !important;
+					box-sizing:border-box !important;
+					}	
+				#tltbt>.xc>div:hover{
+					box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+					}
+				#tltbt>.xc>div:focus{
+					outline: none !important;
+					}
+				#tltbt>.xc>div:active{
+					box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+					-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+					background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+					}
+				/* button icons */
+					/* all icons */
+					#tltbt>.xc>div>div {
+						height: 21px !important;
+						width: 21px !important;
+						opacity: 0.55 !important;
+						}
+					#tltbt>.xc>div:hover>div {
+						opacity: 0.9 !important;
+						}
+					/* menu icon */
+					#tltbt>.xc>div:first-child>div {
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -84px !important;
+						}
+					/* reload icon */
+					#tltbt>.xc>div:last-child>div{
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -105px !important;
+						}
+				
+			/* red compose button */
+				
+				/* button element */
+					#tltbt>.yc>div {
+						box-sizing:border-box !important;
+						min-width: 40px !important;
+						min-height: 27px !important;
+						outline: none !important;
+						-webkit-user-select: none !important;
+						border-radius: 2px !important;
+						background: -webkit-linear-gradient(top,#DD4B39,#D14836) !important;
+						border: 1px solid transparent !important;
+						}
+					#tltbt>.yc>div:hover {
+						background: -webkit-linear-gradient(top,#DD4B39,#C53727) !important;
+						border: 1px solid #B0281A !important;
+						box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) !important;
+						}
+					#tltbt>.yc>div:active {
+						background: -webkit-linear-gradient(top,#DD4B39,#B0281A) !important;
+						border: 1px solid #992A1B !important;
+						box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+						}
+				/* button icon */
+					#tltbt>.yc>div>div {
+						height: 21px !important;
+						width: 21px !important;
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -84px !important;
+						/* set margin to 0, to center the icon */
+						margin: 0 !important;
+						}
+			
+			/* bottom navbar */
+			#tltbb {
+				/* hide the account chooser, because it is also available in the main menu */
+				display: none !important;
+				}
+			
+			
+		/* searchbox */
+		
+			/* searchBoxContainer */
+			.Zi {
+				border-bottom: 1px solid #E5E5E5 !important;
+				box-sizing: border-box !important;
+				height: 44px !important;
+				background-color: #FBFBFB !important;
+				/* change position of the searchbox to the top */
+				top: -44px !important;
+				/* always show the search box */
+				display: block !important;
+				/* change the padding */
+				padding: 8px !important;
+				}
+			/* searchbox search button */
+			.Zi .an {
+				/* hide the search button */
+				display: none !important;
+				}
+			/* searchbox input field container */
+			.Zi .hn {
+				/* remove the border image */
+				-webkit-border-image: none !important;
+				/* remove padding and margin from this element, because it is already added to the input field element */
+				padding: 0px !important;
+				margin: 0px !Important;
+				}
+			/* searchbox input field */
+			.Zi input {
+				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -25px #fff !important;
+				border: 1px solid #D9D9D9 !important;
+				border-top: 1px solid silver !important;
+				color: #222 !important;
+				display: inline-block !important;
+				border-radius: 1px !important;
+				height: 27px !important;
+				line-height: 25px !important;
+				outline: none !important;
+				padding-left: 4px !important;
+				vertical-align: top !important;
+				width: 100% !important;
+				font: 13px arial,sans-serif !important;
+				}
+		
+		/* email list */
+			
+			/* email list main container */
+			#tl_ .Ji {
+				/* add the scroll functionality part A */
+				position: fixed !important;
+				top: 0px !important;
+				width: 100% !important;
+				height: 100% !important;
+				padding-top: 88px !important;
+				box-sizing: border-box !important;
+				}
+			/* allow interaction with the toolbar */
+			#tl_ .Ji {
+				pointer-events: none !important;
+				}
+			#tl_ .Ji * {
+				pointer-events: all !important;
+				}
+			/* email list sub container */
+			#tl_ .Ci {
+				/* add the scroll functionality part B */
+				box-sizing: border-box !important;
+				height: 100% !important;
+				overflow-y: auto !important;			
+				background: -webkit-linear-gradient(white 30%, rgba(255, 255, 255, 0)), -webkit-linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%, -webkit-radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, .2), transparent), -webkit-radial-gradient(50% 100%,farthest-side, rgba(0, 0, 0, .2), transparent) 0 100% !important;
+				background-repeat: no-repeat !important;
+				background-color: white !important;
+				background-size: 100% 20px, 100% 20px, 100% 7px, 100% 7px !important;
+				background-attachment: local, local, scroll, scroll !important;
+				}
+			/* email list last-sub container */
+			#tl_ .go {
+				/* add the scroll functionality part C */
+				background-color: transparent !important;
+				}
+			/* email rows */
+				/* read emails */
+				#tl_ .aj.wn {
+					background-color:rgba(0,0,0,.03) !important;
+					}
+				/* unread emails */
+				#tl_ .aj.vn {
+					background-color: transparent !Important;
+					}			
+				
+				/* selected emails */
+				#tl_ .aj.un.Yo, #tl_ .aj.vn.Yo {
+					background: rgba(255, 255, 0, 0.15) !important;
+					}
+			/* email font style and size */
+			#tl_ .aj {
+				font-family: arial,sans-serif;
+				font-size: 13px;
+				}
+			/* selected mail indicator */
+			.Mn {
+				background: #4D90F0 !important;
+				height: 100% !important;
+				margin-left: -1px !important;
+				width: 3px !important;
+				}
+			/* checkboxes */
+				
+				/* unselected and selected checkboxes */
+				.cb {
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -84px !important;
+					}
+				/* selected checkbox */
+				.cb.l{
+					background-position: -84px 0px !important;
+					}
+			/* stars */
+				
+				/* starred */
+				.uo {
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -42px !important;
+					}
+				/* unstarred */
+				.vo {
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -42px !important;
+					}
+			/* important tag */
+			.Qg {
+				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -67px -26px !important;
+				width: 14px !important;
+				}
+		
+	/* compose view */
+	
+		/* navbars */
+		
+			/* top navbar */
+			#cvtbt {
+				/* change navbar color to grey */
+				background: whiteSmoke !important;
+				/* add bottom border to the nav bar */
+				border-bottom: 1px solid #E5E5E5 !important;
+				}
+			/* bottom navbar */
+			#cvtbb {
+				/* hide the bottom navbar */
+				display: none !important;
+				}
+			/* left button container */
+			#cvtbt>.xc {
+				right: 3px !important;
+				left: auto !important;
+				}
+			/* right button container */
+			#cvtbt>.yc {
+				left: 3px !important;
+				right: auto !important;
+				}
+			
+			/* grey cancel button */
+				/* button element */
+					#cvtbt>.xc>div {
+						border-radius: 2px !important;
+						background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+						-webkit-user-select: none !important;
+						border: 1px solid #ccc !important;
+						min-height: 27px !important;
+						outline: none !important;
+						min-width: 40px !important;
+						box-sizing:border-box !important;
+						}	
+					#cvtbt>.xc>div:hover{
+						box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+						}
+					#cvtbt>.xc>div:focus{
+						outline: none !important;
+						}
+					#cvtbt>.xc>div:active{
+						box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+						-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+						background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+						}
+				/* button icon */
+				#cvtbt>.xc>div>div {
+					font-family: arial, sans-serif !important;
+					font-weight: bold !important;
+					font-size: 11px !important;
+					text-shadow: none !important;
+					color: #333 !important;
+					}
+					
+			/* blue send button */
+				
+				/* button element */
+					#cvtbt>.yc>div {
+						box-sizing:border-box !important;
+						min-width: 40px !important;
+						min-height: 27px !important;
+						outline: none !important;
+						-webkit-user-select: none !important;
+						border-radius: 2px !important;
+						background: -webkit-linear-gradient(top,#4D90FE,#4787ED) !important;
+						border: 1px solid #3079ED !important;
+						}
+					#cvtbt>.yc>div:hover {
+						background-image: -webkit-linear-gradient(top,#4D90FE,#357AE8) !important;
+						border-color: #2F5BB7 !important;
+						}
+					#cvtbt>.yc>div:active {
+						box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+						}
+				/* button icon */
+					#cvtbt>.yc>div>div {
+						color: white !important;
+						font-family: arial, sans-serif !important;
+						font-weight: bold !important;
+						font-size: 11px !important;
+						text-shadow: none !important;
+						}
+			
+		/* compose content */
+			
+			/* compose + buttons (.gh is the class with the old bg image) */
+			#co_ .hh {
+				/* change icon */
+				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -63px !important;
+				opacity: 0.5 !important;
+				}
+			#co_ .hh:hover {
+				opacity: 0.9 !important;
+				}
+			/* compose - buttons (.Rg is the class with the old bg image) */
+			#co_ .Sg {
+				/* change icon */
+				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -72px !important;
+				opacity: 0.5 !important;
+				height: 3px !important;
+				margin-top: 6px !important;
+				}
+			#co_ .Sg:hover {
+				opacity: 0.9 !important;
+				}
+				
+			/* compose content container */
+			#co_ {
+				/* add the scroll functionality part A */
+				position: fixed !important;
+				top: 44px !important;
+				padding-top: 44px !important;
+				box-sizing: border-box !important;
+				}
+			/* compoase sub container */
+			#co_>.Ji {
+				margin-top: -44px !important;
+				/* add the scroll functionality part B */
+				height: 100% !important;
+				overflow-y: auto !important;
+				}
+			/* fix the scrollbar+input bug with the input fields */
+				#cmcc_composeto, #cmcc_composecc, #cmcc_composebcc{
+				padding-right: 28px !important;
+				box-sizing: border-box !important;
+				}
+				#cmcc_composeto input, #cmcc_composecc input, #cmcc_composebcc input{
+				width: 100% !important;
+				}
+				#cmcsubj {
+				position: absolute !important;
+				top: 10px !important;
+				}
+			
+	/* main menu view */
+	
+		/* top navbar */
+		#mutbt {
+			/* change background of and add border to the top navbar */
+			background: #fff !important;
+			border-bottom: 1px solid #E5E5E5 !important;
+			}
+		/* user select button */
+		#mutbt>.zc>div:nth-child(2) {
+			-webkit-padding-end: 20px !important;
+			-webkit-padding-start: 6px !important;
+			-webkit-user-select: none !important;
+			background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -50px, -webkit-linear-gradient(top,whiteSmoke,#F1F1F1) !important;
+			border: 1px solid #CCC !important;
+			border-radius: 2px !important;
+			height: 27px !important;
+			color: #333 !important;
+			display: inline-block !important;
+			min-width: 150px !important;
+			}	
+		#mutbt>.zc>div:nth-child(2):hover{
+			box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+			}
+		#mutbt>.zc>div:nth-child(2):active{
+			box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+			-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+			background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -50px, -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+			}
+		/* user select button text */
+		#mutbt>.zc>div:nth-child(2)>div:first-child {
+			text-shadow: none !important;
+			font-family: arial,sans-serif !important;
+			font-weight: 700 !important;
+			font-size: 11px !important;
+			line-height: 24px !important;
+			}
+		/* user select button arrow */
+		#mutbt>.zc>div:nth-child(2)>div:last-child {
+			/* hide the button arrow */
+			display: none !important;
+			}
+		/* user select container */
+		#mutbt>.zc>div:nth-child(1)>div>div{
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px !important;
+			overflow-x: hidden !important;
+			position: fixed !important;
+			border: 1px solid #BBB !important;
+			border-image: initial !important;
+			padding: 0px 0px 1px !important;
+			margin-left: 3px !important;
+			border-radius: 0px !important;
+			/* convert the user select window to grayscale */
+			-webkit-filter: grayscale() !important;
+			}
+		/* bottom navbar */
+		#mutbb {
+			/* hide the bottom navbar */
+			display: none !important;
+			}
+		/* main menu content container */
+		#mn_ {
+			/* add the scroll functionality part A */
+			position: fixed !important;
+			top: 0 !important;
+			padding-top: 44px !important;
+			box-sizing: border-box !important;
+			/* change backgroundcolor */
+			background: whiteSmoke !important;
+			}
+		/* main menu sub container */
+		#mn_>.Ji {
+			/* add the scroll functionality part B */
+			height: 100% !important;
+			overflow-y: auto !important;
+			}
+		/* right button container */
+		#mutbt>.yc {
+			/* hide right button container (the settings icon) */
+			display: none !important;
+			}
+		/* menu items font style */
+		#mn_ .Dm {
+			/*font: 700 13px arial,sans-serif !important;*/
+			}
+
+	/* move & label view */
+		/* navbar */
+			/* navbar container */
+			#lbttb {
+				/* change navbar color to grey */
+				background: whiteSmoke !important;
+				/* add bottom border to the nav bar */
+				border-bottom: 1px solid #E5E5E5 !important;
+				}
+			/* cancel button - change it's style */
+			#lbttb>div:first-child>div {
+				border-radius: 2px !important;
+				background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+				-webkit-user-select: none !important;
+				border: 1px solid #ccc !important;
+				min-height: 27px !important;
+				outline: none !important;
+				min-width: 40px !important;
+				box-sizing:border-box !important;
+				}	
+			#lbttb>div:first-child>div:hover{
+				box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+				}
+			#lbttb>div:first-child>div:focus{
+				outline: none !important;
+				}
+			#lbttb>div:first-child>div:active{
+				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+				-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+				background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+				}
+			/* cancel button text/icon */
+			#lbttb>div:first-child>div>div {
+				font-family: arial, sans-serif !important;
+				font-weight: bold !important;
+				font-size: 11px !important;
+				text-shadow: none !important;
+				color: #333 !important;
+				}
+			/* left button container */
+			#lbttb>.xc {
+				right: 3px !important;
+				left: auto !important;
+				}
+			/* right button container */
+			#lbttb>.yc {
+				left: 3px !important;
+				right: auto !important;
+				}	
+			/* blue send button */
+					
+					/* button element */
+						#lbttb>.yc>div {
+							box-sizing:border-box !important;
+							min-width: 40px !important;
+							min-height: 27px !important;
+							outline: none !important;
+							-webkit-user-select: none !important;
+							border-radius: 2px !important;
+							background: -webkit-linear-gradient(top,#4D90FE,#4787ED) !important;
+							border: 1px solid #3079ED !important;
+							}
+						#lbttb>.yc>div:hover {
+							background-image: -webkit-linear-gradient(top,#4D90FE,#357AE8) !important;
+							border-color: #2F5BB7 !important;
+							}
+						#lbttb>.yc>div:active {
+							box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+							}
+					/* button icon */
+						#lbttb>.yc>div>div {
+							color: white !important;
+							font-family: arial, sans-serif !important;
+							font-weight: bold !important;
+							font-size: 11px !important;
+							text-shadow: none !important;
+							}		
+				
+
+	/* message view */		
+		/* toolbar container */
+		#tlb .Xo {
+			/* allow the bottom navbar to appear at the top */
+			z-index: 0 !important;
+			}
+		/* bottom navbar */
+		#cv__cntbb {
+			background: #fff !important;
+			border-bottom: 1px solid #E5E5E5 !important;
+			position: fixed !important;
+			top: 0px !important;
+			}
+		#cv__cntbb>.xc {
+			display: none !important;
+			}
+			#cv_ {
+				position:fixed !important;
+				top: 0px !important;
+				background: whiteSmoke !important;
+				}
+			#cv_ .Ji {
+				padding-top: 44px !important;
+				width: 100% !important;
+				height: 100% !important;
+				box-sizing: border-box !important;
+				}
+			#cv_ .Ci {
+				height: 100% !important;
+				overflow-y: scroll !important;
+				}
+			/* message container */
+			#cv_ .Lk {
+				/* add horizontal scrollbar if needed */
+				overflow-x: auto !important;
+				width: 100% !important;
+				}
+				/* back button - change it's style */
+				#cv__cntbt>div:first-child>div {
+					border-radius: 2px !important;
+					background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+					-webkit-user-select: none !important;
+					border: 1px solid #ccc !important;
+					min-height: 27px !important;
+					outline: none !important;
+					min-width: 40px !important;
+					box-sizing:border-box !important;
+					}	
+				#cv__cntbt>div:first-child>div:hover{
+					box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+					}
+				#cv__cntbt>div:first-child>div:focus{
+					outline: none !important;
+					}
+				#cv__cntbt>div:first-child>div:active{
+					box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+					-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+					background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+					}
+				/* back button text/icon */
+				#cv__cntbt>div:first-child>div>div {
+					font-size: 0 !important;
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -17px -126px !important;
+					opacity: 0.55 !important;
+					width: 21px !important;
+					height: 21px !important;
+					margin: 0 !important;
+					}	
+				#cv__cntbt>div:first-child>div:hover>div {
+					opacity: 0.9 !important;
+					}		
+				/* back and forward buttons */
+					#cv__cntbb>.yc>div {
+						background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
+						-webkit-user-select: none !important;
+						border: 1px solid #CCC !important;
+						min-height: 27px !important;
+						outline: none !important;
+						box-sizing: border-box !important;
+						margin-top: 1px !important;
+						}
+					#cv__cntbb>.yc>div:hover{
+						box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
+						}
+					#cv__cntbb>.yc>div:focus{
+						outline: none !important;
+						}
+					#cv__cntbb>.yc>div:active{
+						box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+						-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
+						background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
+						}
+					/* back button */
+					#cv__cntbb>.yc>div:first-child {
+						border-top-left-radius: 2px !important;
+						border-bottom-left-radius: 2px !important;
+						}
+					
+					/* forward button */
+					#cv__cntbb>.yc>div:last-child {
+						border-top-right-radius: 2px !important;
+						border-bottom-right-radius: 2px !important;
+						}
+				/* important icon */
+				.Rg {
+					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -67px -26px !important;
+					}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+/* temporary */
+	/* add some filters to the action bar */
+	#mutbt .m, #cv__cntbb .i, #cv__cntbb .m, #cv_ .ck, #tlb .i {
+	-webkit-filter: grayscale();
+	}
+	/* vacation responder */
+	#prefsbottombar {
+		display: none;
+		}
+#pr_ .AA {
+	padding-top: 0px !important;
+	border-bottom: 0px !important;
+	}
+#pr_ {
+	padding: 0px !important;
+	}
+#preftopbar > .yc > div {
+	position: relative;
+	min-width: 60px !important;
+	right: 5px;
+	}
+#preftopbar {
+	border-bottom: 1px solid #E5E5E5 !important;
+	background: #FBFBFB !important;
+	}
+#preftopbar .xc {
+	display: block !important;
+	height: 32px;
+	width: 32px;
+	background: url(chrome-extension://__MSG_@@extension_id__/images/sprite-32.png);
+	background-position: 0 -1518px;
+	margin-left: 15px;
+	margin-top: 6px;
+	}
+#preftopbar>.xc>div {
+	display: none;
+	}
+#preftopbar > .yc > div > div {
+	color: #fff !important;
+	opacity: 1 !important;
+	text-shadow: none !important;
+	font-size: 11px !important;
+	color: white !important;
+	}
+#preftopbar > .yc > div {
+	background: -webkit-linear-gradient(top,#4D90FE,#4787ED) !important;
+	border: 1px solid #3079ED !important;
+	opacity: 1 !important;
+	}	
+#preftopbar > .yc > div:hover {
+	background: -webkit-linear-gradient(top,#4D90FE,#357AE8) !important;
+	border-color: #2F5BB7 !important;
+	}
+#preftopbar > .yc > div:active {
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+	}
+#preftopbar>.yc>div>div {
+	float: left;
+	font: 700 12px arial,sans-serif;
+	margin: 14px 0 0;
+	color: black !important;
+	width: 100%;
+	height: 30px;
+	padding-left: 64px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	text-align: left !important;
+	pointer-events: none !important;
+	}
+#cv__cntbt, #tlb, #cv__cntbt .zc {
+	background: transparent !important;
+	pointer-events: none;
+	}
+#cv__cntbt .xc, #tlb>div>div * {
+	pointer-events: all;
+	}
+.Dq {
+background: whiteSmoke !important;
+}
+#mn_ {
+z-index: -1 !important;
+top: 44px !important;
+
+}
+#mn_ > .Ji {
+margin-top: -44px !important;
+}
+				
+	
+				
+				
+				

@@ -1,0 +1,135 @@
+<NotepadPlus>
+    <Project name="Black Menu">
+        <Folder name="ContentScripts">
+            <File name="contentScripts\calendar.css" />
+            <File name="contentScripts\calendar.js" />
+            <File name="contentScripts\drive.css" />
+            <File name="contentScripts\drive.js" />
+            <File name="contentScripts\gmail.css" />
+            <File name="contentScripts\gmail.js" />
+            <File name="contentScripts\googlebar.js" />
+            <File name="contentScripts\gplus_core.js" />
+            <File name="contentScripts\gplus_inject.css" />
+            <File name="contentScripts\gplus_inject.js" />
+            <File name="contentScripts\gplus_page.css" />
+            <File name="contentScripts\gplus_page.js" />
+            <File name="contentScripts\maps.css" />
+            <File name="contentScripts\news.css" />
+            <File name="contentScripts\reader.css" />
+            <File name="contentScripts\tasks.css" />
+            <File name="contentScripts\tasks.js" />
+            <File name="contentScripts\translate.css" />
+            <File name="contentScripts\youtube.css" />
+        </Folder>
+        <Folder name="images">
+            <File name="images\about_me-32.png" />
+            <File name="images\Awards-32.png" />
+            <File name="images\changelog-32.png" />
+            <File name="images\dropdown.png" />
+            <File name="images\Feedback-32.png" />
+            <File name="images\icon_128.png" />
+            <File name="images\icon_16.png" />
+            <File name="images\icon_19.png" />
+            <File name="images\icon_32.png" />
+            <File name="images\icon_48.png" />
+            <File name="images\lightbulb-32.png" />
+            <File name="images\Question-32.png" />
+            <File name="images\rate_and_review-32.png" />
+            <File name="images\rate_and_review-32_2.png" />
+            <File name="images\search-24.png" />
+            <File name="images\settings.png" />
+            <File name="images\sprite.png" />
+            <File name="images\thanks-32.png" />
+        </Folder>
+        <Folder name="old about page">
+            <Folder name="images">
+                <File name="old about page\images\applications-30.png" />
+                <File name="old about page\images\applications-32.png" />
+                <File name="old about page\images\blogs-32.png" />
+                <File name="old about page\images\books-32.png" />
+                <File name="old about page\images\dropdown.png" />
+                <File name="old about page\images\flights-32.png" />
+                <File name="old about page\images\icon_128.png" />
+                <File name="old about page\images\icon_16.png" />
+                <File name="old about page\images\icon_19.png" />
+                <File name="old about page\images\icon_32.png" />
+                <File name="old about page\images\icon_48.png" />
+                <File name="old about page\images\images-32.png" />
+                <File name="old about page\images\logo_picasa_large.png" />
+                <File name="old about page\images\patent-32.png" />
+                <File name="old about page\images\recipes-32.png" />
+                <File name="old about page\images\search-24.png" />
+                <File name="old about page\images\settings.png" />
+                <File name="old about page\images\shopping-32.png" />
+                <File name="old about page\images\sprite.png" />
+                <File name="old about page\images\videos-32.png" />
+            </Folder>
+            <File name="old about page\popup.css" />
+            <File name="old about page\popup.html" />
+            <File name="old about page\popup.js" />
+            <File name="old about page\popup_jfksearch.html" />
+        </Folder>
+        <Folder name="_locales">
+            <Folder name="ca">
+                <File name="_locales\ca\desktop.ini" />
+                <File name="_locales\ca\messages.json" />
+            </Folder>
+            <Folder name="de">
+                <File name="_locales\de\desktop.ini" />
+                <File name="_locales\de\messages.json" />
+            </Folder>
+            <Folder name="en">
+                <File name="_locales\en\messages.json" />
+            </Folder>
+            <Folder name="es">
+                <File name="_locales\es\desktop.ini" />
+                <File name="_locales\es\messages.json" />
+            </Folder>
+            <Folder name="es_419">
+                <File name="_locales\es_419\desktop.ini" />
+                <File name="_locales\es_419\messages.json" />
+            </Folder>
+            <Folder name="fr">
+                <File name="_locales\fr\desktop.ini" />
+                <File name="_locales\fr\messages.json" />
+            </Folder>
+            <Folder name="it">
+                <File name="_locales\it\desktop.ini" />
+                <File name="_locales\it\messages.json" />
+            </Folder>
+            <Folder name="nl">
+                <File name="_locales\nl\desktop.ini" />
+                <File name="_locales\nl\messages.json" />
+            </Folder>
+            <Folder name="pt_BR">
+                <File name="_locales\pt_BR\desktop.ini" />
+                <File name="_locales\pt_BR\messages.json" />
+            </Folder>
+            <Folder name="pt_PT">
+                <File name="_locales\pt_PT\desktop.ini" />
+                <File name="_locales\pt_PT\messages.json" />
+            </Folder>
+            <Folder name="ru">
+                <File name="_locales\ru\desktop.ini" />
+                <File name="_locales\ru\messages.json" />
+            </Folder>
+            <Folder name="tr">
+                <File name="_locales\tr\messages.json" />
+            </Folder>
+            <Folder name="zh_CN">
+                <File name="_locales\zh_CN\desktop.ini" />
+                <File name="_locales\zh_CN\messages.json" />
+            </Folder>
+        </Folder>
+        <File name="Black Menu Dev 1.2.0.5.zip" />
+        <File name="Black Menu Dev 1.2.0.6.zip" />
+        <File name="Black Menu Dev 1.2.0.7.zip" />
+        <File name="Black Menu Dev 1.2.0.8.zip" />
+        <File name="Black Menu Dev 1.2.0.9.zip" />
+        <File name="manifest.json" />
+        <File name="popup.css" />
+        <File name="popup.html" />
+        <File name="popup.js" />
+        <File name="Workspace" />
+    </Project>
+</NotepadPlus>

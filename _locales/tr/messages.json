@@ -1,0 +1,830 @@
+{
+  "extDescription": {
+    "message": "Tek bir tıklama ile tüm google servislerine erişmek için hazırlanmış bir menü.",
+    "description": "Extension Description"
+  },
+  "msg0": {
+    "message": "Arama",
+    "description": "Main Menu --> Search"
+  },
+  "msg1": {
+    "message": "Google Plus",
+    "description": "Main Menu --> Google+"
+  },
+  "msg2": {
+    "message": "Çeviri",
+    "description": "Main Menu --> Translate"
+  },
+  "msg3": {
+    "message": "Haritalar",
+    "description": "Main Menu --> Maps"
+  },
+  "msg4": {
+    "message": "Oyun",
+    "description": "Main Menu --> Play"
+  },
+  "msg5": {
+    "message": "Youtube Video",
+    "description": "Main Menu --> Youtube"
+  },
+  "msg6": {
+    "message": "Haberler",
+    "description": "Main Menu --> News"
+  },
+  "msg7": {
+    "message": "Gmail",
+    "description": "Main Menu --> Gmail"
+  },
+  "msg8": {
+    "message": "Sanal Disk",
+    "description": "Main Menu --> Drive"
+  },
+  "msg9": {
+    "message": "Takvim",
+    "description": "Main Menu --> Calendar"
+  },
+  "msg10": {
+    "message": "Daha fazlası",
+    "description": "Main Menu --> More"
+  },
+  "msg11": {
+    "message": "Google Arama",
+    "description": "Search Menu --> Google Search"
+  },
+  "msg12": {
+    "message": "İnternet",
+    "description": "Search Menu --> Web"
+  },
+  "msg13": {
+    "message": "Videolar",
+    "description": "Search Menu --> Videos"
+  },
+  "msg14": {
+    "message": "Alışveriş",
+    "description": "Search Menu --> Shopping"
+  },
+  "msg15": {
+    "message": "Yerler",
+    "description": "Search Menu --> Places"
+  },
+  "msg16": {
+    "message": "Tartışmalar",
+    "description": "Search Menu --> Discussions"
+  },
+  "msg17": {
+    "message": "Patentler",
+    "description": "Search Menu --> Patents"
+  },
+  "msg18": {
+    "message": "Uçuş bilgileri",
+    "description": "Search Menu --> Flights"
+  },
+  "msg19": {
+    "message": "Görseller",
+    "description": "Search Menu --> Images"
+  },
+  "msg20": {
+    "message": "Haberler",
+    "description": "Search Menu --> News"
+  },
+  "msg21": {
+    "message": "Kitaplar",
+    "description": "Search Menu --> Books"
+  },
+  "msg22": {
+    "message": "Bloglar",
+    "description": "Search Menu --> Blogs"
+  },
+  "msg23": {
+    "message": "Tarifler",
+    "description": "Search Menu --> Recipes"
+  },
+  "msg24": {
+    "message": "Uygulamalar",
+    "description": "Search Menu --> Applications"
+  },
+  "msg25": {
+    "message": "Haritalar",
+    "description": "Search Menu --> Maps"
+  },
+  "msg26": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Search Menu --> Links"
+  },
+  "msg27": {
+    "message": "Trendler",
+    "description": "Search Menu --> Trends"
+  },
+  "msg28": {
+    "message": "Özel Arama",
+    "description": "Search Menu --> Custom Search"
+  },
+  "msg29": {
+    "message": "Google Plus",
+    "description": "Google+ Menu --> Google Plus"
+  },
+  "msg30": {
+    "message": "Her Yer",
+    "description": "Google+ Menu --> Everywhere"
+  },
+  "msg31": {
+    "message": "Communities",
+    "description": "Google+ Menu --> Communities"
+  },
+  "msg32": {
+    "message": "Olaylar",
+    "description": "Google+ Menu --> Events"
+  },
+  "msg33": {
+    "message": "Mesajlar",
+    "description": "Google+ Menu --> Posts"
+  },
+  "msg34": {
+    "message": "Görüntülü Arama",
+    "description": "Google+ Menu --> Hangouts"
+  },
+  "msg35": {
+    "message": "İnsanlar ve Sayfalar",
+    "description": "Google+ Menu --> People and Pages"
+  },
+  "msg36": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Google+ Menu --> Links"
+  },
+  "msg37": {
+    "message": "Referans",
+    "description": "Google+ Menu --> Home"
+  },
+  "msg38": {
+    "message": "Sayfalar",
+    "description": "Google+ Menu --> Pages"
+  },
+  "msg39": {
+    "message": "Profil",
+    "description": "Google+ Menu --> Profile"
+  },
+  "msg40": {
+    "message": "Olaylar",
+    "description": "Google+ Menu --> Events"
+  },
+  "msg41": {
+    "message": "Keşif",
+    "description": "Google+ Menu --> Explore"
+  },
+  "msg42": {
+    "message": "Görüntülü Arama",
+    "description": "Google+ Menu --> Hangouts"
+  },
+  "msg43": {
+    "message": "Yerel",
+    "description": "Google+ Menu --> Local"
+  },
+  "msg44": {
+    "message": "Resimler",
+    "description": "Google+ Menu --> Photos"
+  },
+  "msg45": {
+    "message": "Yakınlıklar",
+    "description": "Google+ Menu --> Circles"
+  },
+  "msg46": {
+    "message": "Oyunlar",
+    "description": "Google+ Menu --> Games"
+  },
+  "msg47": {
+    "message": "Çeviri",
+    "description": "Translate Menu --> Translate"
+  },
+  "msg48": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Translate Menu --> Links"
+  },
+  "msg49": {
+    "message": "Çevirmen Araç Seti",
+    "description": "Translate Menu --> Transliteration"
+  },
+  "msg50": {
+    "message": "Harfi harfine çevirme",
+    "description": "Translate Menu --> Transliteration"
+  },
+  "msg51": {
+    "message": "Haritalar",
+    "description": "Maps Menu --> Maps"
+  },
+  "msg52": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Maps Menu --> Links"
+  },
+  "msg53": {
+    "message": "Enlem",
+    "description": "Maps Menu --> Latitude"
+  },
+  "msg54": {
+    "message": "Harita Hazırlayıcısı",
+    "description": "Maps Menu --> Mapmaker"
+  },
+  "msg55": {
+    "message": "Google Play Mağazası",
+    "description": "Play Menu --> Google Play Store"
+  },
+  "msg56": {
+    "message": "Uygulamalar",
+    "description": "Play Menu --> Apps"
+  },
+  "msg57": {
+    "message": "Kitaplar",
+    "description": "Play Menu --> Books"
+  },
+  "msg58": {
+    "message": "Dergiler",
+    "description": "Play Menu --> Magazines"
+  },
+  "msg59": {
+    "message": "Filmler ve TV",
+    "description": "Play Menu --> Movies & TV"
+  },
+  "msg60": {
+    "message": "Müzik",
+    "description": "Play Menu --> Music"
+  },
+  "msg61": {
+    "message": "Cihazlar",
+    "description": "Play Menu --> Devices"
+  },
+  "msg62": {
+    "message": "Oyun Mağazası Linkleri",
+    "description": "Play Menu --> Play Store Links"
+  },
+  "msg63": {
+    "message": "Siparişler",
+    "description": "Play Menu --> Orders"
+  },
+  "msg64": {
+    "message": "Ayarlar",
+    "description": "Play Menu --> Settings"
+  },
+  "msg65": {
+    "message": "Hakkımda",
+    "description": "Play Menu --> My Content"
+  },
+  "msg66": {
+    "message": "Uygulamalarım",
+    "description": "Play Menu --> My Apps"
+  },
+  "msg67": {
+    "message": "Kitaplarım",
+    "description": "Play Menu --> My Books"
+  },
+  "msg68": {
+    "message": "Dergilerim",
+    "description": "Play Menu --> My Magazines"
+  },
+  "msg69": {
+    "message": "Filmlerim ve TV kanallarım",
+    "description": "Play Menu --> My Movies & TV"
+  },
+  "msg70": {
+    "message": "Müziğim",
+    "description": "Play Menu --> My Music"
+  },
+  "msg71": {
+    "message": "Cihazlarım",
+    "description": "Play Menu --> My Devices"
+  },
+  "msg72": {
+    "message": "Youtube Video",
+    "description": "Youtube Menu --> Youtube"
+  },
+  "msg73": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Youtube Menu --> Links"
+  },
+  "msg74": {
+    "message": "Daha sonra izle",
+    "description": "Youtube Menu --> Watch later"
+  },
+  "msg75": {
+    "message": "Çalma Listesi",
+    "description": "Youtube Menu --> Playlists"
+  },
+  "msg76": {
+    "message": "Haberler",
+    "description": "News Menu --> News"
+  },
+  "msg77": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "News Menu --> Links"
+  },
+  "msg78": {
+    "message": "Haber arşivi",
+    "description": "News Menu --> News archive"
+  },
+  "msg79": {
+    "message": "Google Okuyucu",
+    "description": "News Menu --> Google Reader"
+  },
+  "msg80": {
+    "message": "Gmail",
+    "description": "Gmail Menu --> Gmail"
+  },
+  "msg81": {
+    "message": "Tüm Postalar",
+    "description": "Gmail Menu --> All Mail"
+  },
+  "msg82": {
+    "message": "Gelen Kutusu",
+    "description": "Gmail Menu --> Inbox"
+  },
+  "msg83": {
+    "message": "Okunmamış",
+    "description": "Gmail Menu --> Unread"
+  },
+  "msg84": {
+    "message": "Önemli",
+    "description": "Gmail Menu --> Important"
+  },
+  "msg85": {
+    "message": "Taslaklar",
+    "description": "Gmail Menu --> Drafts"
+  },
+  "msg86": {
+    "message": "Reklam E-postası",
+    "description": "Gmail Menu --> Spam"
+  },
+  "msg87": {
+    "message": "Yakınlıklar",
+    "description": "Gmail Menu --> Circles"
+  },
+  "msg88": {
+    "message": "Bağlantısız",
+    "description": "Gmail Menu --> Anywhere"
+  },
+  "msg89": {
+    "message": "Gönderilmiş Postalar",
+    "description": "Gmail Menu --> Sent Mail"
+  },
+  "msg90": {
+    "message": "Okunan",
+    "description": "Gmail Menu --> Read"
+  },
+  "msg91": {
+    "message": "Yıldızlı",
+    "description": "Gmail Menu --> Starred"
+  },
+  "msg92": {
+    "message": "Eklentiler",
+    "description": "Gmail Menu --> Attachments"
+  },
+  "msg93": {
+    "message": "Çöp Kutusuna Taşı",
+    "description": "Gmail Menu --> Trash"
+  },
+  "msg94": {
+    "message": "Sohbetler",
+    "description": "Gmail Menu --> Chats"
+  },
+  "msg95": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Gmail Menu --> Links"
+  },
+  "msg96": {
+    "message": "Hazırlama",
+    "description": "Gmail Menu --> Compose"
+  },
+  "msg97": {
+    "message": "Kişiler",
+    "description": "Gmail Menu --> Contacts"
+  },
+  "msg98": {
+    "message": "Sanal Disk",
+    "description": "Drive Menu --> Drive"
+  },
+  "msg99": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "Drive Menu --> Links"
+  },
+  "msg100": {
+    "message": "Sanal Diskim",
+    "description": "Drive Menu --> My Drive"
+  },
+  "msg101": {
+    "message": "Benimle Paylaşılan",
+    "description": "Drive Menu --> Shared with me"
+  },
+  "msg102": {
+    "message": "Yıldızlı",
+    "description": "Drive Menu --> Starred"
+  },
+  "msg103": {
+    "message": "Son",
+    "description": "Drive Menu --> Recent"
+  },
+  "msg104": {
+    "message": "Aktivite",
+    "description": "Drive Menu --> Activity"
+  },
+  "msg105": {
+    "message": "Tüm öğeler",
+    "description": "Drive Menu --> All items"
+  },
+  "msg106": {
+    "message": "Çöp Kutusuna Taşı",
+    "description": "Drive Menu --> Trash"
+  },
+  "msg107": {
+    "message": "Şablonlar",
+    "description": "Drive Menu --> Templates"
+  },
+  "msg108": {
+    "message": "Takvim",
+    "description": "Calendar Menu --> Calendar"
+  },
+  "msg109": {
+    "message": "Görevler",
+    "description": "Calendar Menu --> Tasks"
+  },
+  "msg110": {
+    "message": "Duygularım",
+    "description": "More Menu --> Adsense"
+  },
+  "msg111": {
+    "message": "Uyarılar",
+    "description": "More Menu --> Alerts"
+  },
+  "msg112": {
+    "message": "Temel Program",
+    "description": "More Menu --> App Engine"
+  },
+  "msg113": {
+    "message": "Chrome Web Mağazası",
+    "description": "More Menu --> Chrome Web Store"
+  },
+  "msg114": {
+    "message": "Geliştiriciler",
+    "description": "More Menu --> Developers"
+  },
+  "msg115": {
+    "message": "Teklifler",
+    "description": "More Menu --> Offers"
+  },
+  "msg116": {
+    "message": "Bilgin",
+    "description": "More Menu --> Scholar"
+  },
+  "msg117": {
+    "message": "URL Kısaltıcı",
+    "description": "More Menu --> Url Shortener"
+  },
+  "msg118": {
+    "message": "Cüzdan",
+    "description": "More Menu --> Wallet"
+  },
+  "msg119": {
+    "message": "Gösterge Panosu",
+    "description": "More Menu --> Dashboard"
+  },
+  "msg120": {
+    "message": "Yazdıklarım",
+    "description": "More Menu --> Adwords"
+  },
+  "msg121": {
+    "message": "Analizler",
+    "description": "More Menu --> Analytics"
+  },
+  "msg122": {
+    "message": "Blogcu",
+    "description": "More Menu --> Blogger"
+  },
+  "msg123": {
+    "message": "Gruplar",
+    "description": "More Menu --> Groups"
+  },
+  "msg124": {
+    "message": "Finans",
+    "description": "More Menu --> Finance"
+  },
+  "msg125": {
+    "message": "Resim Düzenleme",
+    "description": "More Menu --> Picasa"
+  },
+  "msg126": {
+    "message": "Web Siteleri",
+    "description": "More Menu --> Sites"
+  },
+  "msg127": {
+    "message": "Konuşma",
+    "description": "More Menu --> Voice"
+  },
+  "msg128": {
+    "message": "Webmaster Araçları",
+    "description": "More Menu --> Webmaster Tools"
+  },
+  "msg129": {
+    "message": "Google Ayarları",
+    "description": "More Menu --> Google Settings"
+  },
+  "msg130": {
+    "message": "Hakkında",
+    "description": "More Menu --> About"
+  },
+  "msg131": {
+    "message": "Hakkında",
+    "description": "About Menu --> About"
+  },
+  "msg132": {
+    "message": "Bu uzantıyı yüklediğiniz için teşekkürler!",
+    "description": "About Menu --> thanks for installing this extension!"
+  },
+  "msg133": {
+    "message": "Linkler (Bağlantılar)",
+    "description": "About Menu --> Links"
+  },
+  "msg134": {
+    "message": "Bağış yapın!",
+    "description": "About Menu --> Donate"
+  },
+  "msg135": {
+    "message": "Değerlendirme ve yorum",
+    "description": "About Menu --> Rate & review"
+  },
+  "msg136": {
+    "message": "Geribildirim bırakın",
+    "description": "About Menu --> Give feedback"
+  },
+  "msg137": {
+    "message": "Bana ulaşın",
+    "description": "About Menu --> Contact me"
+  },
+  "msg138": {
+    "message": "E-posta",
+    "description": "About Menu --> Email"
+  },
+  "msg139": {
+    "message": "Google Plus",
+    "description": "About Menu --> Google+"
+  },
+  "msg140": {
+    "message": "Teşekkürler",
+    "description": "About Menu --> Thanks to"
+  },
+  "msg141": {
+    "message": "Bu eklentide kullanılan google simgelerinin telif hakkı Google'a aittir.",
+    "description": "About Menu --> The google icons in this extension are copyrighted by google"
+  },
+  "msg142": {
+    "message": "Çeviri yardımı",
+    "description": "About Menu --> Help translating"
+  },
+  "msg143": {
+    "message": "Geri Dön",
+    "description": "About Menu --> Go Back"
+  },
+  "msg144": {
+    "message": "Okuyucu",
+    "description": "Main Menu --> Reader"
+  },
+  "msg145": {
+    "message": "Okuyucu",
+    "description": "Reader Menu --> Reader"
+  },
+  "msg146": {
+    "message": "Ayarlar",
+    "description": "More Menu --> Settings"
+  },
+  "msg147": {
+    "message": "Geri Dön",
+    "description": "Settings Menu --> Go Back"
+  },
+  "msg148": {
+    "message": "Ayarlar",
+    "description": "Settings Menu --> Settings"
+  },
+  "msg149": {
+	"message": "Generic",
+	"description": "Settings Menu Main --> Generic"
+  },
+  "msg150": {
+	"message": "Çeviri",
+	"description": "Settings Menu Main --> Translate"
+  },
+  "msg151": {
+	"message": "Haritalar",
+	"description": "Settings Menu Main --> Maps"
+  },
+  "msg152": {
+	"message": "Haberler",
+	"description": "Settings Menu Main --> News"
+  },
+  "msg153": {
+	"message": "Takvim",
+	"description": "Settings Menu Main --> Calendar"
+  },
+  "msg154": {
+	"message": "Sanal Disk",
+	"description": "Settings Menu Main --> Drive"
+  },
+  "msg155": {
+	"message": "Hide the black bar on all google websites",
+	"description": "Settings Menu Generic --> Hide the black bar on all google websites"
+  },
+  "msg156": {
+	"message": "Show unread counts for Google+, Gmail and Reader",
+	"description": "Settings Menu Generic --> Show unread counts for Google+, Gmail and Reader"
+  },
+  "msg157": {
+	"message": "Kaynak dil",
+	"description": "Settings Menu Translate --> Source language"
+  },
+  "msg158": {
+	"message": "Hedef dil",
+	"description": "Settings Menu Translate--> Target language"
+  },
+  "msg159": {
+	"message": "Map view",
+	"description": "Settings Menu Maps--> Map view"
+  },
+  "msg160": {
+	"message": "Show traffic",
+	"description": "Settings Menu Maps--> Show traffic"
+  },
+  "msg161": {
+	"message": "Default location",
+	"description": "Settings Menu Maps --> Default location"
+  },
+  "msg162": {
+	"message": "News edition",
+	"description": "Settings Menu News --> News edition"
+  },
+  "msg163": {
+	"message": "Image visibility",
+	"description": "Settings Menu News --> Image visibility"
+  },
+  "msg164": {
+	"message": "Number of items to display",
+	"description": "Settings Menu News --> Number of items to display"
+  },
+  "msg165": {
+	"message": "Hide bottom links",
+	"description": "Settings Menu News --> Hide bottom links"
+  },
+  "msg166": {
+	"message": "Show empty days",
+	"description": "Settings Menu Calendar --> Show empty days"
+  },
+  "msg167": {
+	"message": "Expand the tasks panel by default",
+	"description": "Settings Menu Calendar --> Expand the tasks panel by default"
+  },
+  "msg168": {
+	"message": "View preference",
+	"description": "Settings Menu Drive --> View preference"
+  },
+  "msg169": {
+	"message": "Chrome language",
+	"description": "Settings Menu Translate Targetlanguage --> Chrome language"
+  },
+  "msg170": {
+	"message": "Auto detect",
+	"description": "Settings Menu Translate Sourcelanguage --> Auto detect"
+  },
+  "msg171": {
+	"message": "Roadmap",
+	"description": "Settings Menu Maps Mapview --> Roadmap"
+  },
+  "msg172": {
+	"message": "Terrain",
+	"description": "Settings Menu Maps Mapview --> Terrain"
+  },
+  "msg173": {
+	"message": "Satellite",
+	"description": "Settings Menu Maps Mapview --> Satellite"
+  },
+  "msg174": {
+	"message": "Hybrid",
+	"description": "Settings Menu Maps Mapview --> Hybrid"
+  },
+  "msg175": {
+	"message": "Show headline images only",
+	"description": "Settings Menu News Imagevisibility --> Show headline images only"
+  },
+  "msg176": {
+	"message": "Show all images",
+	"description": "Settings Menu News Imagevisibility --> Show all images"
+  },
+  "msg177": {
+	"message": "Hide all images",
+	"description": "Settings Menu News Imagevisibility --> Hide all images"
+  },
+  "msg178": {
+	"message": "Opened by me",
+	"description": "Settings Menu Drive Viewpreference --> Opened by me"
+  },
+  "msg179": {
+	"message": "Owned by me",
+	"description": "Settings Menu Drive Viewpreference --> Owned by me"
+  },
+  "msg180": {
+	"message": "Yıldızlı",
+	"description": "Settings Menu Drive Viewpreference --> Starred"
+  },
+  "msg181": {
+	"message": "Gmail",
+	"description": "Settings Menu Main --> Gmail"
+  },
+  "msg182": {
+	"message": "Open compose in a popup/panel",
+	"description": "Settings Menu Gmail --> Open compose in a popup/panel"
+  },
+  "pmsg0": {
+    "message": "Google'da  Arama ",
+    "description": "Search Menu --> Search google..."
+  },
+  "pmsg1": {
+    "message": "Google Plus'ta Arama ",
+    "description": "Google+ Menu --> Search google plus..."
+  },
+  "pmsg2": {
+    "message": "Google Oyun Mağazasında Arama",
+    "description": "Play Menu --> Search google play store..."
+  },
+  "pmsg3": {
+    "message": "Google Haberler'de Arama ",
+    "description": "News Menu --> Search google news..."
+  },
+  "pmsg4": {
+    "message": "Gmail'de Arama ",
+    "description": "Gmail Menu --> Search gmail..."
+  },
+  "pmsg5": {
+    "message": "Google Takvim'de Arama",
+    "description": "Calendar Menu --> Search google calendar..."
+  },
+  "pmsg6": {
+    "message": "Çevrilecek metni buraya yazın ...",
+    "description": "Translate Menu --> Enter text to translate here..."
+  },
+  "pmsg7": {
+    "message": "Google Haritalar'da Arama",
+    "description": "Maps Menu --> Search google maps..."
+  },
+  "pmsg8": {
+    "message": "Youtube'da Arama",
+    "description": "Youtube Menu --> Search youtube..."
+  },
+  "pmsg9": {
+    "message": "Google Sanal Disk'te Arama",
+    "description": "Drive Menu --> Search google drive..."
+  },
+  "pmsg10": {
+    "message": "Google Reader'da Arama",
+    "description": "Reader Menu --> Search google reader..."
+  },
+  "tmsg0": {
+    "message": "Yeni Belge",
+    "description": "Drive Menu --> New Document"
+  },
+  "tmsg1": {
+    "message": "Yeni Sunu",
+    "description": "Drive Menu --> New Presentation"
+  },
+  "tmsg2": {
+    "message": "Yeni E-Tablo",
+    "description": "Drive Menu --> New Spreadsheet"
+  },
+  "tmsg3": {
+    "message": "Yeni Form",
+    "description": "Drive Menu --> New Form"
+  },
+  "tmsg4": {
+    "message": "Yeni Tablo",
+    "description": "Drive Menu --> New Table"
+  },
+  "tmsg5": {
+    "message": "Yeni Çizim",
+    "description": "Drive Menu --> New Drawing"
+  },
+  "tmsg6": {
+    "message": "Yeni Script",
+    "description": "Drive Menu --> New Script"
+  },
+  "tmsg7": {
+    "message": "Genişletmek için tıklayınız",
+    "description": "Calendar Menu --> Click to Expand"
+  },
+  "tmsg8": {
+    "message": "Taşınabilirlik için tıklayın",
+    "description": "Calendar Menu --> Click to Collapse"
+  },
+  "tmsg9": {
+    "message": "Okuyucuya geçiş",
+    "description": "Reader Switch --> Switch to Reader"
+  },
+  "tmsg10": {
+    "message": "Habere geçiş",
+    "description": "Reader Switch --> Switch to News"
+  },
+  "chromeLangLocation": {
+    "message": "atlantik okyanusu",
+    "description": "The main location where this language is used"
+  }
+}

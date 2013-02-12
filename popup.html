@@ -1,0 +1,1412 @@
+﻿<meta charset="utf-8">
+<!DOCTYPE html>
+	<head>
+		<title>Black Menu</title>
+		<link rel="stylesheet" type="text/css" href="popup.css">
+		<script type='text/javascript' src='popup.js'></script>
+	</head>
+	<body id="body" scrolling="no">
+		<div id="mainMenuWindow">
+			<ul id="mainMenu">
+				<li id="Search" draggable="true" class="mainMenuButtonOn">
+					<a accesskey="s" href="https://www.google.com/webhp" target="_blank">
+						<span class="sprite-search-32"></span>
+						<p data-msg="0">Search</p>
+					</a>
+				</li>
+				<li id="Gplus" draggable="true">
+					<a href="https://plus.google.com" target="_blank">
+						<span class="sprite-gplus-32"></span>
+						<p id="unreadCountGplus" class="unreadCountElement" data-msg="1">Google+</p>
+					</a>
+				</li>
+				<li id="Translate" draggable="true">
+					<a href="http://translate.google.com/" target="_blank">
+						<span class="sprite-translate-32"></span>
+						<p data-msg="2">Translate</p>
+					</a>
+				</li>
+				<li id="Maps">
+					<a href="https://maps.google.com/maps" target="_blank">
+						<span class="sprite-maps-32"></span>
+						<p data-msg="3">Maps</p>
+					</a>
+				</li>
+				<li id="Play">
+					<a href="https://play.google.com" target="_blank">
+						<span class="sprite-play-32"></span>
+						<p data-msg="4">Play</p>
+					</a>
+				</li>
+				<li id="Youtube">
+					<a href="https://www.youtube.com/" target="_blank">
+						<span class="sprite-youtube-32"></span>
+						<p data-msg="5">Youtube</p>
+					</a>
+				</li>
+				<li id="News">
+					<a  href="https://news.google.com/nwshp" target="_blank">
+						<span class="sprite-news-32"></span>
+						<p data-msg="6">News</p>
+						<a data-tmsg="9" class="inline-block" title="Switch to Reader" ><span id="readerSwitchNews" class="readerSwitch sprite-switch-32"></span></a>
+					</a>
+				</li>
+				<li id="Reader">
+					<a href="https://www.google.com/reader/" target="_blank">
+						<span class="sprite-reader-32"></span>
+						<p id="unreadCountReader" class="unreadCountElement" data-msg="144">Reader</p>
+						<a data-tmsg="10" class="inline-block" title="Switch to News" ><span id="readerSwitchReader" class="readerSwitch sprite-switch-32"></span></a>
+					</a>
+				</li>
+				<li id="Gmail">
+					<a class="inline-block" href="https://mail.google.com/mail/" target="_blank">
+						<span class="sprite-googlemail-32"></span>
+						<p id="unreadCountGmail" class="unreadCountElement" data-msg="7">Gmail</p>
+					</a>
+				</li>
+				<li id="Drive">
+					<a href="https://drive.google.com/" target="_blank">
+						<span class="sprite-drive-32"></span>
+						<p data-msg="8">Drive</p>
+					</a>
+				</li>
+				<li id="Calendar">
+					<a href="https://www.google.com/calendar/render" target="_blank">
+						<span class="sprite-calendar-32"></span>
+						<p id="unreadCountCalendar" class="unreadCountElement" data-msg="9">Calendar</p>
+					</a>
+				</li>
+				<li id="More">
+					<a href="https://www.google.com/intl/en_us/about/products/index.html" target="_blank">
+						<span></span>
+						<p data-msg="10">More</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="mainWindowSearch" class="mainWindowOn">
+			<div id="headerSearch" class="header topHeader">
+				<span class="sprite-search-w32"></span>
+				<p data-msg="11" class="headerMainP">Google Search</p>
+			</div>
+			<iframe style="height: 439px;" id="iframeSearch"></iframe>
+			<!--div data-service="Search" class="searchFilters">
+				<ul class="boxList">
+					<li data-search="https://www.google.com/search?hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?hl=[chromeLang]">
+						<span class="sprite-search_pointer-32"></span>
+						<p data-msg="12">Web</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=isch&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/imghp?hl=[chromeLang]">
+						<span class="sprite-images-32"></span>
+						<p data-msg="19">Images</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=vid&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/videohp?hl=[chromeLang]">
+						<span class="sprite-videos-32"></span>
+						<p data-msg="13">Videos</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=nws&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/news?hl=[chromeLang]">
+						<span class="sprite-newspaper-32"></span>
+						<p data-msg="20">News</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=shop&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/shopping?hl=[chromeLang]">
+						<span class="sprite-shopping-32"></span>
+						<p data-msg="14">Shopping</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=bks&hl=[chromeLang]&q=[query]" data-link="http://www.google.com/books?hl=[chromeLang]">
+						<span class="sprite-books-32"></span>
+						<p data-msg="21">Books</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=plcs&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=plcs&hl=[chromeLang]">
+						<span class="sprite-maps_alt-32"></span>
+						<p data-msg="15">Places</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=blg&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/blogsearch/?hl=[chromeLang]">
+						<span class="sprite-blogs-32"></span>
+						<p data-msg="22">Blogs</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=dsc&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=dsc&hl=[chromeLang]">
+						<span class="sprite-discussions-32"></span>
+						<p data-msg="16">Discussions</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=rcp&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/webhp?tbm=rcp&hl=[chromeLang]">
+						<span class="sprite-recipe_search-32"></span>
+						<p data-msg="23">Recipes</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=pts&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=pts&hl=[chromeLang]">
+						<span class="sprite-patents-32"></span>
+						<p data-msg="17">Patents</p>
+					</li>
+					<li data-search="https://www.google.com/search?tbm=app&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=app&hl=[chromeLang]">
+						<span class="sprite-applications-32"></span>
+						<p data-msg="24">Applications</p>
+					</li>
+					<li data-search="https://www.google.com/flights/#search;hl=[chromeLang]&q=[query]" data-link="https://www.google.com/flights/?hl=[chromeLang]">
+						<span class="sprite-flights-32"></span>
+						<p data-msg="18">Flights</p>
+					</li>
+					<li data-search="https://www.google.com/maps?hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?hl=[chromeLang]">
+						<span class="sprite-maps_alt-32"></span>
+						<p data-msg="25">Maps</p>
+					</li>
+				</ul>
+			</div>
+			<div class="header">
+				<span class="sprite-links-32"></span>
+				<p data-msg="26">Links</p>
+			</div>
+			<ul class="boxList">
+				<li>
+					<a target="_blank" href="https://www.google.com/trends/">
+						<span class="sprite-trends-32"></span>
+						<p data-msg="27">Trends</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.google.com/cse/">
+						<span class="sprite-customsearch-32"></span>
+						<p data-msg="28">Custom Search</p>
+					</a>
+				</li>
+			</ul-->
+		</div>
+		<div id="mainWindowGplus" class="mainWindow">
+			<div id="headerGplus" class="header topHeader">
+				<span class="sprite-gplus-w32"></span>
+				<p data-msg="29" class="headerMainP">Google Plus</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupGplus" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<div class="searchbox">
+				<input data-pmsg="1" id="WindowGplusInput" autocomplete="off" type="text" placeholder="Search google plus..." data-prefix="https://plus.google.com/s/">
+			</div>
+			<iframe id="iframeGplus"></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="189">Links and Search Filters</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<div data-service="Gplus" class="searchFilters">
+					<ul class="boxList">
+						<li data-search="https://plus.google.com/s/[query]" data-link="https://plus.google.com/">
+							<span class="sprite-gplus-32"></span>
+							<p data-msg="30">Everywhere</p>
+						</li>
+						<li data-search="https://plus.google.com/s/[query]/posts" data-link="https://plus.google.com/">
+							<span class="sprite-gplus-32"></span>
+							<p data-msg="33">Posts</p>
+						</li>
+						<li data-search="https://plus.google.com/s/[query]/communities" data-link="https://plus.google.com/communities">
+							<span class="sprite-communities-32"></span>
+							<p data-msg="31">Communities</p>
+						</li>
+						<li data-search="https://plus.google.com/circles?q=[query]" data-link="https://plus.google.com/circles">
+							<span class="sprite-circles-32"></span>
+							<p data-msg="45">Circles</p>
+						</li>
+						<li data-search="https://plus.google.com/local/s/[query]" data-link="https://plus.google.com/local">
+							<span class="sprite-local-32"></span>
+							<p data-msg="43">Local</p>
+						</li>
+						<li data-search="https://plus.google.com/s/[query]/hangouts" data-link="https://plus.google.com/hangouts">
+								<span class="sprite-hangouts-32"></span>
+							<p data-msg="34">Hangouts</p>
+						</li>
+						<li data-search="https://plus.google.com/s/[query]/events" data-link="https://plus.google.com/events">
+							<span class="sprite-events-32"></span>
+							<p data-msg="32">Events</p>
+						</li>
+						<li data-search="https://plus.google.com/s/[query]/people" data-link="https://plus.google.com/pages/manage">
+							<span class="sprite-shared-32"></span>
+							<p data-msg="35">People and Pages</p>
+						</li>
+					</ul>
+				</div>
+				<div class="header">
+					<span class="sprite-links-32"></span>
+					<p data-msg="207">Other links</p>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="https://plus.google.com/stream">
+							<span class="sprite-home-32"></span>
+							<p data-msg="37">Home</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/pages/manage">
+							<span class="sprite-pages-32"></span>
+							<p data-msg="38">Pages</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/me">
+							<span class="sprite-profile-32"></span>
+							<p data-msg="39">Profile</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/photos">
+							<span class="sprite-photos-32"></span>
+							<p data-msg="44">Photos</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/explore">
+							<span class="sprite-explore-32"></span>
+							<p data-msg="41">Explore</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/games">
+							<span class="sprite-games-32"></span>
+							<p data-msg="46">Games</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="mainWindowTranslate" class="mainWindow">
+			<div id="headerTranslate" class="header topHeader">
+				<span class="sprite-translate-w32"></span>
+				<p data-msg="47" class="headerMainP">Translate</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupTranslate" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<iframe id="iframeTranslate" src="" scrolling="no"></iframe>
+			<div class="linksSection" data-state="off">
+				<div id="linksHeaderTranslate" class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="26">Links</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="http://translate.google.com/toolkit/">
+							<span class="sprite-translate-32"></span>
+							<p data-msg="49">Translator Toolkit</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.google.com/transliterate/">
+							<span class="sprite-transliteration-32"></span>
+							<p data-msg="50">Transliteration</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="mainWindowMaps" class="mainWindow">
+			<div id="headerMaps" class="header topHeader">
+				<span class="sprite-maps-w32"></span>
+				<span title="open widget in a panel" data-pmsg="12" id="popupMaps" class="openInPanel sprite-panel-32"></span>
+				<p data-msg="51" class="headerMainP">Maps</p>
+			</div>
+			<iframe id="iframeMaps" scrolling="no" src=""></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="26">Links</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="https://www.google.com/latitude/">
+							<span class="sprite-latitude-32"></span>
+							<p data-msg="53">Latitude</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.google.com/mapmaker">
+							<span class="sprite-mapmaker-32"></span>
+							<p data-msg="54">Mapmaker</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/local">
+							<span class="sprite-local-32"></span>
+							<p data-msg="43">Local</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.google.com/sky/">
+							<span class="sprite-sky-32"></span>
+							<p data-msg="183">Sky</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.google.com/moon/">
+							<span class="sprite-moon-32"></span>
+							<p data-msg="184">Moon</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.google.com/mars/">
+							<span class="sprite-mars-32"></span>
+							<p data-msg="185">Mars</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="mainWindowPlay" class="mainWindow">
+			<div id="headerPlay" class="header topHeader">
+				<span class="sprite-play-w32"></span>
+				<p data-msg="55" class="headerMainP">Google Play Store</p>
+			</div>
+			<div class="searchbox">
+				<input id="WindowPlayInput" data-pmsg="2" autocomplete="off" type="text" placeholder="Search google play store..." data-prefix="https://play.google.com/store/search?c=apps&q">
+			</div>
+			<div data-service="Play" class="searchFilters">
+				<ul class="boxList">
+					<li data-search="https://play.google.com/store/search?c=apps&q=[query]" data-link="https://play.google.com/store/apps">
+						<span class="sprite-play_apps-32"></span>
+						<p data-msg="56">Apps</p>
+					</li>
+					<li data-search="https://play.google.com/store/search?c=movies&q=[query]" data-link="https://play.google.com/store/movies">
+						<span class="sprite-play_movies-32"></span>
+						<p data-msg="59">Movies & TV</p>
+					</li>
+					<li data-search="https://play.google.com/store/search?c=books&q=[query]" data-link="https://play.google.com/store/books">
+						<span class="sprite-play_books-32"></span>
+						<p data-msg="57">Books</p>
+					</li>
+					<li data-search="https://play.google.com/store/search?c=music&q=[query]" data-link="https://play.google.com/store/music">
+						<span class="sprite-play_music-32"></span>
+						<p data-msg="60">Music</p>
+					</li>
+					<li data-search="https://play.google.com/store/search?c=magazines&q=[query]" data-link="https://play.google.com/store/magazines">
+						<span class="sprite-play_magazines-32"></span>
+						<p data-msg="58">Magazines</p>
+					</li>
+					<li data-search="https://play.google.com/store/search?c=devices&q=[query]" data-link="https://play.google.com/store/devices">
+						<span class="sprite-play_devices-32"></span>
+						<p data-msg="61">Devices</p>
+					</li>
+				</ul>
+			</div>
+			<div class="header">
+				<span class="sprite-links-32"></span>
+				<p data-msg="62">Play Store Links</p>
+			</div>
+			<ul class="boxList">
+				<li>
+					<a target="_blank" href="https://play.google.com/store/account?orders">
+						<span class="sprite-play-32"></span>
+						<p data-msg="63">Orders</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/store/account?settings">
+						<span class="sprite-play-32"></span>
+						<p data-msg="64">Settings</p>
+					</a>
+				</li>
+			</ul>
+			<div class="header">
+				<span class="sprite-links-32"></span>
+				<p data-msg="65">My Content</p>
+			</div>
+			<ul class="boxList">
+				<li>
+					<a target="_blank" href="https://play.google.com/apps">
+						<span class="sprite-play_apps-32"></span>
+						<p data-msg="66">My Apps</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/movies">
+						<span class="sprite-play_movies-32"></span>
+						<p data-msg="69">My Movies & TV</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/books">
+						<span class="sprite-play_books-32"></span>
+						<p data-msg="67">My Books</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/music">
+						<span class="sprite-play_music-32"></span>
+						<p data-msg="70">My Music</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/magazines">
+						<span class="sprite-play_magazines-32"></span>
+						<p data-msg="68">My Magazines</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://play.google.com/devices">
+						<span class="sprite-play_devices-32"></span>
+						<p data-msg="71">My Devices</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="mainWindowYoutube" class="mainWindow">
+			<div id="headerYoutube" class="header topHeader">
+				<span class="sprite-youtube-w32"></span>
+				<p data-msg="72" class="headerMainP">Youtube</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupYoutube" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<iframe id="iframeYoutube" scrolling="no" src=""></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="26">Links</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="http://www.youtube.com/my_profile">
+							<span class="sprite-youtube_profile-32"></span>
+							<p data-msg="193">My Profile</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/my_videos">
+							<span class="sprite-youtube_uploads-32"></span>
+							<p data-msg="194">My Uploads</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/my_favorites">
+							<span class="sprite-youtube_favorites-32"></span>
+							<p data-msg="195">My Favorites</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.youtube.com/my_liked_videos">
+							<span class="sprite-youtube_likes-32"></span>
+							<p data-msg="196">My Liked Videos</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/my_subscriptions">
+							<span class="sprite-youtube_subscriptions-32"></span>
+							<p data-msg="197">Subscription Videos</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/channels">
+							<span class="sprite-youtube_channels-32"></span>
+							<p data-msg="198">Browse Channels</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/dashboard">
+							<span class="sprite-youtube_dashboard-32"></span>
+							<p data-msg="199">Dashboard</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/editor">
+							<span class="sprite-youtube_video_editor-32"></span>
+							<p data-msg="200">Video Editor</p>
+						</a>
+					</li>
+					<li class="separator">
+						<a target="_blank" href="https://www.youtube.com/analytics">
+							<span class="sprite-youtube_analytics-32"></span>
+							<p data-msg="201">Analytics</p>
+						</a>
+					</li>
+					<li class="separator">
+						<a target="_blank" href="https://www.youtube.com/inbox">
+							<span class="sprite-youtube_inbox-32"></span>
+							<p data-msg="202">Inbox</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed">
+							<span class="sprite-youtube_subscriptions-32"></span>
+							<p data-msg="203">My feed</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed/watch_later">
+							<span class="sprite-youtube_watch_later-32"></span>
+							<p data-msg="74">Watch later</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed/history">
+							<span class="sprite-youtube_history-32"></span>
+							<p data-msg="204">Watch History</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed/playlists">
+							<span class="sprite-youtube_playlists-32"></span>
+							<p data-msg="75">Playlists</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed/subscriptions">
+							<span class="sprite-youtube_subscriptions-32"></span>
+							<p data-msg="205">My subscriptions</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.youtube.com/feed/social">
+							<span class="sprite-youtube_social-32"></span>
+							<p data-msg="206">Social</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="mainWindowNews" class="mainWindow">
+			<div id="headerNews" class="header topHeader">
+				<span class="sprite-news-w32"></span>
+				<p data-msg="76" class="headerMainP">News</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupNews" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<div class="searchbox">
+				<input id="WindowNewsInput" data-pmsg="3" autocomplete="off" type="text" placeholder="Search google news..." data-prefix="https://www.google.com/search?tbm=nws&q=">
+			</div>
+			<iframe id="iframeNews" src=""></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="26">Links</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="http://news.google.com/news/advanced_news_search?as_drrb=a">
+							<span class="sprite-archive-32"></span>
+							<p data-msg="78">News archive</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="http://www.google.com/reader">
+							<span class="sprite-reader-32"></span>
+							<p data-msg="79">Google Reader</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="mainWindowReader" class="mainWindow">
+			<div id="headerReader" class="header topHeader">
+				<span class="sprite-reader-w32"></span>
+				<p data-msg="145" class="headerMainP">Reader</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupReader" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<div id="searchboxReader" class="searchbox">
+				<input id="WindowReaderInput" data-pmsg="10" autocomplete="off" type="text" placeholder="Search google reader..." data-prefix="https://www.google.com/reader/view/#search/">
+			</div>
+			<iframe id="iframeReader" src=""></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="26">Links</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="https://www.google.com/reader/play/">
+							<span class="sprite-reader-32"></span>
+							<p data-msg="186">Reader Play</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://news.google.com/">
+							<span class="sprite-news-32"></span>
+							<p data-msg="192">Google News</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="mainWindowGmail" class="mainWindow">
+			<div id="headerGmail" class="header topHeader">
+				<span class="sprite-googlemail-w32"></span>
+				<p data-msg="80" class="headerMainP">Gmail</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupGmail" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<iframe id="iframeGmail"></iframe>
+			<div class="linksSection" data-state="off">
+				<div class="headerButton">
+					<span class="sprite-links-32"></span>
+					<p data-msg="189">Links and Search Filters</p>
+					<span class="sprite-arrow_up-32"></span>
+				</div>
+				<div id="gmailSearchFilters">
+					<ul class="boxList">
+						<li data-search="https://mail.google.com/mail/#search/[query]" data-link="https://mail.google.com/mail/#all">
+							<span class="sprite-googlemail_all-32"></span>
+							<p data-msg="81">All Mail</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:anywhere [query]" data-link="https://mail.google.com/mail/#search/in:anywhere">
+							<span class="sprite-googlemail_anywhere-32"></span>
+							<p data-msg="88">Anywhere</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:inbox [query]" data-link="https://mail.google.com/mail/#inbox">
+							<span class="sprite-googlemail_inbox-32"></span>
+							<p data-msg="82">Inbox</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:sent [query]" data-link="https://mail.google.com/mail/#sent">
+							<span class="sprite-send-32"></span>
+							<p data-msg="89">Sent Mail</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/is:unread [query]" data-link="https://mail.google.com/mail/#search/is:unread">
+							<span class="sprite-googlemail_unread-32"></span>
+							<p data-msg="83">Unread</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/is:read [query]" data-link="https://mail.google.com/mail/#search/is:read">
+							<span class="sprite-googlemail_read-32"></span>
+							<p data-msg="90">Read</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:starred [query]" data-link="https://mail.google.com/mail/#starred">
+							<span class="sprite-starred-32"></span>
+							<p data-msg="91">Starred</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:important [query]" data-link="https://mail.google.com/mail/#search/in:important">
+							<span class="sprite-googlemail_priority-32"></span>
+							<p data-msg="84">Important</p>
+						</li>
+						<li data-search="h	ttps://mail.google.com/mail/#search/in:drafts [query]" data-link="https://mail.google.com/mail/#drafts">
+							<span class="sprite-templates-32"></span>
+							<p data-msg="85">Drafts</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/has:attachment [query]" data-link="https://mail.google.com/mail/#search/has:attachment">
+							<span class="sprite-attachments-32"></span>
+							<p data-msg="92">Attachments</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:spam [query]" data-link="https://mail.google.com/mail/#spam">
+							<span class="sprite-spam-32"></span>
+							<p data-msg="86">Spam</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#search/in:trash [query]" data-link="https://mail.google.com/mail/#trash">
+							<span class="sprite-trash-32"></span>
+							<p data-msg="93">Trash</p>
+						</li>
+						<li class="separator" data-search="https://mail.google.com/mail/#search/has:circle [query]" data-link="https://mail.google.com/mail/#search/has:circle">
+							<span class="sprite-googlemail_circles-32"></span>
+							<p data-msg="87">Circles</p>
+						</li>
+						<li class="separator" data-search="https://mail.google.com/mail/#search/in:chats [query]" data-link="https://mail.google.com/mail/#chats">
+							<span class="sprite-googlemail_chats-32"></span>
+							<p data-msg="94">Chats</p>
+						</li>
+						<li data-search="https://mail.google.com/mail/#contacts/search/[query]" data-link="https://mail.google.com/mail/#contacts/">
+							<span class="sprite-contacts-32"></span>
+							<p data-msg="97">Contacts</p>
+						</li>
+						<li>
+							<a target="_blank" href="https://www.google.com/contacts/#contact/new">
+								<span class="sprite-contacts-32"></span>
+								<p data-msg="188">New contact</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="mainWindowDrive" class="mainWindow">
+			<div id="headerDrive" class="header topHeader">
+				<span class="sprite-drive-w32"></span>
+				<p data-msg="98" class="headerMainP">Drive</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupDrive" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<iframe id="iframeDrive" src=""></iframe>
+			<div class="header">
+				<span class="sprite-links-32"></span>
+				<p data-msg="26">Links</p>
+			</div>
+			<ul class="boxList">
+				<li>
+					<a target="_blank" href="https://drive.google.com/#my-drive">
+						<span class="sprite-person-32"></span>
+						<p data-msg="100">My drive</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://drive.google.com/#activity">
+						<span class="sprite-drive_activity-32"></span>
+						<p data-msg="104">Activity</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://drive.google.com/#shared-with-me">
+						<span class="sprite-shared-32"></span>
+						<p data-msg="101">Shared with me</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://drive.google.com/#all">
+						<span class="sprite-drive_all-32"></span>
+						<p data-msg="105">All items</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://drive.google.com/#starred">
+						<span class="sprite-starred-32"></span>
+						<p data-msg="102">Starred</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://drive.google.com/#trash">
+						<span class="sprite-trash-32"></span>
+						<p data-msg="106">Trash</p>
+					</a>
+				</li>
+				<li class="separator">
+					<a target="_blank" href="https://drive.google.com/#recent">
+						<span class="sprite-clock-32"></span>
+						<p data-msg="103">Recent</p>
+					</a>
+				</li>
+				<li class="separator">
+					<a target="_blank" href="https://drive.google.com/#offline">
+						<span class="sprite-templates-32"></span>
+						<p data-msg="187">Offline Files</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="mainWindowCalendar" class="mainWindow" data-tasksstate="collapsed">
+			<div id="headerCalendar" class="header topHeader">
+				<span class="sprite-calendar-w32"></span>
+				<p data-msg="108" class="headerMainP">Calendar</p>
+				<span title="open widget in a panel" data-pmsg="12" id="popupCalendar" class="openInPanel sprite-panel-32"></span>
+			</div>
+			<div id="searchboxCalendar" class="searchbox">
+				<input id="WindowCalendarInput" data-pmsg="5" autocomplete="off" type="text" placeholder="Search google calendar..." data-prefix="https://www.google.com/calendar/render?q=">
+			</div>
+			<iframe id="iframeCalendar" src=""></iframe>
+			<div id="headerCalendarTasks" class="headerButton">
+					<span class="sprite-tasks-32"></span>
+					<p data-msg="109">Tasks</p>
+					<span class="sprite-arrow_up-32"></span>		
+					<span title="open widget in a panel" data-pmsg="12" id="popupTasks" class="openInPanel sprite-panel-gr32"></span>
+			</div>
+			<iframe id="iframeTasks" src=""></iframe>
+		</div>
+		<div id="mainWindowMore" class="mainWindow">
+			<ul id="moreProductLinks" class="boxList">
+			</ul>
+			<ul id="moreExtensionLinks" class="boxList">
+				<li id="About" class="headerButton">
+					<span class="sprite-about-32"></span>
+					<p data-msg="130">About</p>
+				</li>
+				<li id="Settings" class="headerButton">
+					<span class="sprite-settings-32"></span>
+					<p data-msg="146">Settings</p>
+				</li>	
+			</ul>
+		</div>
+		<div id="panelAbout" class="panel">
+			<div id="headerAbout" class="header panelHeader">
+				<span class="sprite-about-w32"></span>
+				<p data-msg="130" class="headerMainP">About</p>
+				<p data-msg="143" class="headerMainP panelBack aboutGoBack">Go back</p>
+			</div>
+			<ul id="panelMenuAbout" class="panelMenu">
+				<li id="aboutAbout" class="panelButtonOn">
+					<span class="sprite-about_me-32"></span>
+					<p data-msg="247">About</p>
+				</li>
+				<li id="aboutCredits">
+					<span class="sprite-thanks-32"></span>
+					<p data-msg="140">Thanks to</p>
+				</li>
+				<li id="aboutFeedback">
+					<span class="sprite-feedback-32"></span>
+					<p data-msg="249">Feedback</p>
+				</li>
+				<li id="aboutAwards">
+					<span class="sprite-awards-32"></span>
+					<p data-msg="250">Awards</p>
+				</li>
+				<!--li id="aboutChangelog">
+					<span class="sprite-changelog-32"></span>
+					<p data-msg="251">Changelog</p>
+				</li-->
+				<iframe id="iframePlusone"></iframe>
+				<p id="versionNumber"></p>
+			</ul>
+			
+			<ul id="aboutAboutWindow" class="panelWindowOn">
+				<div data-msg="132" class='textBox'>Thanks for installing this extension!</div>
+				<li style="width: 100%;float: left;">
+					<a target="_blank" href="http://www.google.com/permissions/using-product-graphics.html">
+						<p id="aboutCopyright" data-msg="141">The google icons in this extension are copyrighted by google</p>
+					</a>
+				</li>
+			</ul>
+			<ul id="aboutCreditsWindow" class="panelWindowOff">
+				<div class="textBox" data-msg="252">I would like to thank these people in helping me, and translating this extension. Thank you guys!</div>
+				<ul id="creditsList" class="boxList">
+				</ul>
+			</ul>
+			<ul id="aboutFeedbackWindow" class="panelWindowOff">
+				<div class="textBox" data-msg="253">Want to tell the world how you like Black Menu? Or want to help me with the development?</div>
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="https://chrome.google.com/webstore/detail/eignhdfgaldabilaaegmdfbajngjmoke/reviews">
+							<span class="sprite-rate_and_review-32"></span>
+							<p data-msg="135">Rate & review</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://chrome.google.com/webstore/support/eignhdfgaldabilaaegmdfbajngjmoke#bug">
+							<span class="sprite-chrome_web_store-32"></span>
+							<p data-msg="254">Report a bug</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://chrome.google.com/webstore/support/eignhdfgaldabilaaegmdfbajngjmoke#question">
+					<span class="sprite-question-32"></span>
+							<p data-msg="255">Ask a question</p>
+						</a>
+					</li>	
+					<li>
+						<a target="_blank" href="https://chrome.google.com/webstore/support/eignhdfgaldabilaaegmdfbajngjmoke#feature">
+							<span class="sprite-lightbulb-32"></span>
+							<p data-msg="256">Request a feature</p>
+						</a>
+					</li>				
+					<li>
+						<a target="_blank" href="mailto:ccbjeurissen@gmail.com">
+							<span class="sprite-googlemail-32"></span>
+							<p data-msg="257">Send an email</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://plus.google.com/118017345135937765349/">
+							<span class="sprite-gplus-32"></span>
+							<p data-msg="258">Follow me</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="mailto:ccbjeurissen@gmail.com?Subject=Black Menu Translation">
+							<span class="sprite-translate-32"></span>
+							<p data-msg="142">help translating</p>
+						</a>
+					</li>
+					<li>
+						<a target="_blank" href="https://www.paypal.com/&cmd=_s-xclick&hosted_button_id=GRE2DV32PM326">
+							<span class="sprite-donate-32"></span>
+							<p data-msg="134">Donate</p>
+						</a>
+					</li>
+				</ul>
+			</ul>
+			<ul id="aboutAwardsWindow" class="panelWindowOff">
+				<div class="textBox" data-msg="259">The award gallery, thanks for awarding this extension!</div>
+				<a target="_blank" href="http://mac.softpedia.com/progClean/Black-Menu-Clean-126791.html">
+					<img id="awardSoftpedia">
+				</a>
+			</ul>
+			<!--ul id="aboutChangelogWindow" class="panelWindowOff">
+				<ul class="boxList">
+					<li>
+						<a target="_blank" href="https://plus.google.com/118017345135937765349/posts/V1XTU8y6DLK">
+							<span class="sprite-black_menu-32"></span>
+							<p>Black Menu 1.0</p>
+						</a>
+					</li>
+				</ul>
+			</ul-->
+		</div>
+		<div id="panelSettings" class="panel">
+			<div id="headerSettings" class="header panelHeader">
+				<span class="sprite-settings-w32"></span>
+				<p data-msg="146" class="headerMainP">Settings</p>
+				<p data-msg="143" class="headerMainP panelBack settingsGoBack">Go back</p>
+			</div>
+			<ul id="panelMenuSettings" class="panelMenu">
+				<li id="settingsGeneric" class="panelButtonOn">
+					<span class="sprite-settings_ph-32"></span>
+					<p data-msg="149">Generic</p>
+				</li>
+				<li id="settingsTranslate">
+					<span class="sprite-translate-32"></span>
+					<p data-msg="2">Translate</p>
+				</li>
+				<li id="settingsMaps">
+					<span class="sprite-maps-32"></span>
+					<p data-msg="3">Maps</p>
+				</li>
+				<li id="settingsYoutube">
+					<span class="sprite-youtube-32"></span>
+					<p data-msg="5">Youtube</p>
+				</li>
+				<li id="settingsReader">
+					<span class="sprite-reader-32"></span>
+					<p data-msg="144">Reader</p>
+				</li>
+				<li id="settingsNews">
+					<span class="sprite-news-32"></span>
+					<p data-msg="6">News</p>
+				</li>
+				<li id="settingsGmail">
+					<span class="sprite-googlemail-32"></span>
+					<p data-msg="7">Gmail</p>
+				</li>
+				<li id="settingsDrive">
+					<span class="sprite-drive-32"></span>
+					<p data-msg="8">Drive</p>
+				</li>
+				<li id="settingsCalendar">
+					<span class="sprite-calendar-32"></span>
+					<p data-msg="9">Calendar</p>
+				</li>
+			</ul>
+			<ul id="settingsGenericWindow" class="panelWindowOn">
+				<li>
+					<label data-msg="209" for="prefGenericShortcut">Shortcut</label>
+					<button data-msg="210" id="prefGenericShortcut" type="button">Define</button>
+				</li>
+				<li>
+					<label data-msg="XXX" for="prefGenericUnreadCounts">Unread Counts</label>
+					<button data-msg="212" id="prefGenericUnreadCounts" type="button">Configure</button>
+				</li>
+				<li id="prefBoxGenericGooglebar">
+					<label data-msg="155" class="labelCheckbox" for="prefGenericGooglebar">Hide black Bar on all google websites</label>
+					<input id="prefGenericGooglebar" type="checkbox">
+				</li>
+				<li>
+					<label class="labelCheckbox" for="prefSearchInstant">Search Page - Enable Instant Search</label>
+					<input id="prefSearchInstant" type="checkbox">
+				</li>
+				<div class="linksSection labsSection" data-state="off">
+					<div class="headerButton">
+						<span><img src="images/labs-32.png"></span>
+						<p data-msg="245">Experimental</p>
+						<span class="sprite-arrow_up-32"></span>
+					</div>
+					<li>
+						<label data-msg="208" class="labelCheckbox" for="prefGenericGadgetPanels">Show buttons to open gadgets in a panel</label>
+						<input id="prefGenericGadgetPanels" type="checkbox">
+					</li>
+					<li>
+						<label data-msg="190" class="labelCheckbox" for="prefGenericPanel">Open Black Menu in a panel</label>
+						<input id="prefGenericPanel" type="checkbox">
+					</li>
+				</div>
+			</ul>
+			<ul id="settingsTranslateWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="157" for="prefTranslateSource">Source language</label>
+					<select id="prefTranslateSource">
+						<option data-msg="170" selected value="undefined">Auto detect</option>
+						<option  value="up_sl=ar">ar</option>
+						<option  value="up_sl=bg">bg</option>
+						<option  value="up_sl=ca">ca</option>
+						<option  value="up_sl=cs">cs</option>
+						<option  value="up_sl=da">da</option>
+						<option  value="up_sl=de">de</option>
+						<option  value="up_sl=el">el</option>
+						<option  value="up_sl=en">en</option>
+						<option  value="up_sl=es">es</option>
+						<option  value="up_sl=fi">fi</option>
+						<option  value="up_sl=fr">fr</option>
+						<option  value="up_sl=hi">hi</option>
+						<option  value="up_sl=hr">hr</option>
+						<option  value="up_sl=id">id</option>
+						<option  value="up_sl=it">it</option>
+						<option  value="up_sl=iw">iw</option>
+						<option  value="up_sl=ja">ja</option>
+						<option  value="up_sl=ko">ko</option>
+						<option  value="up_sl=lt">lt</option>
+						<option  value="up_sl=lv">lv</option>
+						<option  value="up_sl=nl">nl</option>
+						<option  value="up_sl=no">no</option>
+						<option  value="up_sl=pl">pl</option>
+						<option  value="up_sl=pt">pt</option>
+						<option  value="up_sl=ro">ro</option>
+						<option  value="up_sl=ru">ru</option>
+						<option  value="up_sl=sk">sk</option>
+						<option  value="up_sl=sl">sl</option>
+						<option  value="up_sl=sr">sr</option>
+						<option  value="up_sl=sv">sv</option>
+						<option  value="up_sl=tl">tl</option>
+						<option  value="up_sl=uk">uk</option>
+						<option  value="up_sl=vi">vi</option>
+						<option  value="up_sl=zh">zh</option>
+					</select> 
+				</li>
+				<li>
+					<label data-msg="158" for="prefTranslateTarget">Target language</label>
+					<select id="prefTranslateTarget">
+						<option data-msg="169" selected value="undefined">Chrome language</option>
+						<option value="up_tl=ar">ar</option>
+						<option value="up_tl=bg">bg</option>
+						<option value="up_tl=ca">ca</option>
+						<option value="up_tl=cs">cs</option>
+						<option value="up_tl=da">da</option>
+						<option value="up_tl=de">de</option>
+						<option value="up_tl=el">el</option>
+						<option value="up_tl=en">en</option>
+						<option value="up_tl=es">es</option>
+						<option value="up_tl=fi">fi</option>
+						<option value="up_tl=fr">fr</option>
+						<option value="up_tl=hi">hi</option>
+						<option value="up_tl=hr">hr</option>
+						<option value="up_tl=id">id</option>
+						<option value="up_tl=it">it</option>
+						<option value="up_tl=iw">iw</option>
+						<option value="up_tl=ja">ja</option>
+						<option value="up_tl=ko">ko</option>
+						<option value="up_tl=lt">lt</option>
+						<option value="up_tl=lv">lv</option>
+						<option value="up_tl=nl">nl</option>
+						<option value="up_tl=no">no</option>
+						<option value="up_tl=pl">pl</option>
+						<option value="up_tl=pt">pt</option>
+						<option value="up_tl=ro">ro</option>
+						<option value="up_tl=ru">ru</option>
+						<option value="up_tl=sk">sk</option>
+						<option value="up_tl=sl">sl</option>
+						<option value="up_tl=sr">sr</option>
+						<option value="up_tl=sv">sv</option>
+						<option value="up_tl=tl">tl</option>
+						<option value="up_tl=uk">uk</option>
+						<option value="up_tl=vi">vi</option>
+						<option value="up_tl=zh-CN">zh_CN</option>
+						<option value="up_tl=zh-TW">zh_TW</option>
+					</select>
+				</li>
+			</ul>
+
+			<ul id="settingsMapsWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="159" for="prefMapsMaptype">Map view</label>
+					<select id="prefMapsMaptype">
+						<option data-msg="171" value='undefined'>Roadmap</option>
+						<option data-msg="172" value='up_mapType=p'>Terrain</option>
+						<option data-msg="173" value='up_mapType=k'>Satellite</option>
+						<option data-msg="174" value='up_mapType=h'>Hybrid</option>
+					</select>
+				</li>
+				<li>
+					<label data-msg="161" for="prefMapsLocation">Default location</label>
+					<input id="prefMapsLocation" type="text">
+				</li>
+				<li>
+					<label data-msg="160" class="labelCheckbox" for="prefMapsTraffic">Show traffic</label>
+					<input id="prefMapsTraffic" type="checkbox">
+				</li>
+
+				<div class="linksSection labsSection" data-state="off">
+					<div class="headerButton">
+						<span><img src="images/labs-32.png"></span>
+						<p data-msg="245">Experimental</p>
+						<span class="sprite-arrow_up-32"></span>
+					</div>	
+					<li>
+						<label data-msg="191" class="labelCheckbox" for="prefMapsInstant">Enable instant search</label>
+						<input id="prefMapsInstant" type="checkbox">
+					</li>
+				</div>	
+		
+			</ul>
+			<ul id="settingsYoutubeWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="191" class="labelCheckbox" for="prefYoutubeInstant">Enable instant search</label>
+					<input id="prefYoutubeInstant" type="checkbox">
+				</li>
+			</ul>
+			<ul id="settingsNewsWindow" class="panelWindowOff">
+				<li>
+						<label data-msg="162" for="prefNewsEdition">News edition</label>
+						<select id="prefNewsEdition">
+							<option value='undefined'>Autodetect</option>
+							<option value='lang=es&country=ar'>Argentina</option>
+							<option value='country=au'>Australia</option>
+							<option value='lang=nl&country=be'>België</option>
+							<option value='lang=fr&country=be'>Belgique</option>
+							<option value='lang=en&country=bw'>Botswana</option>
+							<option value='lang=pt-BR&country=br'>Brasil</option>
+							<option value='country=ca'>Canada English</option>
+							<option value='lang=fr&country=ca'>Canada Français</option>
+							<option value='lang=cs&country=cz'>Ceská republika</option>
+							<option value='lang=es&country=cl'>Chile</option>
+							<option value='lang=es&country=co'>Colombia</option>
+							<option value='lang=es&country=cu'>Cuba</option>
+							<option value='country=de'>Deutschland</option>
+							<option value='country=es'>España</option>
+							<option value='lang=es&country=us'>Estados Unidos</option>
+							<option value='lang=en&country=et'>Ethiopia</option>
+							<option value='country=fr'>France</option>
+							<option value='lang=en&country=gh'>Ghana</option>
+							<option value='country=in'>India</option>
+							<option value='lang=id&country=id'>Indonesia</option>
+							<option value='lang=en&country=ie'>Ireland</option>
+							<option value='lang=en&country=il'>Israel</option>
+							<option value='country=it'>Italia</option>
+							<option value='lang=en&country=ke'>Kenya</option>
+							<option value='lang=hu&country=hu'>Magyarország</option>
+							<option value='lang=en&country=my'>Malaysia</option>
+							<option value='lang=es&country=mx'>México</option>
+							<option value='lang=en&country=na'>Namibia</option>
+							<option value='lang=nl&country=nl'>Nederland</option>
+							<option value='country=nz'>New Zealand</option>
+							<option value='lang=en&country=ng'>Nigeria</option>
+							<option value='lang=no&country=no'>Norge</option>
+							<option value='lang=de&country=at'>Österreich</option>
+							<option value='lang=en&country=pk'>Pakistan</option>
+							<option value='lang=es&country=pe'>Perú</option>
+							<option value='lang=en&country=ph'>Philippines</option>
+							<option value='lang=pl&country=pl'>Polska</option>
+							<option value='lang=pt-PT&country=pt'>Portugal</option>
+							<option value='lang=de&country=ch'>Schweiz</option>
+							<option value='lang=fr&country=sn'>Sénégal</option>
+							<option value='lang=en&country=sg'>Singapore</option>
+							<option value='lang=en&country=za'>South Africa</option>
+							<option value='lang=fr&country=ch'>Suisse</option>
+							<option value='lang=sv&country=se'>Sverige</option>
+							<option value='lang=en&country=tz'>Tanzania</option>
+							<option value='lang=tr&country=tr'>Türkiye</option>
+							<option value='country=uk'>U.K.</option>
+							<option value='country=us'>U.S.</option>
+							<option value='lang=en&country=ug'>Uganda</option>
+							<option value='lang=es&country=ve'>Venezuela</option>
+							<option value='lang=vi&country=vn'>Việt Nam (Vietnam)</option>
+							<option value='lang=en&country=zw'>Zimbabwe</option>
+							<option value='lang=el&country=gr'>Ελλάδα (Greece)</option>
+							<option value='lang=ru&country=ru'>Россия (Russia)</option>
+							<option value='lang=ru&country=ua'>Украина (Ukraine)</option>
+							<option value='lang=uk&country=ua'>Україна (Ukraine)</option>
+							<option value='lang=iw&country=il'>ישראל (Israel)</option>
+							<option value='lang=ar&country=ae'>الإمارات (UAE)</option>
+							<option value='lang=ar&country=sa'>السعودية (KSA)</option>
+							<option value='lang=ar&country=me'>العالم العربي (Arabic)</option>
+							<option value='lang=ar&country=lb'>لبنان (Lebanon)</option>
+							<option value='lang=ar&country=eg'>مصر (Egypt)</option>
+							<option value='lang=hi&country=in'>हिन्दी (India)</option>
+							<option value='lang=ta&country=in'>தமிழ் (India)</option>
+							<option value='lang=te&country=in'>తెలుగు (India)</option>
+							<option value='lang=ml&country=in'>മലയാളം (India)</option>
+							<option value='country=kr'>한국 (Korea)</option>
+							<option value='country=cn'>中国版 (China)</option>
+							<option value='country=tw'>台灣版 (Taiwan)</option>
+							<option value='country=jp'>日本 (Japan)</option>
+							<option value='country=hk'>香港版 (Hong Kong)</option>
+						</select>
+				</li>
+				<li>
+					<label data-msg="163" for="prefNewsImages">Image visibility</label>
+					<select id="prefNewsImages">
+						<option data-msg="176" value='undefined'>Show all images</option>
+						<option data-msg="175" selected value='0'>Show headline images only</option>
+						<option data-msg="177" value='2'>Hide all images</option>
+					</select>
+				</li>
+				<li>
+					<label data-msg="164" for="prefNewsItems">Number of items to display</label>
+					<select id="prefNewsItems">
+						<option value='up_items=3'>3</option>
+						<option value='up_items=4'>4</option>
+						<option value='up_items=5'>5</option>
+						<option value='up_items=6'>6</option>
+						<option value='up_items=7'>7</option>
+						<option selected value='undefined'>8</option>
+					</select>
+				</li>
+				<li>
+					<label data-msg="211" for="prefNewsSections">Sections</label>
+					<button data-msg="212" id="prefNewsSections" type="button">Configure</button>
+				</li>				
+			</ul>
+			<ul id="settingsReaderWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="246" class="labelCheckbox" for="prefReaderMarkasread">Display 'mark as read' buttons</label>
+					<input id="prefReaderMarkasread" type="checkbox">
+				</li>
+			</ul>
+			<ul id="settingsGmailWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="213" for="prefGmailVacationResponder">Vacation Responder</label>
+					<button data-msg="212" id="prefGmailVacationResponder" type="button">Configure</button>
+				</li>
+				<div class="linksSection labsSection" data-state="off">
+					<div class="headerButton">
+						<span><img src="images/labs-32.png"></span>
+						<p data-msg="245">Experimental</p>
+						<span class="sprite-arrow_up-32"></span>
+					</div>	
+					<li>
+						<label data-msg="182" class="labelCheckbox" for="prefGmailCompose">Open compose in a popup/panel</label>
+						<input id="prefGmailCompose" type="checkbox">
+					</li>
+				</div>	
+			</ul>
+			<ul id="settingsDriveWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="168" for="prefDriveView">View preference</label>
+					<select id="prefDriveView">
+						<option data-msg="178" value='undefined'>Opened by me</option>
+						<option data-msg="179" value='up_viewPreference=owned_by_me'>Owned by me</option>
+						<option data-msg="180" value='up_viewPreference=starred'>Starred</option>
+					</select>
+				</li>
+			</ul>
+			<ul id="settingsCalendarWindow" class="panelWindowOff">
+				<li>
+					<label data-msg="166" class="labelCheckbox" for="prefCalendarEmptydays">Show empty days</label>
+					<input id="prefCalendarEmptydays" type="checkbox">
+				</li>	
+				<li>
+					<label data-msg="167" class="labelCheckbox" for="prefCalendarTasksexpanded">Expand the tasks panel by default</label>
+					<input id="prefCalendarTasksexpanded" type="checkbox">
+				</li>
+			</ul>
+		</div>
+		<div id="whitePanel" class="panel"></div>
+		<div id="popupPanelWarning" class="popupFrame">
+			<div class="popup">
+				<div class="popupHeader">
+					<span class="sprite-warning-y32.png"></span>
+					<p data-msg="214">Please enable panels</p>
+					<button class="blueButton popupClose" data-msg="215">ok</button>
+				</div>
+				<div class="popupContent">
+					<p data-msg="216">Before you can open Black Menu, or parts of Black Menu in a panel, you need to enable panels. To do that, follow these steps.</p>
+					<p data-msg="217" class="linkP">1. Go to</p><a class="chromePage"> chrome://flags</a>
+					<p data-msg="218">2. Locate the 'Enable Panels' panel</p>
+					<p data-msg="219">3. Enable the 'Enable Panels' flag</p>
+					<p data-msg="220">4. Relaunch Chrome</p>
+					<p data-msg="221">5. Done</p>
+				</div>
+			</div>
+		</div>
+		<div id="popupSettingsGenericShortcut" class="popupFrame">
+			<div class="popup">
+				<div class="popupHeader">
+					<span class="sprite-settings-32"></span>
+					<p data-msg="222">Define a shortcut key to open Black Menu</p>
+					<button class="blueButton popupClose" data-msg="223">got it</button>
+				</div>
+				<div class="popupContent">
+					<p data-msg="224">Follow these steps to define a shortcut key to open black menu.</p>
+					<p data-msg="217" class="linkP">1. Go to</p><a class="chromePage"> chrome://extensions</a>
+					<p data-msg="225">2. Scroll all the way to the bottom of the page</p>
+					<p data-msg="226">3. Click on 'Configure Commands'</p>
+					<p data-msg="227">4. Locate Black Menu</p>
+					<p data-msg="228">5. Click the 'not set' box next to Black Menu</p>
+					<p data-msg="229">6. Press the key you want to attach to Black Menu</p>
+					<p data-msg="230">7. Click OK</p>
+					<p data-msg="231">8. Done</p>
+				</div>
+			</div>
+		</div>
+		<div id="popupSettingsGmailVacationResponder" class="popupFrame">
+			<div class="popup">
+				<iframe id="iframeGmailHoliday" class="popupContent"></iframe>
+			</div>
+		</div>
+		<div id="popupSettingsNewsSections" class="popupFrame">
+			<div class="popup">
+				<div class="popupHeader">
+					<span class="sprite-news-32"></span>
+					<p data-msg="232">Select news sections</p>
+					<button class="blueButton popupClose" data-msg="233">done</button>
+				</div>
+				<div class="popupContent">
+					<p data-msg="234">Select news sections:</p>
+					<div>
+						<ul id="prefNewsSectionsSelection" class="boxList">
+							<li>
+								<input id="prefNewsSections-h" type="checkbox">
+								<label data-msg="235" class="labelCheckbox" for="prefNewsSections-h">Top Stories</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-w" type="checkbox">
+								<label data-msg="236" class="labelCheckbox" for="prefNewsSections-w">World</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-n" type="checkbox">
+								<label data-msg="237" class="labelCheckbox" for="prefNewsSections-n">Your Country</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-b" type="checkbox">
+								<label data-msg="238" class="labelCheckbox" for="prefNewsSections-b">Business</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-t" type="checkbox">
+								<label data-msg="239" class="labelCheckbox" for="prefNewsSections-t">Sci/Tech</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-e" type="checkbox">
+								<label data-msg="240" class="labelCheckbox" for="prefNewsSections-e">Entertainment</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-s" type="checkbox">
+								<label data-msg="241" class="labelCheckbox" for="prefNewsSections-s">Sports</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-m" type="checkbox">
+								<label data-msg="242" class="labelCheckbox" for="prefNewsSections-m">Health</label>
+							</li>
+							<li>
+								<input id="prefNewsSections-po" type="checkbox">
+								<label data-msg="243" class="labelCheckbox" for="prefNewsSections-po">Popular</label>
+							</li>
+						</ul>
+					</div>
+					<br>
+					<p data-msg="244">Custom Sections, seperate with a comma:</p>
+					<div>
+						<ul>
+							<li>
+								<input id="prefNewsSectionsCustom" data-pmsg="11" type="text">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="popupSettingsGeneralUnreadCounts" class="popupFrame">
+			<div class="popup">
+				<div class="popupHeader">
+					<span class="sprite-settings-32"></span>
+					<p data-msg="XXX">Unread count settings</p>
+					<button class="blueButton popupClose" data-msg="233">done</button>
+				</div>
+				<div class="popupContent">
+					<p data-msg="XXX">Select the services you want to display unread count for:</p>
+					<div style="height:80px;">
+						<ul class="boxList">
+							<li>
+								<input id="prefGenericUnreadCountsGplus" type="checkbox">
+								<label data-msg="XXX" class="labelCheckbox" for="prefGenericUnreadCountsGplus">Google+</label>
+							</li>
+							<li>
+								<input id="prefGenericUnreadCountsGmail" type="checkbox">
+								<label data-msg="XXX" class="labelCheckbox" for="prefGenericUnreadCountsGmail">Gmail</label>
+							</li>
+							<li>
+								<input id="prefGenericUnreadCountsReader" type="checkbox">
+								<label data-msg="XXX" class="labelCheckbox" for="prefGenericUnreadCountsReader">Reader</label>
+							</li>
+						</ul>
+					</div>
+					<br>
+					<p data-msg="XXX">Select where the unread count should be shown</p>
+					<div>
+						<ul class="boxList">
+							<li>
+								<input id="prefGenericUnreadCount" type="checkbox">
+								<label data-msg="XXX" class="labelCheckbox" for="prefGenericUnreadCount">In the extension itself</label>
+							</li>
+							<li>	
+								<input id="prefGenericUnreadCountBadge" type="checkbox">
+								<label data-msg="XXX" class="labelCheckbox" for="prefGenericUnreadCountBadge">As a badge on the extension icon (experimental)</label>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
