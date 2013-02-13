@@ -27,7 +27,6 @@ html, body {
 	background-size: 100% 20px, 100% 20px, 100% 7px, 100% 7px;
 	background-attachment: local, local, scroll, scroll;
 	}
-
 #toolbar {
 	height: 44px;
 	display: inline-block;
@@ -149,12 +148,7 @@ html, body {
 	background-repeat: no-repeat;
 	width: 100%;
 	margin-top: -88px;
-	}/*
-.images_table td {
-	display: block !important;
 	}
-	*/
-	
 #results[data-type="books"] .th {
 	background-image: url(http://www.google.com/images/icons/product/directory-64.png);
 	background-repeat: no-repeat;
@@ -163,7 +157,6 @@ html, body {
 	background-position: -2px;
 	border: none !important;
 	}
-	
 /* share button */
 #results[data-type="web"] .pplsrsl {
 	display: none;
@@ -175,28 +168,6 @@ a:link {
 a:link:hover {
 	text-decoration: underline;
 	}
-	
 body {
 	overflow: hidden !important;
 	}
-	/*
-body {
-	background: transparent !important;
-	}
-.searchBox {
-padding-left: 16px;
-padding-right: 16px;
-background-color: transparent;
-border-color: transparent;
-}
-.searchBox input {
-background: url("images/sprite-25.png") repeat-y right -25px rgba(255, 255, 255, .9) !important;
-}
-#toolbar {
-position: relative;
-top: 44px;
-background-color: #FFF;
-}
-#resultsContainer {
-padding-top: 132px;
-}

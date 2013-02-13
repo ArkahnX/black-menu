@@ -239,9 +239,6 @@ li a {
 	width:100%;
 	text-decoration: none;
 	}
-.inline-block {
-	display:inline-block;
-	}
 .header .headerMainP {
 	color:#fff;
 	}
@@ -818,7 +815,7 @@ input[type=checkbox]:checked::after {
 	height: 120px;
 	}
 #prefGeneralUnreadCountsSelection {
-	height: 100px;
+	height: 100px;	
 	}
 #popupSettingsGeneralUnreadCounts li {
 	width:100%;

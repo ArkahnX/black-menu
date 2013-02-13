@@ -388,10 +388,11 @@ function settingsLoad() {
 	document.getElementById('prefGenericGadgetPanels').addEventListener('click', function () {
 		if(this.checked){
 			localStorage.setItem(this.id,"true");
-			document.body.className += " gadgetPanels";
+			enableOpenInPanelButtons();
 			}
 		else {
 			localStorage.setItem(this.id,"false");
+			disableOpenInPanelButtons();
 			};
 		});		
 		
@@ -659,24 +660,22 @@ function openBlackMenuInPanel(){
 			);
 		};
 	};
-	
-function enableOpenInPanelButtons(){
-	document.body.className += " gadgetPanels";
-	document.getElementById("popupGmail").addEventListener("click", function() {
-		openPanel("https://mail.google.com/mail/mu/mp/441/?mui=blackMenu;panel=false&hl=" + browserLang + "#tl/Inbox", 450, 485);
-		});
-	document.getElementById("popupDrive").addEventListener("click", function() {
-		openPanel("chrome-extension://" + extensionId + "/panel.html#Drive", 450, 300);
-		});
-	var defaultPopups = ["Translate", "Maps", "News", "Reader", "Calendar", "Youtube", "Gplus"]
-	for (var i = defaultPopups.length ; i-- ; i>0){
-		document.getElementById("popup" + defaultPopups[i]).addEventListener("click", function () {
-			openPanel("chrome-extension://" + extensionId + "/panel.html#" + this.id.replace("popup",""), 450, 485);
+
+function enableOpenInPanelButtons() {
+	document.body.classList.add("gadgetPanels");
+	var openInPanelButtons = document.getElementsByClassName("openInPanel");
+	for (var i = openInPanelButtons.length ; i-- ; i>0){
+		openInPanelButtons[i].addEventListener("click", function () {
+			openPanel("chrome-extension://" + extensionId + "/pages/" + this.dataset.service + "/index.html", 450, 485);
 			});
 		};
 	};
-	
-function loadMorePageServices(){
+
+function disableOpenInPanelButtons() {
+	document.body.classList.remove("gadgetPanels");
+	};
+
+function loadMorePageServices() {
 var services = {
 	'Adsense': {name: 'Adsense', url: 'https://www.google.com/adsense/', msg: '110', tooltip: '', icon: 'adsense'},
 	'Adwords': {name: 'Adwords', url: 'https://adwords.google.com/', msg: '120', tooltip: '', icon: 'adwords'},
