@@ -20,7 +20,7 @@ function init(){
 
 	setDefaultSettings();
 
-	loadAllIframes();
+	loadAllPages();
 
 	loadMorePageServices();
 	
@@ -33,13 +33,8 @@ function init(){
 	loadLinksSections();
 
 	calendarCurrentDate();
-
-	tasksExpandSystem();
 	
 	readerNewsSwitch();
-	
-	gmailGadgetMessageListener();
-	gmailSearchFilters();
 	
 	loadAboutClickEvent();
 	
@@ -113,31 +108,17 @@ function unreadCounts(){
 		}
 	};
 
-function loadAllIframes(){
-	var iframes = ["Translate", "Maps", "Youtube", "News", "Reader", "Gmail", "Drive", "Calendar", "Tasks", "Gplus", "Search"]
+function loadAllPages(){
+	var iframes = ["Translate", "Maps", "Youtube", "News", "Reader", "Gmail", "Drive", "Calendar", "Gplus", "Search", "Play"]
 	for(var i = iframes.length; i--; i>0){
-		loadIframe(iframes[i]);
+		loadPage(iframes[i]);
 		};
 	};
 	
-var gadgetDomain = "https://www-gadget-opensocial.googleusercontent.com/gadgets/ifr?url=https://black-menu.googlecode.com/files/";		
-function loadIframe(service){
-	var iframeSrc = {
-		Translate: gadgetDomain + "translate_v" + 109 + ".xml&parent=google.com&up_sl=auto&lang=" + browserLang + "&placeholder=" + chrome.i18n.getMessage("pmsg6") + "&" + localStorage.getItem("prefTranslateTarget") + "&" + localStorage.getItem("prefTranslateSource") + "&extensionId=" + extensionId,
-		Maps: gadgetDomain + "maps_v" + 159 + ".xml&lang=" + browserLang + "&placeholder=" + chrome.i18n.getMessage("pmsg7")+  "&" + localStorage.getItem("prefMapsMaptype") + "&up_location=" + localStorage.getItem("prefMapsLocation") + "&up_trafficMode=" + localStorage.getItem("prefMapsTraffic") + "&extensionId=" + extensionId + "&instant=" + localStorage.getItem("prefMapsInstant"),
-		Youtube: gadgetDomain + "youtube_v" + 150 + ".xml&lang=" + browserLang + "&placeholder=" + chrome.i18n.getMessage("pmsg8") + "&extensionId=" + extensionId + "&instant=" + localStorage.getItem("prefYoutubeInstant"),
-		News: gadgetDomain + "news_v" + 124 + ".xml&lang="+ browserLang + "&up_show_image=" + localStorage.getItem("prefNewsImages") + "&" + localStorage.getItem("prefNewsItems") + "&" + localStorage.getItem("prefNewsEdition") + "&extensionId=" + extensionId + "&" + localStorage.getItem("prefNewsSections") + "&" + localStorage.getItem("prefNewsSectionsCustom"),
-		Reader: "https://www.google.com/reader/igoogle-module?hl=" + browserLang + "&markAsRead=" + localStorage.getItem("prefReaderMarkasread"),
-		Gmail: "https://mail.google.com/mail/mu/mp/?mui=blackMenu;panel=" + localStorage.getItem("prefGmailCompose") + "&hl=" + browserLang,
-		Drive: "https://docs.google.com/API/IGoogle?libs=2cT9GVm7Okc/lib/libcore.js&up_viewPreference=opened_by_me" + "&" + localStorage.getItem("prefDriveView"),
-		Calendar: "https://www.google.com/calendar/ig?hl=" + browserLang + "&up_showEmptyDays=" + localStorage.getItem("prefCalendarEmptydays"),
-		Tasks: "https://www.google.com/blackmenu/tasks/"+ Date() + "/?hl=" + browserLang, 
-		Gplus: "https://www.google.com/blackmenu/gplus/"+ Date() + "/?extension=blackMenu&page=notifications",
-		Plusone: "https://plusone.google.com/_/+1/fastbutton?amp&url=https://chrome.google.com/webstore/detail/black-menu/eignhdfgaldabilaaegmdfbajngjmoke",
-		GmailHoliday: "https://mail.google.com/mail/mu/mp/?mui=blackMenu&hl=" + browserLang + "#pr",
-		Search: "/search.html?instant=" + localStorage.getItem("prefSearchInstant"),
-		};
-	document.getElementById("iframe" + service).src=iframeSrc[service];
+var gadgetDomain = "https://www-gadget-opensocial.googleusercontent.com/gadgets/ifr?url=https://black-menu.googlecode.com/files/";
+		
+function loadPage(service) {
+	document.getElementById("iframe" + service).src = "/pages/" + service.toLowerCase() + "/index.html";
 	};
 //---------general functions-------\\
 
@@ -283,7 +264,7 @@ function aboutLoad(){
 		};
 	document.getElementById("aboutAboutWindow").style.background = "url(https://profiles.google.com/s2/photos/profile/118017345135937765349?sz=250) no-repeat right bottom";
 	document.getElementById("awardSoftpedia").src = "http://mac.softpedia.com/base_img/softpedia_clean_award_f.gif";
-	loadIframe("Plusone");
+	document.getElementById("iframePlusone").src = "https://plusone.google.com/_/+1/fastbutton?amp&url=https://chrome.google.com/webstore/detail/black-menu/eignhdfgaldabilaaegmdfbajngjmoke";
 	if (chrome.i18n){
 		document.getElementById("versionNumber").innerHTML = "Black Menu " + chrome.app.getDetails()["version"];
 		};
@@ -396,7 +377,7 @@ function settingsLoad() {
 			
 	document.getElementById('prefDriveView').addEventListener('change', function () {
 		localStorage.setItem("prefDriveView", this[this.selectedIndex].value);
-		loadIframe("Drive");
+		loadPage("Drive");
 		});
 		
 	document.getElementById('prefGenericPanel').addEventListener('click', function () {
@@ -451,7 +432,7 @@ function settingsLoad() {
 	document.getElementById('prefSearchInstant').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id, "false");};
-		loadIframe("Search");
+		loadPage("Search");
 		});	
 		
 		
@@ -470,71 +451,71 @@ function settingsLoad() {
 	
 	document.getElementById('prefTranslateSource').addEventListener('change', function () {
 		localStorage.setItem("prefTranslateSource", this[this.selectedIndex].value);
-		loadIframe("Translate");
+		loadPage("Translate");
 		})
 		
 	document.getElementById('prefTranslateTarget').addEventListener('change', function () {
 		localStorage.setItem("prefTranslateTarget", this[this.selectedIndex].value);
-		loadIframe("Translate");
+		loadPage("Translate");
 		})		
 		
 	document.getElementById('prefMapsMaptype').addEventListener('change', function () {
 		localStorage.setItem("prefMapsMaptype", this[this.selectedIndex].value);
-		loadIframe("Maps");
+		loadPage("Maps");
 		});
 	
 	document.getElementById('prefMapsTraffic').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Maps");
+		loadPage("Maps");
 		});
 		
 	document.getElementById('prefMapsLocation').addEventListener('keyup', function () {
 		localStorage.setItem("prefMapsLocation", this.value);
-		loadIframe("Maps");
+		loadPage("Maps");
 		});
 		
 	document.getElementById('prefMapsInstant').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Maps");
+		loadPage("Maps");
 		});
 		
 	document.getElementById('prefYoutubeInstant').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Youtube");
+		loadPage("Youtube");
 		});
 		
 	document.getElementById('prefNewsImages').addEventListener('change', function () {
 		localStorage.setItem(this.id, this[this.selectedIndex].value);
-		loadIframe("News");
+		loadPage("News");
 		});
 
 	document.getElementById('prefNewsItems').addEventListener('change', function () {
 		localStorage.setItem(this.id, this[this.selectedIndex].value);
-		loadIframe("News");
+		loadPage("News");
 		});
 
 	document.getElementById('prefNewsEdition').addEventListener('change', function () {
 		localStorage.setItem(this.id, this[this.selectedIndex].value);
-		loadIframe("News");
+		loadPage("News");
 		});
 	document.getElementById('prefReaderMarkasread').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Reader");
+		loadPage("Reader");
 		});
 
 	document.getElementById('prefGmailCompose').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Gmail");
+		loadPage("Gmail");
 		});
 		
 	document.getElementById('prefGmailVacationResponder').addEventListener('click', function () {
 		document.getElementById("popupSettingsGmailVacationResponder").dataset.state = "on";
-		loadIframe("GmailHoliday");
+		document.getElementById("iframeGmailHoliday").src = "https://mail.google.com/mail/mu/mp/?mui=blackMenu&hl=" + browserLang + "#pr";
 		});
 		
 	document.getElementById('prefGenericUnreadCounts').addEventListener('click', function () {
@@ -554,18 +535,18 @@ function settingsLoad() {
 				}
 			}
 		localStorage.setItem("prefNewsSections", "up_tabs=" + selection);
-		loadIframe("News");
+		loadPage("News");
 		});
 		
 	document.getElementById('prefNewsSectionsCustom').addEventListener('keyup', function () {
 		localStorage.setItem(this.id,"up_queryList=" + this.value.split(',').join('|'));   
-		loadIframe("News");
+		loadPage("News");
 		});
 
 	document.getElementById('prefCalendarEmptydays').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
 		else {localStorage.setItem(this.id,"false");};
-		loadIframe("Calendar");
+		loadPage("Calendar");
 		});
 
 	document.getElementById('prefCalendarTasksexpanded').addEventListener('click', function () {
@@ -686,9 +667,6 @@ function enableOpenInPanelButtons(){
 		});
 	document.getElementById("popupDrive").addEventListener("click", function() {
 		openPanel("chrome-extension://" + extensionId + "/panel.html#Drive", 450, 300);
-		});
-	document.getElementById("popupTasks").addEventListener("click", function() {
-		openPanel(document.getElementById("iframeTasks").src, 450, 485);
 		});
 	var defaultPopups = ["Translate", "Maps", "News", "Reader", "Calendar", "Youtube", "Gplus"]
 	for (var i = defaultPopups.length ; i-- ; i>0){

@@ -1,0 +1,43 @@
+﻿<html>
+	<head>
+		<title id="title">Black Menu - Google Calendar</title>
+		<link id="favicon" href="icon-16.png" rel="icon" type="image/png">
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<script type='text/javascript' src='/main.js'></script>
+		<script type='text/javascript' src='index.js'></script>
+		<style>
+		#iframeTasks,#iframeCalendar {
+			-webkit-transition:height .25s;
+			-moz-transition:height .25s;
+			}
+		#iframeCalendar {
+			border-bottom: 1px solid #E5E5E5;
+			}
+		[data-tasksstate="expanded"] #iframeCalendar {
+			height:0px;
+			border-bottom:none;
+			}
+		[data-tasksstate="collapsed"] #iframeCalendar, [data-tasksstate="collapsed"] #iframeTasks{
+			height:175px;
+			}
+		[data-tasksstate="expanded"] #iframeTasks {
+			height: 351px;
+			}
+		[data-tasksstate="expanded"] .sprite-arrow_up-32 {
+			-webkit-transform: rotate(180deg);
+			}
+		</style>
+	</head>
+	<body data-tasksstate="collapsed">
+		<div id="searchboxCalendar" class="searchbox">
+			<input id="WindowCalendarInput" data-pmsg="5" autocomplete="off" type="text" placeholder="Search google calendar..." data-prefix="https://www.google.com/calendar/render?q=">
+		</div>
+		<iframe id="iframeCalendar" ></iframe>
+		<div id="headerCalendarTasks" class="headerButton">
+			<span class="sprite-tasks-32"></span>
+			<p data-msg="109">Tasks</p>
+			<span class="sprite-arrow_up-32"></span>
+		</div>
+		<iframe id="iframeTasks" ></iframe>
+	</body>
+</html>	

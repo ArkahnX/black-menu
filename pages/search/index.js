@@ -1,7 +1,7 @@
 ﻿window.addEventListener("load", init); 
 var searchType = "web";
 var instantSearch = ""
-	if(location.href.indexOf("instant=true") != -1) { instantSearch = true; }
+	if(localStorage.getItem("prefSearchInstant") == "true") { instantSearch = true; }
 	else { instantSearch = false; }
 
 function init() {
