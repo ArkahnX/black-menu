@@ -12,5 +12,5 @@ function setTitle() {
 	};
 
 function loadIframe() {
-	document.querySelector("iframe").src =  gadgetDomain + "news_v" + 124 + ".xml&lang="+ browserLang + "&up_show_image=" + localStorage.getItem("prefNewsImages") + "&" + localStorage.getItem("prefNewsItems") + "&" + localStorage.getItem("prefNewsEdition") + "&extensionId=" + extensionId + "&" + localStorage.getItem("prefNewsSections") + "&" + localStorage.getItem("prefNewsSectionsCustom");
+	document.querySelector("iframe").src =  gadgetDomain + "news_v" + 124 + ".xml&up_show_image=" + localStorage.getItem("prefNewsImages") + "&" + localStorage.getItem("prefNewsItems") + "&" + localStorage.getItem("prefNewsEdition") + "&extensionId=" + extensionId + "&" + localStorage.getItem("prefNewsSections") + "&" + localStorage.getItem("prefNewsSectionsCustom") + "&lang=" + + browserLang;
 	};
