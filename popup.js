@@ -109,17 +109,12 @@ function unreadCounts(){
 	};
 
 function loadAllPages(){
-	var iframes = ["Translate", "Maps", "Youtube", "News", "Reader", "Gmail", "Drive", "Calendar", "Gplus", "Search", "Play"]
+	var iframes = document.getElementById("mainWindow").getElementsByTagName("iframe");
 	for(var i = iframes.length; i--; i>0){
-		loadPage(iframes[i]);
+		iframes[i].src = "/pages/" + iframes[i].dataset.service.toLowerCase() + "/index.html";
 		};
 	};
-	
-var gadgetDomain = "https://www-gadget-opensocial.googleusercontent.com/gadgets/ifr?url=https://black-menu.googlecode.com/files/";
-		
-function loadPage(service) {
-	document.getElementById("iframe" + service).src = "/pages/" + service.toLowerCase() + "/index.html";
-	};
+
 //---------general functions-------\\
 
 //is key
@@ -579,18 +574,31 @@ function readerNewsSwitch() {
 		News.style.display = 'none';
 		};
 	};
-	
+
 function mainMenuSystem() {
+	var serviceHeaderMsgId = {
+		Search: 11,
+		Gplus: 29,
+		Translate: 47,
+		Maps: 51,
+		Play: 55,
+		Youtube: 72,
+		News: 76,
+		Reader: 145,
+		Gmail: 80,
+		Drive: 98,
+		Calendar: 108,
+		};
     var divs = document.getElementById('mainMenu').children;
     for (var i = divs.length; i--;i>=0 ) {
         divs[i].addEventListener('mouseover', function () {
-			var ThisId = this.id;
 			document.getElementsByClassName('mainMenuButtonOn')[0].className = 'mainMenuButton';
 			this.className = 'mainMenuButtonOn';
-			document.getElementsByClassName('mainWindowOn')[0].className = 'mainWindow';
-			document.getElementById("mainWindow" + ThisId).className = 'mainWindowOn';
-			//box = document.getElementById('Window' + ThisId + 'Input');
-			//if (box!=null)box.focus();
+			document.querySelector("#mainWindow iframe.on").classList.remove("on");
+			document.querySelector("#mainWindow iframe[data-service='" + this.id + "']").classList.add("on");
+			document.getElementById("mainWindow").getElementsByTagName("span")[0].className = "sprite-" + this.id + "-w32";
+			document.getElementById("mainWindow").getElementsByTagName("p")[0].innerText = chrome.i18n.getMessage("msg" + serviceHeaderMsgId[this.id]);
+			document.getElementById("mainWindow").dataset.service = this.id;
 			});
 		};
 	};
