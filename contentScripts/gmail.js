@@ -3,9 +3,9 @@
 	if(location.href.indexOf("mui=blackMenu") != -1){
 		loadRedesign();
 
-
-	document.addEventListener("click", checkIfToolbarExist);
-	document.addEventListener("mouseover", checkIfToolbarExist);
+	document.addEventListener("mousedown", checkIfToolbarExist);
+	document.addEventListener("mouseup", checkIfToolbarExist);
+	document.addEventListener("mousemove", checkIfToolbarExist);
 		
 		
 	if(window.location.href.indexOf("#pr")){
