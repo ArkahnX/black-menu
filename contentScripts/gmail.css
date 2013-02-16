@@ -93,7 +93,7 @@
 			}
 			
 		/* footer */
-		.yi{
+		.zi{
 			/* hide the footer */
 			display: none !important;
 			}
@@ -222,7 +222,7 @@
 				display: none !important;
 				}
 			/* navbar inbox name */
-			#tltbt>.Zi {
+			#tltbt>.bj {
 				color: #333 !important;
 				cursor: default !important;
 				}
@@ -312,7 +312,7 @@
 		/* searchbox */
 		
 			/* searchBoxContainer */
-			.Zi {
+			.bj {
 				border-bottom: 1px solid #E5E5E5 !important;
 				box-sizing: border-box !important;
 				height: 44px !important;
@@ -325,12 +325,12 @@
 				padding: 8px !important;
 				}
 			/* searchbox search button */
-			.Zi .an {
+			.bj .dn {
 				/* hide the search button */
 				display: none !important;
 				}
 			/* searchbox input field container */
-			.Zi .hn {
+			.bj .kn {
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				/* remove padding and margin from this element, because it is already added to the input field element */
@@ -338,7 +338,7 @@
 				margin: 0px !Important;
 				}
 			/* searchbox input field */
-			.Zi input {
+			.bj input {
 				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -25px #fff !important;
 				border: 1px solid #D9D9D9 !important;
 				border-top: 1px solid silver !important;
@@ -392,20 +392,20 @@
 				}
 			/* email rows */
 				/* read emails */
-				#tl_ .aj.wn {
+				#tl_ .cj.zn {
 					background-color:rgba(0,0,0,.03) !important;
 					}
 				/* unread emails */
-				#tl_ .aj.vn {
+				#tl_ .cj.yn {
 					background-color: transparent !Important;
 					}			
 				
 				/* selected emails */
-				#tl_ .aj.un.Yo, #tl_ .aj.vn.Yo {
+				#tl_ .cj.yn.cp, #tl_ .cj.zn.cp {
 					background: rgba(255, 255, 0, 0.15) !important;
 					}
 			/* email font style and size */
-			#tl_ .aj {
+			#tl_ .cj {
 				font-family: arial,sans-serif;
 				font-size: 13px;
 				}
@@ -420,6 +420,7 @@
 				
 				/* unselected and selected checkboxes */
 				.cb {
+					margin-left: 11px !important;
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -84px !important;
 					}
 				/* selected checkbox */
@@ -429,11 +430,11 @@
 			/* stars */
 				
 				/* starred */
-				.uo {
+				.xo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -42px !important;
 					}
 				/* unstarred */
-				.vo {
+				.yo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -42px !important;
 					}
 			/* important tag */
