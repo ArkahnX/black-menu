@@ -45,6 +45,17 @@
 #mainWindow[data-service="Calendar"] .topHeader {
 	background-color: #7976bf;
 	}
+#mainWindow #mainWindowMore {
+	display: none;
+	}
+#mainWindow[data-service="More"] #mainWindowMore {
+	display: block;
+	}
+#mainWindow[data-service="More"] #mainWindowServices {
+	display: none;
+	}
+
+	
 
 
 
@@ -574,7 +585,7 @@ li.headerButton {
 .sprite-google_settings-32{ background-position: 0 -1485px;  } 
 .sprite-googlemail-32{ background-position: 0 -1518px;  } 
 .sprite-googlemail-dg32{ background-position: 0 -1551px;  } 
-.sprite-googlemail-w32{ background-position: 0 -1584px;  } 
+.sprite-gmail-w32{ background-position: 0 -1584px;  } 
 .sprite-googlemail_all-32{ background-position: 0 -1617px;  } 
 .sprite-googlemail_anywhere-32{ background-position: 0 -1650px;  } 
 .sprite-googlemail_chats-32{ background-position: 0 -1683px;  } 

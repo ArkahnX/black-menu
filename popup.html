@@ -85,36 +85,37 @@
 			</ul>
 		</div>
 		<div id="mainWindow" data-service="Search">
-			<div class="header topHeader">
-				<span class="sprite-search-w32"></span>
-				<p data-msg="11" class="headerMainP">Google Search</p>
-				<span title="open widget in a panel" data-pmsg="12" class="openInPanel sprite-panel-32"></span>
+			<div id="mainWindowServices">
+				<div class="header topHeader">
+					<span class="sprite-search-w32"></span>
+					<p data-msg="11" class="headerMainP">Google Search</p>
+					<span title="open widget in a panel" data-pmsg="12" class="openInPanel sprite-panel-32"></span>
+				</div>
+				<iframe data-service="Search" class="on"></iframe>
+				<iframe data-service="Gplus"></iframe>
+				<iframe data-service="Translate"></iframe>
+				<iframe data-service="Maps"></iframe>
+				<iframe data-service="Play"></iframe>
+				<iframe data-service="Youtube"></iframe>
+				<iframe data-service="News"></iframe>
+				<iframe data-service="Reader"></iframe>
+				<iframe data-service="Gmail"></iframe>
+				<iframe data-service="Drive"></iframe>
+				<iframe data-service="Calendar"></iframe>
 			</div>
-			<iframe data-service="Search" class="on"></iframe>
-			<iframe data-service="Gplus"></iframe>
-			<iframe data-service="Translate"></iframe>
-			<iframe data-service="Maps"></iframe>
-			<iframe data-service="Play"></iframe>
-			<iframe data-service="Youtube"></iframe>
-			<iframe data-service="News"></iframe>
-			<iframe data-service="Reader"></iframe>
-			<iframe data-service="Gmail"></iframe>
-			<iframe data-service="Drive"></iframe>
-			<iframe data-service="Calendar"></iframe>
-		</div>
-		<div id="mainWindowMore" class="mainWindow">
-			<ul id="moreProductLinks" class="boxList">
-			</ul>
-			<ul id="moreExtensionLinks" class="boxList">
-				<li id="About" class="headerButton">
-					<span class="sprite-about-32"></span>
-					<p data-msg="130">About</p>
-				</li>
-				<li id="Settings" class="headerButton">
-					<span class="sprite-settings-32"></span>
-					<p data-msg="146">Settings</p>
-				</li>	
-			</ul>
+			<div id="mainWindowMore">
+				<ul id="moreProductLinks" class="boxList"></ul>
+				<ul id="moreExtensionLinks" class="boxList">
+					<li id="About" class="headerButton">
+						<span class="sprite-about-32"></span>
+						<p data-msg="130">About</p>
+					</li>
+					<li id="Settings" class="headerButton">
+						<span class="sprite-settings-32"></span>
+						<p data-msg="146">Settings</p>
+					</li>	
+				</ul>
+			</div>
 		</div>
 		<div id="panelAbout" class="panel">
 			<div id="headerAbout" class="header panelHeader">

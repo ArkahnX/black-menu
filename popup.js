@@ -592,13 +592,20 @@ function mainMenuSystem() {
     var divs = document.getElementById('mainMenu').children;
     for (var i = divs.length; i--;i>=0 ) {
         divs[i].addEventListener('mouseover', function () {
+			var service = this.id;
 			document.getElementsByClassName('mainMenuButtonOn')[0].className = 'mainMenuButton';
 			this.className = 'mainMenuButtonOn';
-			document.querySelector("#mainWindow iframe.on").classList.remove("on");
-			document.querySelector("#mainWindow iframe[data-service='" + this.id + "']").classList.add("on");
-			document.getElementById("mainWindow").getElementsByTagName("span")[0].className = "sprite-" + this.id + "-w32";
-			document.getElementById("mainWindow").getElementsByTagName("p")[0].innerText = chrome.i18n.getMessage("msg" + serviceHeaderMsgId[this.id]);
-			document.getElementById("mainWindow").dataset.service = this.id;
+			document.getElementById("mainWindow").dataset.service = service;
+			if(service != "More"){
+				document.querySelector("#mainWindow iframe.on").classList.remove("on");
+				document.querySelector("#mainWindow iframe[data-service='" + service + "']").classList.add("on");
+				document.getElementById("mainWindow").getElementsByTagName("span")[0].className = "sprite-" + service + "-w32";
+				document.getElementById("mainWindow").getElementsByTagName("span")[0].innerText = "";
+				document.getElementById("mainWindow").getElementsByTagName("p")[0].innerText = chrome.i18n.getMessage("msg" + serviceHeaderMsgId[this.id]);
+				};
+			if(service == "Calendar") {
+				calendarCurrentDate();
+				};
 			});
 		};
 	};
