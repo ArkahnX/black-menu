@@ -88,705 +88,91 @@
 			<div id="headerSearch" class="header topHeader">
 				<span class="sprite-search-w32"></span>
 				<p data-msg="11" class="headerMainP">Google Search</p>
+				<span title="open widget in a panel" data-pmsg="12" data-service="search" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<iframe style="height: 439px;" id="iframeSearch"></iframe>
-			<!--div data-service="Search" class="searchFilters">
-				<ul class="boxList">
-					<li data-search="https://www.google.com/search?hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?hl=[chromeLang]">
-						<span class="sprite-search_pointer-32"></span>
-						<p data-msg="12">Web</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=isch&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/imghp?hl=[chromeLang]">
-						<span class="sprite-images-32"></span>
-						<p data-msg="19">Images</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=vid&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/videohp?hl=[chromeLang]">
-						<span class="sprite-videos-32"></span>
-						<p data-msg="13">Videos</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=nws&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/news?hl=[chromeLang]">
-						<span class="sprite-newspaper-32"></span>
-						<p data-msg="20">News</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=shop&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/shopping?hl=[chromeLang]">
-						<span class="sprite-shopping-32"></span>
-						<p data-msg="14">Shopping</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=bks&hl=[chromeLang]&q=[query]" data-link="http://www.google.com/books?hl=[chromeLang]">
-						<span class="sprite-books-32"></span>
-						<p data-msg="21">Books</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=plcs&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=plcs&hl=[chromeLang]">
-						<span class="sprite-maps_alt-32"></span>
-						<p data-msg="15">Places</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=blg&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/blogsearch/?hl=[chromeLang]">
-						<span class="sprite-blogs-32"></span>
-						<p data-msg="22">Blogs</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=dsc&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=dsc&hl=[chromeLang]">
-						<span class="sprite-discussions-32"></span>
-						<p data-msg="16">Discussions</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=rcp&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/webhp?tbm=rcp&hl=[chromeLang]">
-						<span class="sprite-recipe_search-32"></span>
-						<p data-msg="23">Recipes</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=pts&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=pts&hl=[chromeLang]">
-						<span class="sprite-patents-32"></span>
-						<p data-msg="17">Patents</p>
-					</li>
-					<li data-search="https://www.google.com/search?tbm=app&hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?tbm=app&hl=[chromeLang]">
-						<span class="sprite-applications-32"></span>
-						<p data-msg="24">Applications</p>
-					</li>
-					<li data-search="https://www.google.com/flights/#search;hl=[chromeLang]&q=[query]" data-link="https://www.google.com/flights/?hl=[chromeLang]">
-						<span class="sprite-flights-32"></span>
-						<p data-msg="18">Flights</p>
-					</li>
-					<li data-search="https://www.google.com/maps?hl=[chromeLang]&q=[query]" data-link="https://www.google.com/?hl=[chromeLang]">
-						<span class="sprite-maps_alt-32"></span>
-						<p data-msg="25">Maps</p>
-					</li>
-				</ul>
-			</div>
-			<div class="header">
-				<span class="sprite-links-32"></span>
-				<p data-msg="26">Links</p>
-			</div>
-			<ul class="boxList">
-				<li>
-					<a target="_blank" href="https://www.google.com/trends/">
-						<span class="sprite-trends-32"></span>
-						<p data-msg="27">Trends</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="http://www.google.com/cse/">
-						<span class="sprite-customsearch-32"></span>
-						<p data-msg="28">Custom Search</p>
-					</a>
-				</li>
-			</ul-->
+			<iframe id="iframeSearch"></iframe>
 		</div>
 		<div id="mainWindowGplus" class="mainWindow">
 			<div id="headerGplus" class="header topHeader">
 				<span class="sprite-gplus-w32"></span>
 				<p data-msg="29" class="headerMainP">Google Plus</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupGplus" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<div class="searchbox">
-				<input data-pmsg="1" id="WindowGplusInput" autocomplete="off" type="text" placeholder="Search google plus..." data-prefix="https://plus.google.com/s/">
+				<span title="open widget in a panel" data-pmsg="12" data-service="gplus" class="openInPanel sprite-panel-32"></span>
 			</div>
 			<iframe id="iframeGplus"></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="189">Links and Search Filters</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<div data-service="Gplus" class="searchFilters">
-					<ul class="boxList">
-						<li data-search="https://plus.google.com/s/[query]" data-link="https://plus.google.com/">
-							<span class="sprite-gplus-32"></span>
-							<p data-msg="30">Everywhere</p>
-						</li>
-						<li data-search="https://plus.google.com/s/[query]/posts" data-link="https://plus.google.com/">
-							<span class="sprite-gplus-32"></span>
-							<p data-msg="33">Posts</p>
-						</li>
-						<li data-search="https://plus.google.com/s/[query]/communities" data-link="https://plus.google.com/communities">
-							<span class="sprite-communities-32"></span>
-							<p data-msg="31">Communities</p>
-						</li>
-						<li data-search="https://plus.google.com/circles?q=[query]" data-link="https://plus.google.com/circles">
-							<span class="sprite-circles-32"></span>
-							<p data-msg="45">Circles</p>
-						</li>
-						<li data-search="https://plus.google.com/local/s/[query]" data-link="https://plus.google.com/local">
-							<span class="sprite-local-32"></span>
-							<p data-msg="43">Local</p>
-						</li>
-						<li data-search="https://plus.google.com/s/[query]/hangouts" data-link="https://plus.google.com/hangouts">
-								<span class="sprite-hangouts-32"></span>
-							<p data-msg="34">Hangouts</p>
-						</li>
-						<li data-search="https://plus.google.com/s/[query]/events" data-link="https://plus.google.com/events">
-							<span class="sprite-events-32"></span>
-							<p data-msg="32">Events</p>
-						</li>
-						<li data-search="https://plus.google.com/s/[query]/people" data-link="https://plus.google.com/pages/manage">
-							<span class="sprite-shared-32"></span>
-							<p data-msg="35">People and Pages</p>
-						</li>
-					</ul>
-				</div>
-				<div class="header">
-					<span class="sprite-links-32"></span>
-					<p data-msg="207">Other links</p>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="https://plus.google.com/stream">
-							<span class="sprite-home-32"></span>
-							<p data-msg="37">Home</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/pages/manage">
-							<span class="sprite-pages-32"></span>
-							<p data-msg="38">Pages</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/me">
-							<span class="sprite-profile-32"></span>
-							<p data-msg="39">Profile</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/photos">
-							<span class="sprite-photos-32"></span>
-							<p data-msg="44">Photos</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/explore">
-							<span class="sprite-explore-32"></span>
-							<p data-msg="41">Explore</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/games">
-							<span class="sprite-games-32"></span>
-							<p data-msg="46">Games</p>
-						</a>
-					</li>
-				</ul>
-			</div>
 		</div>
 		<div id="mainWindowTranslate" class="mainWindow">
 			<div id="headerTranslate" class="header topHeader">
 				<span class="sprite-translate-w32"></span>
 				<p data-msg="47" class="headerMainP">Translate</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupTranslate" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="translate" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<iframe id="iframeTranslate" src="" scrolling="no"></iframe>
-			<div class="linksSection" data-state="off">
-				<div id="linksHeaderTranslate" class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="26">Links</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="http://translate.google.com/toolkit/">
-							<span class="sprite-translate-32"></span>
-							<p data-msg="49">Translator Toolkit</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.google.com/transliterate/">
-							<span class="sprite-transliteration-32"></span>
-							<p data-msg="50">Transliteration</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+			<iframe id="iframeTranslate" scrolling="no"></iframe>
 		</div>
 		<div id="mainWindowMaps" class="mainWindow">
 			<div id="headerMaps" class="header topHeader">
 				<span class="sprite-maps-w32"></span>
-				<span title="open widget in a panel" data-pmsg="12" id="popupMaps" class="openInPanel sprite-panel-32"></span>
 				<p data-msg="51" class="headerMainP">Maps</p>
+				<span title="open widget in a panel" data-pmsg="12" data-service="maps" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<iframe id="iframeMaps" scrolling="no" src=""></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="26">Links</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="https://www.google.com/latitude/">
-							<span class="sprite-latitude-32"></span>
-							<p data-msg="53">Latitude</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.google.com/mapmaker">
-							<span class="sprite-mapmaker-32"></span>
-							<p data-msg="54">Mapmaker</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://plus.google.com/local">
-							<span class="sprite-local-32"></span>
-							<p data-msg="43">Local</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.google.com/sky/">
-							<span class="sprite-sky-32"></span>
-							<p data-msg="183">Sky</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.google.com/moon/">
-							<span class="sprite-moon-32"></span>
-							<p data-msg="184">Moon</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.google.com/mars/">
-							<span class="sprite-mars-32"></span>
-							<p data-msg="185">Mars</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+			<iframe id="iframeMaps"></iframe>
 		</div>
 		<div id="mainWindowPlay" class="mainWindow">
 			<div id="headerPlay" class="header topHeader">
 				<span class="sprite-play-w32"></span>
 				<p data-msg="55" class="headerMainP">Google Play Store</p>
+				<span title="open widget in a panel" data-pmsg="12" data-service="play" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<div class="searchbox">
-				<input id="WindowPlayInput" data-pmsg="2" autocomplete="off" type="text" placeholder="Search google play store..." data-prefix="https://play.google.com/store/search?c=apps&q">
-			</div>
-			<div data-service="Play" class="searchFilters">
-				<ul class="boxList">
-					<li data-search="https://play.google.com/store/search?c=apps&q=[query]" data-link="https://play.google.com/store/apps">
-						<span class="sprite-play_apps-32"></span>
-						<p data-msg="56">Apps</p>
-					</li>
-					<li data-search="https://play.google.com/store/search?c=movies&q=[query]" data-link="https://play.google.com/store/movies">
-						<span class="sprite-play_movies-32"></span>
-						<p data-msg="59">Movies & TV</p>
-					</li>
-					<li data-search="https://play.google.com/store/search?c=books&q=[query]" data-link="https://play.google.com/store/books">
-						<span class="sprite-play_books-32"></span>
-						<p data-msg="57">Books</p>
-					</li>
-					<li data-search="https://play.google.com/store/search?c=music&q=[query]" data-link="https://play.google.com/store/music">
-						<span class="sprite-play_music-32"></span>
-						<p data-msg="60">Music</p>
-					</li>
-					<li data-search="https://play.google.com/store/search?c=magazines&q=[query]" data-link="https://play.google.com/store/magazines">
-						<span class="sprite-play_magazines-32"></span>
-						<p data-msg="58">Magazines</p>
-					</li>
-					<li data-search="https://play.google.com/store/search?c=devices&q=[query]" data-link="https://play.google.com/store/devices">
-						<span class="sprite-play_devices-32"></span>
-						<p data-msg="61">Devices</p>
-					</li>
-				</ul>
-			</div>
-			<div class="header">
-				<span class="sprite-links-32"></span>
-				<p data-msg="62">Play Store Links</p>
-			</div>
-			<ul class="boxList">
-				<li>
-					<a target="_blank" href="https://play.google.com/store/account?orders">
-						<span class="sprite-play-32"></span>
-						<p data-msg="63">Orders</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/store/account?settings">
-						<span class="sprite-play-32"></span>
-						<p data-msg="64">Settings</p>
-					</a>
-				</li>
-			</ul>
-			<div class="header">
-				<span class="sprite-links-32"></span>
-				<p data-msg="65">My Content</p>
-			</div>
-			<ul class="boxList">
-				<li>
-					<a target="_blank" href="https://play.google.com/apps">
-						<span class="sprite-play_apps-32"></span>
-						<p data-msg="66">My Apps</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/movies">
-						<span class="sprite-play_movies-32"></span>
-						<p data-msg="69">My Movies & TV</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/books">
-						<span class="sprite-play_books-32"></span>
-						<p data-msg="67">My Books</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/music">
-						<span class="sprite-play_music-32"></span>
-						<p data-msg="70">My Music</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/magazines">
-						<span class="sprite-play_magazines-32"></span>
-						<p data-msg="68">My Magazines</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://play.google.com/devices">
-						<span class="sprite-play_devices-32"></span>
-						<p data-msg="71">My Devices</p>
-					</a>
-				</li>
-			</ul>
+			<iframe id="iframePlay" ></iframe>
 		</div>
 		<div id="mainWindowYoutube" class="mainWindow">
 			<div id="headerYoutube" class="header topHeader">
 				<span class="sprite-youtube-w32"></span>
 				<p data-msg="72" class="headerMainP">Youtube</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupYoutube" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="youtube" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<iframe id="iframeYoutube" scrolling="no" src=""></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="26">Links</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="http://www.youtube.com/my_profile">
-							<span class="sprite-youtube_profile-32"></span>
-							<p data-msg="193">My Profile</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/my_videos">
-							<span class="sprite-youtube_uploads-32"></span>
-							<p data-msg="194">My Uploads</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/my_favorites">
-							<span class="sprite-youtube_favorites-32"></span>
-							<p data-msg="195">My Favorites</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.youtube.com/my_liked_videos">
-							<span class="sprite-youtube_likes-32"></span>
-							<p data-msg="196">My Liked Videos</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/my_subscriptions">
-							<span class="sprite-youtube_subscriptions-32"></span>
-							<p data-msg="197">Subscription Videos</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/channels">
-							<span class="sprite-youtube_channels-32"></span>
-							<p data-msg="198">Browse Channels</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/dashboard">
-							<span class="sprite-youtube_dashboard-32"></span>
-							<p data-msg="199">Dashboard</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/editor">
-							<span class="sprite-youtube_video_editor-32"></span>
-							<p data-msg="200">Video Editor</p>
-						</a>
-					</li>
-					<li class="separator">
-						<a target="_blank" href="https://www.youtube.com/analytics">
-							<span class="sprite-youtube_analytics-32"></span>
-							<p data-msg="201">Analytics</p>
-						</a>
-					</li>
-					<li class="separator">
-						<a target="_blank" href="https://www.youtube.com/inbox">
-							<span class="sprite-youtube_inbox-32"></span>
-							<p data-msg="202">Inbox</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed">
-							<span class="sprite-youtube_subscriptions-32"></span>
-							<p data-msg="203">My feed</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed/watch_later">
-							<span class="sprite-youtube_watch_later-32"></span>
-							<p data-msg="74">Watch later</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed/history">
-							<span class="sprite-youtube_history-32"></span>
-							<p data-msg="204">Watch History</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed/playlists">
-							<span class="sprite-youtube_playlists-32"></span>
-							<p data-msg="75">Playlists</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed/subscriptions">
-							<span class="sprite-youtube_subscriptions-32"></span>
-							<p data-msg="205">My subscriptions</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://www.youtube.com/feed/social">
-							<span class="sprite-youtube_social-32"></span>
-							<p data-msg="206">Social</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+			<iframe id="iframeYoutube"></iframe>
 		</div>
 		<div id="mainWindowNews" class="mainWindow">
 			<div id="headerNews" class="header topHeader">
 				<span class="sprite-news-w32"></span>
 				<p data-msg="76" class="headerMainP">News</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupNews" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="news" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<div class="searchbox">
-				<input id="WindowNewsInput" data-pmsg="3" autocomplete="off" type="text" placeholder="Search google news..." data-prefix="https://www.google.com/search?tbm=nws&q=">
-			</div>
-			<iframe id="iframeNews" src=""></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="26">Links</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="http://news.google.com/news/advanced_news_search?as_drrb=a">
-							<span class="sprite-archive-32"></span>
-							<p data-msg="78">News archive</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="http://www.google.com/reader">
-							<span class="sprite-reader-32"></span>
-							<p data-msg="79">Google Reader</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+			<iframe id="iframeNews" ></iframe>
 		</div>
 		
 		<div id="mainWindowReader" class="mainWindow">
 			<div id="headerReader" class="header topHeader">
 				<span class="sprite-reader-w32"></span>
 				<p data-msg="145" class="headerMainP">Reader</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupReader" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="reader" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<div id="searchboxReader" class="searchbox">
-				<input id="WindowReaderInput" data-pmsg="10" autocomplete="off" type="text" placeholder="Search google reader..." data-prefix="https://www.google.com/reader/view/#search/">
-			</div>
-			<iframe id="iframeReader" src=""></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="26">Links</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<ul class="boxList">
-					<li>
-						<a target="_blank" href="https://www.google.com/reader/play/">
-							<span class="sprite-reader-32"></span>
-							<p data-msg="186">Reader Play</p>
-						</a>
-					</li>
-					<li>
-						<a target="_blank" href="https://news.google.com/">
-							<span class="sprite-news-32"></span>
-							<p data-msg="192">Google News</p>
-						</a>
-					</li>
-				</ul>
-			</div>
+			<iframe id="iframeReader" ></iframe>
 		</div>
 		
 		<div id="mainWindowGmail" class="mainWindow">
 			<div id="headerGmail" class="header topHeader">
 				<span class="sprite-googlemail-w32"></span>
 				<p data-msg="80" class="headerMainP">Gmail</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupGmail" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="gmail" class="openInPanel sprite-panel-32"></span>
 			</div>
 			<iframe id="iframeGmail"></iframe>
-			<div class="linksSection" data-state="off">
-				<div class="headerButton">
-					<span class="sprite-links-32"></span>
-					<p data-msg="189">Links and Search Filters</p>
-					<span class="sprite-arrow_up-32"></span>
-				</div>
-				<div id="gmailSearchFilters">
-					<ul class="boxList">
-						<li data-search="https://mail.google.com/mail/#search/[query]" data-link="https://mail.google.com/mail/#all">
-							<span class="sprite-googlemail_all-32"></span>
-							<p data-msg="81">All Mail</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:anywhere [query]" data-link="https://mail.google.com/mail/#search/in:anywhere">
-							<span class="sprite-googlemail_anywhere-32"></span>
-							<p data-msg="88">Anywhere</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:inbox [query]" data-link="https://mail.google.com/mail/#inbox">
-							<span class="sprite-googlemail_inbox-32"></span>
-							<p data-msg="82">Inbox</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:sent [query]" data-link="https://mail.google.com/mail/#sent">
-							<span class="sprite-send-32"></span>
-							<p data-msg="89">Sent Mail</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/is:unread [query]" data-link="https://mail.google.com/mail/#search/is:unread">
-							<span class="sprite-googlemail_unread-32"></span>
-							<p data-msg="83">Unread</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/is:read [query]" data-link="https://mail.google.com/mail/#search/is:read">
-							<span class="sprite-googlemail_read-32"></span>
-							<p data-msg="90">Read</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:starred [query]" data-link="https://mail.google.com/mail/#starred">
-							<span class="sprite-starred-32"></span>
-							<p data-msg="91">Starred</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:important [query]" data-link="https://mail.google.com/mail/#search/in:important">
-							<span class="sprite-googlemail_priority-32"></span>
-							<p data-msg="84">Important</p>
-						</li>
-						<li data-search="h	ttps://mail.google.com/mail/#search/in:drafts [query]" data-link="https://mail.google.com/mail/#drafts">
-							<span class="sprite-templates-32"></span>
-							<p data-msg="85">Drafts</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/has:attachment [query]" data-link="https://mail.google.com/mail/#search/has:attachment">
-							<span class="sprite-attachments-32"></span>
-							<p data-msg="92">Attachments</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:spam [query]" data-link="https://mail.google.com/mail/#spam">
-							<span class="sprite-spam-32"></span>
-							<p data-msg="86">Spam</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#search/in:trash [query]" data-link="https://mail.google.com/mail/#trash">
-							<span class="sprite-trash-32"></span>
-							<p data-msg="93">Trash</p>
-						</li>
-						<li class="separator" data-search="https://mail.google.com/mail/#search/has:circle [query]" data-link="https://mail.google.com/mail/#search/has:circle">
-							<span class="sprite-googlemail_circles-32"></span>
-							<p data-msg="87">Circles</p>
-						</li>
-						<li class="separator" data-search="https://mail.google.com/mail/#search/in:chats [query]" data-link="https://mail.google.com/mail/#chats">
-							<span class="sprite-googlemail_chats-32"></span>
-							<p data-msg="94">Chats</p>
-						</li>
-						<li data-search="https://mail.google.com/mail/#contacts/search/[query]" data-link="https://mail.google.com/mail/#contacts/">
-							<span class="sprite-contacts-32"></span>
-							<p data-msg="97">Contacts</p>
-						</li>
-						<li>
-							<a target="_blank" href="https://www.google.com/contacts/#contact/new">
-								<span class="sprite-contacts-32"></span>
-								<p data-msg="188">New contact</p>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</div>
 		<div id="mainWindowDrive" class="mainWindow">
 			<div id="headerDrive" class="header topHeader">
 				<span class="sprite-drive-w32"></span>
 				<p data-msg="98" class="headerMainP">Drive</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupDrive" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="drive" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<iframe id="iframeDrive" src=""></iframe>
-			<div class="header">
-				<span class="sprite-links-32"></span>
-				<p data-msg="26">Links</p>
-			</div>
-			<ul class="boxList">
-				<li>
-					<a target="_blank" href="https://drive.google.com/#my-drive">
-						<span class="sprite-person-32"></span>
-						<p data-msg="100">My drive</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://drive.google.com/#activity">
-						<span class="sprite-drive_activity-32"></span>
-						<p data-msg="104">Activity</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://drive.google.com/#shared-with-me">
-						<span class="sprite-shared-32"></span>
-						<p data-msg="101">Shared with me</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://drive.google.com/#all">
-						<span class="sprite-drive_all-32"></span>
-						<p data-msg="105">All items</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://drive.google.com/#starred">
-						<span class="sprite-starred-32"></span>
-						<p data-msg="102">Starred</p>
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://drive.google.com/#trash">
-						<span class="sprite-trash-32"></span>
-						<p data-msg="106">Trash</p>
-					</a>
-				</li>
-				<li class="separator">
-					<a target="_blank" href="https://drive.google.com/#recent">
-						<span class="sprite-clock-32"></span>
-						<p data-msg="103">Recent</p>
-					</a>
-				</li>
-				<li class="separator">
-					<a target="_blank" href="https://drive.google.com/#offline">
-						<span class="sprite-templates-32"></span>
-						<p data-msg="187">Offline Files</p>
-					</a>
-				</li>
-			</ul>
+			<iframe id="iframeDrive" ></iframe>
 		</div>
 		<div id="mainWindowCalendar" class="mainWindow" data-tasksstate="collapsed">
 			<div id="headerCalendar" class="header topHeader">
 				<span class="sprite-calendar-w32"></span>
 				<p data-msg="108" class="headerMainP">Calendar</p>
-				<span title="open widget in a panel" data-pmsg="12" id="popupCalendar" class="openInPanel sprite-panel-32"></span>
+				<span title="open widget in a panel" data-pmsg="12" data-service="calendar" class="openInPanel sprite-panel-32"></span>
 			</div>
-			<div id="searchboxCalendar" class="searchbox">
-				<input id="WindowCalendarInput" data-pmsg="5" autocomplete="off" type="text" placeholder="Search google calendar..." data-prefix="https://www.google.com/calendar/render?q=">
-			</div>
-			<iframe id="iframeCalendar" src=""></iframe>
-			<div id="headerCalendarTasks" class="headerButton">
-					<span class="sprite-tasks-32"></span>
-					<p data-msg="109">Tasks</p>
-					<span class="sprite-arrow_up-32"></span>		
-					<span title="open widget in a panel" data-pmsg="12" id="popupTasks" class="openInPanel sprite-panel-gr32"></span>
-			</div>
-			<iframe id="iframeTasks" src=""></iframe>
+			<iframe id="iframeCalendar" ></iframe>
 		</div>
 		<div id="mainWindowMore" class="mainWindow">
 			<ul id="moreProductLinks" class="boxList">

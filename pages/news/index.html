@@ -1,0 +1,38 @@
+﻿<html>
+	<head>
+		<title id="title">Black Menu - Google News</title>
+		<link id="favicon" href="icon-16.png" rel="icon" type="image/png">
+		<link rel="stylesheet" type="text/css" href="/main.css">
+		<script type='text/javascript' src='/main.js'></script>
+		<script type='text/javascript' src='index.js'></script>
+	</head>
+	<body>
+		<div class="searchbox">
+			<input id="WindowNewsInput" data-pmsg="3" autocomplete="off" type="text" placeholder="Search google news..." data-prefix="https://www.google.com/search?tbm=nws&q=">
+		</div>
+		<div id="iframeContainer" class="withLinks withSearch">
+			<iframe></iframe>
+		</div>
+		<div class="linksSection" data-state="off">
+			<div class="headerButton">
+				<span class="sprite-links-32"></span>
+				<p data-msg="26">Links</p>
+				<span class="sprite-arrow_up-32"></span>
+			</div>
+			<ul class="boxList">
+				<li>
+					<a target="_blank" href="http://news.google.com/news/advanced_news_search?as_drrb=a">
+						<span class="sprite-archive-32"></span>
+						<p data-msg="78">News archive</p>
+					</a>
+				</li>
+				<li>
+					<a target="_blank" href="http://www.google.com/reader">
+						<span class="sprite-reader-32"></span>
+						<p data-msg="79">Google Reader</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>	

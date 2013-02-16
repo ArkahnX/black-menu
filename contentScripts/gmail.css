@@ -93,7 +93,7 @@
 			}
 			
 		/* footer */
-		.yi{
+		.zi{
 			/* hide the footer */
 			display: none !important;
 			}
@@ -116,7 +116,7 @@
 		/* floating action toolbar */
 			
 			/* actionbar container */
-			.qr {
+			.tr {
 				height: 42px !important;
 				/* change the horizontal position */
 				right: 70px !important;
@@ -128,22 +128,22 @@
 				-webkit-transform: none !important;
 				}
 			/* actionbar firstChild */
-			.qr>div:first-child {
+			.tr>div:first-child {
 				height: 44px !important;
 				margin-top: 0px !important;
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				}
 			/* dropdown menu */
-			.qr>div:first-child>ul {
+			.tr>div:first-child>ul {
 				margin-top: 9px !important;
 				}
 			/* count of selected items */
-			.qr>div:first-child>div:first-child.or {
+			.tr>div:first-child>div:first-child.rr {
 				display: none !important;
 				}
 			/* button elements */
-			.qr>div:first-child>div {
+			.tr>div:first-child>div {
 				border-radius: 2px !important;
 				background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
 				-webkit-user-select: none !important;
@@ -153,49 +153,49 @@
 				min-width: 40px !important;
 				box-sizing:border-box !important;
 				}	
-			.qr>div:first-child>div:hover{
+			.tr>div:first-child>div:hover{
 				box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
 				}
-			.qr>div:first-child>div:focus{
+			.tr>div:first-child>div:focus{
 				outline: none !important;
 				}
-			.qr>div:first-child>div:active{
+			.tr>div:first-child>div:active{
 				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
 				-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
 				background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
 				}
 			/* button icons */
 				/* all icons */
-				.qr>div:first-child>div>div {
+				.tr>div:first-child>div>div {
 					height: 21px !important;
 					width: 21px !important;
 					opacity: 0.55 !important;
 					}
-				.qr>div:first-child>div:hover>div {
+				.tr>div:first-child>div:hover>div {
 					opacity: 0.9 !important;
 					}
 				/* archive icon */
-				.qr>div:first-child>div[onclick="_e(event, 'f', 1)"]>div {
+				.tr>div:first-child>div[onclick="_e(event, 'f', 1)"]>div {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -21px !important;
 					font-size: 0px !important;
 					padding: 0 !important;
 					}
 				/* delete icon */
-				.qr .rd{
+				.tr .rd{
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -42px !important;
 					}
 				/* dropdown icon */
 					/* normal */
-					.qr .ih{
+					.tr .ih{
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
 						}
 					/* active */
-					.qr .jh{
+					.tr .jh{
 						-webkit-transform: rotate(180deg);
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
 						}
 				/* cancel icon */
-				.qr .Co{
+				.tr .Fo{
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px 0px !important;
 					margin: 0px !important;
 					}
@@ -222,7 +222,7 @@
 				display: none !important;
 				}
 			/* navbar inbox name */
-			#tltbt>.Zi {
+			#tltbt>.bj {
 				color: #333 !important;
 				cursor: default !important;
 				}
@@ -312,7 +312,7 @@
 		/* searchbox */
 		
 			/* searchBoxContainer */
-			.Zi {
+			.bj {
 				border-bottom: 1px solid #E5E5E5 !important;
 				box-sizing: border-box !important;
 				height: 44px !important;
@@ -325,12 +325,12 @@
 				padding: 8px !important;
 				}
 			/* searchbox search button */
-			.Zi .an {
+			.bj .dn {
 				/* hide the search button */
 				display: none !important;
 				}
 			/* searchbox input field container */
-			.Zi .hn {
+			.bj .kn {
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				/* remove padding and margin from this element, because it is already added to the input field element */
@@ -338,7 +338,7 @@
 				margin: 0px !Important;
 				}
 			/* searchbox input field */
-			.Zi input {
+			.bj input {
 				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -25px #fff !important;
 				border: 1px solid #D9D9D9 !important;
 				border-top: 1px solid silver !important;
@@ -392,25 +392,25 @@
 				}
 			/* email rows */
 				/* read emails */
-				#tl_ .aj.wn {
+				#tl_ .cj.zn {
 					background-color:rgba(0,0,0,.03) !important;
 					}
 				/* unread emails */
-				#tl_ .aj.vn {
+				#tl_ .cj.yn {
 					background-color: transparent !Important;
 					}			
 				
 				/* selected emails */
-				#tl_ .aj.un.Yo, #tl_ .aj.vn.Yo {
+				#tl_ .cj.yn.cp, #tl_ .cj.zn.cp {
 					background: rgba(255, 255, 0, 0.15) !important;
 					}
 			/* email font style and size */
-			#tl_ .aj {
+			#tl_ .cj {
 				font-family: arial,sans-serif;
 				font-size: 13px;
 				}
 			/* selected mail indicator */
-			.Mn {
+			.Pn {
 				background: #4D90F0 !important;
 				height: 100% !important;
 				margin-left: -1px !important;
@@ -420,6 +420,7 @@
 				
 				/* unselected and selected checkboxes */
 				.cb {
+					margin-left: 11px !important;
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -84px !important;
 					}
 				/* selected checkbox */
@@ -429,11 +430,11 @@
 			/* stars */
 				
 				/* starred */
-				.uo {
+				.xo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -42px !important;
 					}
 				/* unstarred */
-				.vo {
+				.yo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -42px !important;
 					}
 			/* important tag */

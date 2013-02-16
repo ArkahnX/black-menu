@@ -17,6 +17,22 @@ body {
 	overflow:hidden;
 	background-color: #fbfbfb;
 	}
+.boxList {
+	width:100%;
+	}
+.boxList li {
+	width:50%;
+	float:left;
+	}
+.gadgetPanels .openInPanel {
+	display: block;
+	}
+.boxList li:nth-child(odd) {
+	border-right:1px solid #E5E5E5;
+	}
+.panel .boxList li:nth-child(odd) {
+	border-right:0px;
+	}
 ::-webkit-scrollbar  {
 	background:transparent;
 	overflow:visible;
@@ -33,16 +49,6 @@ body {
 ::-webkit-scrollbar-thumb:vertical:hover  {
 	background-color:rgba(0,0,0,.4);
 	}
-.linksSection:hover .sprite-arrow_up-32 {
-	-webkit-transform: rotate(180deg);
-	}
-.boxList {
-	width:100%;
-	}
-.boxList li {
-	width:50%;
-	float:left;
-	}
 .openInPanel {
 	cursor: pointer;
 	display: none;
@@ -56,54 +62,11 @@ body {
 .panel .boxList li:nth-child(odd) {
 	border-right:0px;
 	}
-.linksSection {
-	display:inline-block;
-	position:absolute;
-	bottom:-1px;
-	background-color:#fff;
-	-webkit-transition:max-height 1s;
-	-moz-transition:max-height 1s;
-	max-height:45px;
-	width:100%;
-	padding-right: 192px;
-	box-sizing: border-box;
-	border-top: 1px solid #E5E5E5;
-	}
-.linksSection:hover {
-	max-height:999px;
-	}
 .sprite-arrow_down-32 {
 	display:none;
 	}
-[data-tasksstate="expanded"] .sprite-arrow_up-32 {
-	-webkit-transform: rotate(180deg);
-	}
-#popupTasks {
-	right:234px;
-	}
-#iframeTasks,#iframeCalendar {
-	-webkit-transition:height .25s;
-	-moz-transition:height .25s;
-	}
-#iframeCalendar {
-	border-bottom: 1px solid #E5E5E5;
-	}
-[data-tasksstate="expanded"] #iframeCalendar {
-	height:0px;
-	border-bottom:none;
-	}
-[data-tasksstate="collapsed"] #iframeCalendar, [data-tasksstate="collapsed"] #iframeTasks{
-	height:175px;
-	}
-#iframeDrive {
-	height:219px;
-	border-bottom: 1px solid #E5E5E5;
-	}
-[data-tasksstate="expanded"] #iframeTasks, #iframeNews, #iframeReader, #iframeGplus{
-	height:351px;
-	}
-#iframeGmail,#iframeMaps,#iframeYoutube,#iframeTranslate {
-	height:395px;
+#iframeGmail, #iframeSearch, #iframeGplus, #iframeReader, #iframeNews, #iframeDrive, #iframeMaps, #iframeYoutube, #iframeTranslate, #iframePlay, #iframeCalendar {
+	height: 439px;
 	}
 #iframePlusone {
 	border: none;
@@ -201,17 +164,6 @@ li {
     line-height: 44px;
 	display:block;
 	cursor:pointer;
-	}
-.boxIcons li {
-	width:14.286%;
-	float:left;
-	border-left:1px solid #E5E5E5;
-	}
-.boxIcons li:first-child {
-	border-left:0px solid #E5E5E5;
-	}
-.boxIcons span  {
-	margin-left: 11px;
 	}
 .separator {
 	border-bottom:1px solid #A7A7A7;	
@@ -343,35 +295,6 @@ li a {
 #headerCalendar {
 	background-color: #7976bf;
 	}
-.searchbox {
-	float:left;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	width:100%;
-	border-style:none;
-	border-bottom:1px solid #e5e5e5;
-	background-color: #fbfbfb;
-    line-height: 44px;
-	margin: 0;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	padding: 8;
-	}
-.searchbox input[type=text]  {
-	background: url("images/sprite-25.png") repeat-y right -25px white;
-	border: 1px solid #d9d9d9;
-	border-top: 1px solid silver;
-	color: #222;
-	display: inline-block;
-	border-radius: 1px;
-	height: 27px;
-	line-height: 25px;
-	outline: none;
-	padding-left: 4px;
-	vertical-align: top;
-	width: 100%;
-	font:13px arial,sans-serif;
-	}
 #aboutCopyright {
 	padding-left: 0px;
 	margin-left:20px;
@@ -396,6 +319,21 @@ li.headerButton {
 	}
 .headerButton:hover,#about:hover,#settings:hover {
 	background-color: #f5f5f5;
+	}
+.linksSection {
+	display:block;
+	position:absolute;
+	bottom:-1px;
+	background-color:#fff;
+	-webkit-transition:max-height 1s;
+	-moz-transition:max-height 1s;
+	max-height:45px;
+	width:100%;
+	box-sizing: border-box;
+	border-top: 1px solid #E5E5E5;
+	}
+.linksSection:hover {
+	max-height:999px;
 	}
 #moreExtensionLinks {
 	position: absolute;
@@ -897,17 +835,4 @@ input[type=checkbox]:checked::after {
 .labsSection {
 	padding-right: 0px;
 	bottom: 0px;
-	}
-/*
-#mainWindowSearch {
-	background-image: url("images/context_header_bg_daylight.jpg");
-	/*background-size: 69%;
-	background-position-y: -44px;*//*
-	background-size: 69% 27.4%;
-	background-repeat: no-repeat;
-	border-top-left-radius: 2px;
-	}
-#mainWindowSearch #headerSearch {
-	background-color: transparent;
-	border-color: transparent;
 	}
