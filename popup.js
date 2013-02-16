@@ -667,7 +667,7 @@ function enableOpenInPanelButtons() {
 	var openInPanelButtons = document.getElementsByClassName("openInPanel");
 	for (var i = openInPanelButtons.length ; i-- ; i>0){
 		openInPanelButtons[i].addEventListener("click", function () {
-			openPanel("chrome-extension://" + extensionId + "/pages/" + this.dataset.service + "/index.html", 450, 485);
+			openPanel("chrome-extension://" + extensionId + "/pages/" + this.parentNode.parentNode.parentNode.dataset.service + "/index.html", 450, 485);
 			});
 		};
 	};
