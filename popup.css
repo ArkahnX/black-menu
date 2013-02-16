@@ -149,8 +149,6 @@ body {
 	}
 .topHeader {
 	border-top-left-radius: 4px;
-	-webkit-transition: background-color .5s;
-	-moz-transition: background-color .5s;
 	}
 .bmInPanel #mainMenu,.bmInPanel #mainMenu li:first-child,.bmInPanel .panelHeader {
 	border-radius: 0;

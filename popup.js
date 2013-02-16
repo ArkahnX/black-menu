@@ -6,6 +6,20 @@ var settingsOpened = 0;
 var aboutOpened = 0;
 var gmailInput = "";
 
+//var SelectedServices = localStorage.getItem("services");
+var SelectedServices = [
+	"Search",
+	"Gplus",
+	"Translate",
+	"Maps",
+	"Play",
+	"Youtube",
+	"News",
+	"Reader",
+	"Gmail",
+	"Drive",
+	"Calendar"
+	];
 window.addEventListener("load", init);
 
 function init(){
@@ -108,11 +122,14 @@ function unreadCounts(){
 		}
 	};
 
-function loadAllPages(){
-	var iframes = document.getElementById("mainWindow").getElementsByTagName("iframe");
-	for(var i = iframes.length; i--; i>0){
-		iframes[i].src = "/pages/" + iframes[i].dataset.service.toLowerCase() + "/index.html";
+function loadAllPages() {
+	for(var i = SelectedServices.length; i--; i>0){
+		loadPage(SelectedServices[i])
 		};
+	};
+
+function loadPage(service) {
+	document.querySelector("#mainWindow iframe[data-service='" + service + "']").src = "/pages/" + service.toLowerCase() + "/index.html";
 	};
 
 //---------general functions-------\\
