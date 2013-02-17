@@ -316,22 +316,6 @@ span.delbox:hover {
 .G-HO {
 	cursor:pointer;
 	}
-::-webkit-scrollbar {
-	background:transparent;
-	overflow:visible;
-	width:15px;
-	}
-::-webkit-scrollbar-thumb:vertical {
-	background-color:rgba(0,0,0,.2);
-	border-right:4px solid #fff;
-	border-left:4px solid #fff;
-	border-top:6px solid #fff;
-	border-bottom:6px solid #fff;
-	height:1px;
-	}
-::-webkit-scrollbar-thumb:vertical:hover {
-	background-color:rgba(0,0,0,.4);
-	}
 .edition-style,.font-style,.img-style,.item-style {
 	background-color:#eee;
 	border:1px solid #ccc;
@@ -443,4 +427,71 @@ a:hover,.tn-headline a:hover,.tn-related a:hover,.tn-more-link:hover,.tn-more a:
 	}
 .tablib_unselected:hover {
 	background-image: -webkit-linear-gradient(top,#F8F8F8,#F1F1F1);
+	}
+::-webkit-scrollbar {
+	height: 16px;
+	width: 12px;
+	}
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+	}
+::-webkit-scrollbar-button:start:decrement,::-webkit-scrollbar-button:end:increment {
+	display: block;
+	}
+::-webkit-scrollbar-button:vertical:start:increment,::-webkit-scrollbar-button:vertical:end:decrement {
+	display: none;
+	}
+::-webkit-scrollbar-track:vertical,::-webkit-scrollbar-track:horizontal,::-webkit-scrollbar-thumb:vertical,::-webkit-scrollbar-thumb:horizontal,::-webkit-scrollbar-track:vertical, ::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-thumb:vertical, ::-webkit-scrollbar-thumb:horizontal {
+	border-style: solid;
+	border-color: transparent;
+	}
+::-webkit-scrollbar-thumb {
+	-webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1),inset 0 -1px 0 rgba(0,0,0,.07);
+	background-clip: padding-box;
+	background-color: rgba(0,0,0,.2);
+	min-height: 28px;
+	padding-top: 100px;
+	}
+::-webkit-scrollbar-thumb:hover {
+	-webkit-box-shadow: inset 1px 1px 1px rgba(0,0,0,.25);
+	background-color: rgba(0,0,0,.4);
+	}
+::-webkit-scrollbar-thumb:active {
+	-webkit-box-shadow: inset 1px 1px 3px rgba(0,0,0,.35);
+	background-color: rgba(0,0,0,.5);
+	}
+::-webkit-scrollbar-thumb:vertical {
+	border-width: 0;
+	border-left-width: 0px;
+	}
+::-webkit-scrollbar-thumb:horizontal {
+	border-width: 0;
+	border-top-width: 5px;
+	}
+::-webkit-scrollbar-track:vertical {
+	border-left-width: 1px;
+	border-right-width: 1px;
+	}
+::-webkit-scrollbar-track:horizontal {
+	border-bottom: 1px;
+	border-top: 6px;
+	}
+::-webkit-scrollbar-thumb:vertical {
+	border-width: 0;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	}
+::-webkit-scrollbar-thumb:horizontal {
+	border-width: 0;
+	border-bottom: 1px;
+	border-top: 6px;
+	}
+::-webkit-scrollbar-track:hover {
+	-webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.1);
+	background-color: rgba(0,0,0,.05);
+	}
+::-webkit-scrollbar-track:active {
+	-webkit-box-shadow: inset 1px 0 0 rgba(0,0,0,.14),inset -1px -1px 0 rgba(0,0,0,.07);
+	background-color: rgba(0,0,0,.05);
 	}

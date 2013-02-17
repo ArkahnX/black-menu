@@ -149,6 +149,8 @@ body {
 	}
 .topHeader {
 	border-top-left-radius: 4px;
+	z-index:3;
+	position: relative;
 	}
 .bmInPanel #mainMenu,.bmInPanel #mainMenu li:first-child,.bmInPanel .panelHeader {
 	border-radius: 0;
@@ -172,10 +174,6 @@ body {
 	}
 #tmsg8 {
 	display:none;
-	}
-.topHeader {
-	z-index:3;
-	position: relative;
 	}
 li {
 	height:44px;
@@ -334,6 +332,9 @@ li.headerButton {
 	bottom: -1px;
 	padding-right: 192px;
 	box-sizing: border-box;
+	}
+.boxList li:hover {
+	background-color: #FBFBFB;
 	}
 	
 /* panels */
