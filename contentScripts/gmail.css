@@ -195,7 +195,7 @@
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
 						}
 				/* cancel icon */
-				.tr .Fo{
+				.tr .Eo{
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px 0px !important;
 					margin: 0px !important;
 					}
@@ -265,6 +265,9 @@
 					#tltbt>.xc>div:first-child>div {
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -84px !important;
 						}
+					#tltbt>.xc>div:nth-child(2)>div {
+						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -84px !important;
+						}
 					/* reload icon */
 					#tltbt>.xc>div:last-child>div{
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -105px !important;
@@ -330,7 +333,7 @@
 				display: none !important;
 				}
 			/* searchbox input field container */
-			.bj .kn {
+			.bj .jn {
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				/* remove padding and margin from this element, because it is already added to the input field element */
@@ -392,16 +395,16 @@
 				}
 			/* email rows */
 				/* read emails */
-				#tl_ .cj.zn {
+				#tl_ .cj.yn {
 					background-color:rgba(0,0,0,.03) !important;
 					}
 				/* unread emails */
-				#tl_ .cj.yn {
+				#tl_ .cj.xn {
 					background-color: transparent !Important;
 					}			
 				
 				/* selected emails */
-				#tl_ .cj.yn.cp, #tl_ .cj.zn.cp {
+				#tl_ .cj.yn.cp, #tl_ .cj.xn.cp {
 					background: rgba(255, 255, 0, 0.15) !important;
 					}
 			/* email font style and size */
@@ -430,11 +433,11 @@
 			/* stars */
 				
 				/* starred */
-				.xo {
+				.wo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -42px !important;
 					}
 				/* unstarred */
-				.yo {
+				.xo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -42px !important;
 					}
 			/* important tag */
