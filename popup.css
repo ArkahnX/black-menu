@@ -1,11 +1,69 @@
+#mainWindow {
+	width:100%;
+	min-width: 610px;
+	height:484px;
+	padding-right:192px;
+	box-sizing:border-box;
+	position:fixed;
+	background-color:#fff;
+	border-bottom:1px solid #e5e5e5;
+	}
+#mainWindow iframe {
+	height: 439px;
+	display: none;
+	}
+#mainWindow iframe.on {
+	display: block;
+	}
+#mainWindow[data-service="Search"] .topHeader{
+	background-color: #458afd;
+	}
+#mainWindow[data-service="Gplus"] .topHeader {
+	background-color: #e24e42;
+	}
+#mainWindow[data-service="Translate"] .topHeader {
+	background-color: #299aaf;
+	}
+#mainWindow[data-service="Maps"] .topHeader {
+	background-color: #0daa61;
+	}
+#mainWindow[data-service="Play"] .topHeader {
+	background-color: #86be57;
+	}
+#mainWindow[data-service="Youtube"] .topHeader {
+	background-color: #ec7a46;
+	}
+#mainWindow[data-service="News"] .topHeader,#mainWindow[data-service="Reader"] .topHeader {
+	background-color: #f5a649;
+	}
+#mainWindow[data-service="Gmail"] .topHeader {
+	background-color: #ae6280;
+	}
+#mainWindow[data-service="Drive"] .topHeader {
+	background-color: #ffc325;
+	}
+#mainWindow[data-service="Calendar"] .topHeader {
+	background-color: #7976bf;
+	}
+#mainWindow #mainWindowMore {
+	display: none;
+	}
+#mainWindow[data-service="More"] #mainWindowMore {
+	display: block;
+	}
+#mainWindow[data-service="More"] #mainWindowServices {
+	display: none;
+	}
+
+	
+
+
+
 iframe {
 	width:100%;
 	border-style:none;
 	margin: 0;
 	padding: 0;
-	}
-.mainWindowOn, .mainWindow {
-	border-bottom:1px solid #e5e5e5;
 	}
 body {
 	min-width:610px;
@@ -65,9 +123,6 @@ body {
 .sprite-arrow_down-32 {
 	display:none;
 	}
-#iframeGmail, #iframeSearch, #iframeGplus, #iframeReader, #iframeNews, #iframeDrive, #iframeMaps, #iframeYoutube, #iframeTranslate, #iframePlay, #iframeCalendar {
-	height: 439px;
-	}
 #iframePlusone {
 	border: none;
 	margin-left: 13;
@@ -77,17 +132,6 @@ body {
 	bottom: 44px;
 	left: 6;
 	width: 170px;
-	}
-#mainWindowTasks {
-	position:relative;
-	-webkit-transition: top .5s;
-	-moz-transition: top .5s;
-	}
-.mainWindowTasks {
-	top:0;
-	}
-.mainWindowTasksExpanded {
-	top:-220px;
 	}
 #mainMenu {
 	float:right;
@@ -105,6 +149,8 @@ body {
 	}
 .topHeader {
 	border-top-left-radius: 4px;
+	z-index:3;
+	position: relative;
 	}
 .bmInPanel #mainMenu,.bmInPanel #mainMenu li:first-child,.bmInPanel .panelHeader {
 	border-radius: 0;
@@ -126,32 +172,8 @@ body {
 .mainMenuButtonOn {
 	background-color: #4C4C4C;
 	}
-.mainWindow,.mainWindowOn {
-	width:100%;
-	min-width: 610px;
-	height:484px;
-	padding-right:192px;
-	box-sizing:border-box;
-	position:fixed;
-	background-color:#fff;
-	}
-.mainWindow {
-	-webkit-transition: Opacity .3s;
-	-moz-transition: Opacity .3s;
-	opacity: 0;
-	z-index:-1;
-	}
-.mainWindowOn {
-	-webkit-transition: Opacity .25s;
-	-moz-transition: Opacity .25s;
-	opacity: 1;
-	}
 #tmsg8 {
 	display:none;
-	}
-.topHeader {
-	z-index:3;
-	position: relative;
 	}
 li {
 	height:44px;
@@ -265,36 +287,6 @@ li a {
 .headerButton span:nth-child(2),.headerButton span:nth-child(3),.headerButton span:nth-child(4) {
 	right:192px;
 	}
-#headerSearch {
-	background-color: #458afd;
-	}
-#headerGplus {
-	background-color: #e24e42;
-	}
-#headerTranslate {
-	background-color: #299aaf;
-	}
-#headerMaps {
-	background-color: #0daa61;
-	}
-#headerPlay {
-	background-color: #86be57;
-	}
-#headerYoutube {
-	background-color: #ec7a46;
-	}
-#headerNews,#headerReader {
-	background-color: #f5a649;
-	}
-#headerGmail {
-	background-color: #ae6280;
-	}
-#headerDrive {
-	background-color: #ffc325;
-	}
-#headerCalendar {
-	background-color: #7976bf;
-	}
 #aboutCopyright {
 	padding-left: 0px;
 	margin-left:20px;
@@ -340,6 +332,9 @@ li.headerButton {
 	bottom: -1px;
 	padding-right: 192px;
 	box-sizing: border-box;
+	}
+.boxList li:hover {
+	background-color: #FBFBFB;
 	}
 	
 /* panels */
@@ -589,7 +584,7 @@ li.headerButton {
 .sprite-google_settings-32{ background-position: 0 -1485px;  } 
 .sprite-googlemail-32{ background-position: 0 -1518px;  } 
 .sprite-googlemail-dg32{ background-position: 0 -1551px;  } 
-.sprite-googlemail-w32{ background-position: 0 -1584px;  } 
+.sprite-gmail-w32{ background-position: 0 -1584px;  } 
 .sprite-googlemail_all-32{ background-position: 0 -1617px;  } 
 .sprite-googlemail_anywhere-32{ background-position: 0 -1650px;  } 
 .sprite-googlemail_chats-32{ background-position: 0 -1683px;  } 

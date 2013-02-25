@@ -84,109 +84,38 @@
 				</li>
 			</ul>
 		</div>
-		<div id="mainWindowSearch" class="mainWindowOn">
-			<div id="headerSearch" class="header topHeader">
-				<span class="sprite-search-w32"></span>
-				<p data-msg="11" class="headerMainP">Google Search</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="search" class="openInPanel sprite-panel-32"></span>
+		<div id="mainWindow" data-service="Search">
+			<div id="mainWindowServices">
+				<div class="header topHeader">
+					<span class="sprite-search-w32"></span>
+					<p data-msg="11" class="headerMainP">Google Search</p>
+					<span title="open widget in a panel" data-pmsg="12" class="openInPanel sprite-panel-32"></span>
+				</div>
+				<iframe data-service="Search" class="on"></iframe>
+				<iframe data-service="Gplus"></iframe>
+				<iframe data-service="Translate"></iframe>
+				<iframe data-service="Maps"></iframe>
+				<iframe data-service="Play"></iframe>
+				<iframe data-service="Youtube"></iframe>
+				<iframe data-service="News"></iframe>
+				<iframe data-service="Reader"></iframe>
+				<iframe data-service="Gmail"></iframe>
+				<iframe data-service="Drive"></iframe>
+				<iframe data-service="Calendar"></iframe>
 			</div>
-			<iframe id="iframeSearch"></iframe>
-		</div>
-		<div id="mainWindowGplus" class="mainWindow">
-			<div id="headerGplus" class="header topHeader">
-				<span class="sprite-gplus-w32"></span>
-				<p data-msg="29" class="headerMainP">Google Plus</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="gplus" class="openInPanel sprite-panel-32"></span>
+			<div id="mainWindowMore">
+				<ul id="moreProductLinks" class="boxList"></ul>
+				<ul id="moreExtensionLinks" class="boxList">
+					<li id="About" class="headerButton">
+						<span class="sprite-about-32"></span>
+						<p data-msg="130">About</p>
+					</li>
+					<li id="Settings" class="headerButton">
+						<span class="sprite-settings-32"></span>
+						<p data-msg="146">Settings</p>
+					</li>	
+				</ul>
 			</div>
-			<iframe id="iframeGplus"></iframe>
-		</div>
-		<div id="mainWindowTranslate" class="mainWindow">
-			<div id="headerTranslate" class="header topHeader">
-				<span class="sprite-translate-w32"></span>
-				<p data-msg="47" class="headerMainP">Translate</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="translate" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeTranslate" scrolling="no"></iframe>
-		</div>
-		<div id="mainWindowMaps" class="mainWindow">
-			<div id="headerMaps" class="header topHeader">
-				<span class="sprite-maps-w32"></span>
-				<p data-msg="51" class="headerMainP">Maps</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="maps" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeMaps"></iframe>
-		</div>
-		<div id="mainWindowPlay" class="mainWindow">
-			<div id="headerPlay" class="header topHeader">
-				<span class="sprite-play-w32"></span>
-				<p data-msg="55" class="headerMainP">Google Play Store</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="play" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframePlay" ></iframe>
-		</div>
-		<div id="mainWindowYoutube" class="mainWindow">
-			<div id="headerYoutube" class="header topHeader">
-				<span class="sprite-youtube-w32"></span>
-				<p data-msg="72" class="headerMainP">Youtube</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="youtube" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeYoutube"></iframe>
-		</div>
-		<div id="mainWindowNews" class="mainWindow">
-			<div id="headerNews" class="header topHeader">
-				<span class="sprite-news-w32"></span>
-				<p data-msg="76" class="headerMainP">News</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="news" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeNews" ></iframe>
-		</div>
-		
-		<div id="mainWindowReader" class="mainWindow">
-			<div id="headerReader" class="header topHeader">
-				<span class="sprite-reader-w32"></span>
-				<p data-msg="145" class="headerMainP">Reader</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="reader" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeReader" ></iframe>
-		</div>
-		
-		<div id="mainWindowGmail" class="mainWindow">
-			<div id="headerGmail" class="header topHeader">
-				<span class="sprite-googlemail-w32"></span>
-				<p data-msg="80" class="headerMainP">Gmail</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="gmail" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeGmail"></iframe>
-		</div>
-		<div id="mainWindowDrive" class="mainWindow">
-			<div id="headerDrive" class="header topHeader">
-				<span class="sprite-drive-w32"></span>
-				<p data-msg="98" class="headerMainP">Drive</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="drive" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeDrive" ></iframe>
-		</div>
-		<div id="mainWindowCalendar" class="mainWindow" data-tasksstate="collapsed">
-			<div id="headerCalendar" class="header topHeader">
-				<span class="sprite-calendar-w32"></span>
-				<p data-msg="108" class="headerMainP">Calendar</p>
-				<span title="open widget in a panel" data-pmsg="12" data-service="calendar" class="openInPanel sprite-panel-32"></span>
-			</div>
-			<iframe id="iframeCalendar" ></iframe>
-		</div>
-		<div id="mainWindowMore" class="mainWindow">
-			<ul id="moreProductLinks" class="boxList">
-			</ul>
-			<ul id="moreExtensionLinks" class="boxList">
-				<li id="About" class="headerButton">
-					<span class="sprite-about-32"></span>
-					<p data-msg="130">About</p>
-				</li>
-				<li id="Settings" class="headerButton">
-					<span class="sprite-settings-32"></span>
-					<p data-msg="146">Settings</p>
-				</li>	
-			</ul>
 		</div>
 		<div id="panelAbout" class="panel">
 			<div id="headerAbout" class="header panelHeader">

@@ -5,6 +5,7 @@ function init() {
 	localization(); //from main.js
 	setTitle();
 	tasksExpandSystem();
+	loadSearchBox(); //from main.js
 	};
 	
 function setTitle() {

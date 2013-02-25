@@ -6,6 +6,20 @@ var settingsOpened = 0;
 var aboutOpened = 0;
 var gmailInput = "";
 
+//var SelectedServices = localStorage.getItem("services");
+var SelectedServices = [
+	"Search",
+	"Gplus",
+	"Translate",
+	"Maps",
+	"Play",
+	"Youtube",
+	"News",
+	"Reader",
+	"Gmail",
+	"Drive",
+	"Calendar"
+	];
 window.addEventListener("load", init);
 
 function init(){
@@ -108,18 +122,16 @@ function unreadCounts(){
 		}
 	};
 
-function loadAllPages(){
-	var iframes = ["Translate", "Maps", "Youtube", "News", "Reader", "Gmail", "Drive", "Calendar", "Gplus", "Search", "Play"]
-	for(var i = iframes.length; i--; i>0){
-		loadPage(iframes[i]);
+function loadAllPages() {
+	for(var i = SelectedServices.length; i--; i>0){
+		loadPage(SelectedServices[i])
 		};
 	};
-	
-var gadgetDomain = "https://www-gadget-opensocial.googleusercontent.com/gadgets/ifr?url=https://black-menu.googlecode.com/files/";
-		
+
 function loadPage(service) {
-	document.getElementById("iframe" + service).src = "/pages/" + service.toLowerCase() + "/index.html";
+	document.querySelector("#mainWindow iframe[data-service='" + service + "']").src = "/pages/" + service.toLowerCase() + "/index.html";
 	};
+
 //---------general functions-------\\
 
 //is key
@@ -579,18 +591,38 @@ function readerNewsSwitch() {
 		News.style.display = 'none';
 		};
 	};
-	
+
 function mainMenuSystem() {
+	var serviceHeaderMsgId = {
+		Search: 11,
+		Gplus: 29,
+		Translate: 47,
+		Maps: 51,
+		Play: 55,
+		Youtube: 72,
+		News: 76,
+		Reader: 145,
+		Gmail: 80,
+		Drive: 98,
+		Calendar: 108,
+		};
     var divs = document.getElementById('mainMenu').children;
     for (var i = divs.length; i--;i>=0 ) {
         divs[i].addEventListener('mouseover', function () {
-			var ThisId = this.id;
+			var service = this.id;
 			document.getElementsByClassName('mainMenuButtonOn')[0].className = 'mainMenuButton';
 			this.className = 'mainMenuButtonOn';
-			document.getElementsByClassName('mainWindowOn')[0].className = 'mainWindow';
-			document.getElementById("mainWindow" + ThisId).className = 'mainWindowOn';
-			//box = document.getElementById('Window' + ThisId + 'Input');
-			//if (box!=null)box.focus();
+			document.getElementById("mainWindow").dataset.service = service;
+			if(service != "More"){
+				document.querySelector("#mainWindow iframe.on").classList.remove("on");
+				document.querySelector("#mainWindow iframe[data-service='" + service + "']").classList.add("on");
+				document.getElementById("mainWindow").getElementsByTagName("span")[0].className = "sprite-" + service + "-w32";
+				document.getElementById("mainWindow").getElementsByTagName("span")[0].innerText = "";
+				document.getElementById("mainWindow").getElementsByTagName("p")[0].innerText = chrome.i18n.getMessage("msg" + serviceHeaderMsgId[this.id]);
+				};
+			if(service == "Calendar") {
+				calendarCurrentDate();
+				};
 			});
 		};
 	};
@@ -635,7 +667,7 @@ function enableOpenInPanelButtons() {
 	var openInPanelButtons = document.getElementsByClassName("openInPanel");
 	for (var i = openInPanelButtons.length ; i-- ; i>0){
 		openInPanelButtons[i].addEventListener("click", function () {
-			openPanel("chrome-extension://" + extensionId + "/pages/" + this.dataset.service + "/index.html", 450, 485);
+			openPanel("chrome-extension://" + extensionId + "/pages/" + this.parentNode.parentNode.parentNode.dataset.service + "/index.html", 450, 485);
 			});
 		};
 	};
