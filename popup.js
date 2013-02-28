@@ -343,8 +343,7 @@ function settingsLoad() {
 		"prefGmailCompose",
 		"prefMapsTraffic",
 		"prefMapsInstant",
-		"prefReaderMarkasread",
-		"prefSearchInstant"
+		"prefReaderMarkasread"
 		];
 	for (var i = checkboxes.length; i--; i>0){
 		var id = checkboxes[i];
@@ -445,11 +444,6 @@ function settingsLoad() {
 		reloadBackgroundPage();
 		unreadCounts();
 		});
-		
-	document.getElementById('prefSearchInstant').addEventListener('click', function () {
-		checkboxSetLocalStorage(this);
-		loadPage("Search");
-		});	
 		
 	document.getElementById('prefGenericUnreadCountBadge').addEventListener('click', function () {
 		if(this.checked){localStorage.setItem(this.id,"true");}
@@ -640,9 +634,6 @@ function setDefaultSettings() {
 		}
 	if(!localStorage.getItem("prefGenericUnreadCountsReader")){
 		localStorage.setItem("prefGenericUnreadCountsReader", "true");
-		}
-	if(!localStorage.getItem("prefSearchInstant")){
-		localStorage.setItem("prefSearchInstant", "true");
 		}
 	};
 	
