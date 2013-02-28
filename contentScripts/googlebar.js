@@ -27,7 +27,8 @@ var css = "";
 	+ ".v9a.odb.tdb {\ntop: 72px !important;\n}\n"
 	+ "#gbi5 {\nbackground-image: url('chrome-extension://" + extensionId + "/images/googlebar_settings.png') !important;\nwidth:17px !important;\n}\n"
 	+ "#lga {\nmargin-top: 9px !important;\n}\n"
-	+ ".gbto .gbts {\n-webkit-box-shadow: inset 0 1px #bbb !important;\n}\n";
+	+ ".gbto .gbts {\n-webkit-box-shadow: inset 0 1px #bbb !important;\n}\n"
+	+ "#body {\nmargin-top: -30px !important;\nmargin-bottom: 30px !important;\n}\n";
 
 switch (loc.host){
 	case "support.google.com":
