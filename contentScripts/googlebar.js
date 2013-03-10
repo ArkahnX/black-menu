@@ -1,5 +1,7 @@
-/* Black Bar Removal Script */
-/* v3.0.4 */
+/**
+ * Black Bar Removal Script
+ * v3.0.5 
+ */
 
 var loc = location
 var originPathname = loc.origin+loc.pathname;
@@ -79,7 +81,7 @@ function oldGooglebar(){
 	+ "#lga {\nmargin-top: 80px !important;\n}\n";
 	};
 
-if(originPathname.indexOf("https://www.google.com/takeout") + originPathname.indexOf("https://www.google.co.uk/compare/") + originPathname.indexOf("https://drive.google.com/templates") + href.indexOf("tbs=sbi:") + href.indexOf("noj=1") + href.indexOf("noj=0") > -6){
+if(originPathname.indexOf("www.google.com/ads/agencyedge/") + originPathname.indexOf("https://www.google.com/takeout") + originPathname.indexOf("https://www.google.co.uk/compare/") + originPathname.indexOf("https://drive.google.com/templates") + href.indexOf("tbs=sbi:") + href.indexOf("noj=1") + href.indexOf("noj=0") > -7){
 	oldGooglebar();
 	};
 

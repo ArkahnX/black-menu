@@ -1,5 +1,6 @@
 ﻿/* welcome to the css content script for the gmail mobile web app. */
 /* this file is still a work in process. If you want to help me, or know more about this, you can contact me via email: ccbjeurissen@gmail.com */
+   
 
 	/* main elements */
 		/* change scrollbars */
@@ -93,7 +94,7 @@
 			}
 			
 		/* footer */
-		.zi{
+		.Ii{
 			/* hide the footer */
 			display: none !important;
 			}
@@ -116,7 +117,7 @@
 		/* floating action toolbar */
 			
 			/* actionbar container */
-			.tr {
+			.Jr {
 				height: 42px !important;
 				/* change the horizontal position */
 				right: 70px !important;
@@ -128,22 +129,22 @@
 				-webkit-transform: none !important;
 				}
 			/* actionbar firstChild */
-			.tr>div:first-child {
+			.Jr>div:first-child {
 				height: 44px !important;
 				margin-top: 0px !important;
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				}
 			/* dropdown menu */
-			.tr>div:first-child>ul {
+			.Jr>div:first-child>ul {
 				margin-top: 9px !important;
 				}
 			/* count of selected items */
-			.tr>div:first-child>div:first-child.rr {
+			.Jr>div:first-child>div:first-child.Hr {
 				display: none !important;
 				}
 			/* button elements */
-			.tr>div:first-child>div {
+			.Jr>div:first-child>div {
 				border-radius: 2px !important;
 				background: 17px 4px no-repeat, -webkit-linear-gradient(top, #F5F5F5, #F1F1F1) !important;
 				-webkit-user-select: none !important;
@@ -153,49 +154,49 @@
 				min-width: 40px !important;
 				box-sizing:border-box !important;
 				}	
-			.tr>div:first-child>div:hover{
+			.Jr>div:first-child>div:hover{
 				box-shadow: 0 1px 1px rgba(0, 0, 0, .1) !important;
 				}
-			.tr>div:first-child>div:focus{
+			.Jr>div:first-child>div:focus{
 				outline: none !important;
 				}
-			.tr>div:first-child>div:active{
+			.Jr>div:first-child>div:active{
 				box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
 				-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1) !important;
 				background: -webkit-linear-gradient(top,#EEE,#E0E0E0) !important;
 				}
 			/* button icons */
 				/* all icons */
-				.tr>div:first-child>div>div {
+				.Jr>div:first-child>div>div {
 					height: 21px !important;
 					width: 21px !important;
 					opacity: 0.55 !important;
 					}
-				.tr>div:first-child>div:hover>div {
+				.Jr>div:first-child>div:hover>div {
 					opacity: 0.9 !important;
 					}
 				/* archive icon */
-				.tr>div:first-child>div[onclick="_e(event, 'f', 1)"]>div {
+				.Jr>div:first-child>div[onclick="_e(event, 'f', 1)"]>div {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -21px !important;
 					font-size: 0px !important;
 					padding: 0 !important;
 					}
 				/* delete icon */
-				.tr .rd{
+				.Jr .rd{
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px -42px !important;
 					}
 				/* dropdown icon */
 					/* normal */
-					.tr .ih{
+					.Jr .ih{
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
 						}
 					/* active */
-					.tr .jh{
+					.Jr .jh{
 						-webkit-transform: rotate(180deg);
 						background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -84px -42px !important;
 						}
 				/* cancel icon */
-				.tr .Eo{
+				.Jr .To{
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -63px 0px !important;
 					margin: 0px !important;
 					}
@@ -222,7 +223,7 @@
 				display: none !important;
 				}
 			/* navbar inbox name */
-			#tltbt>.bj {
+			#tltbt>.mj {
 				color: #333 !important;
 				cursor: default !important;
 				}
@@ -315,7 +316,7 @@
 		/* searchbox */
 		
 			/* searchBoxContainer */
-			.bj {
+			.mj {
 				border-bottom: 1px solid #E5E5E5 !important;
 				box-sizing: border-box !important;
 				height: 44px !important;
@@ -328,12 +329,12 @@
 				padding: 8px !important;
 				}
 			/* searchbox search button */
-			.bj .dn {
+			.mj .rn {
 				/* hide the search button */
 				display: none !important;
 				}
 			/* searchbox input field container */
-			.bj .jn {
+			.mj .yn {
 				/* remove the border image */
 				-webkit-border-image: none !important;
 				/* remove padding and margin from this element, because it is already added to the input field element */
@@ -341,7 +342,7 @@
 				margin: 0px !Important;
 				}
 			/* searchbox input field */
-			.bj input {
+			.mj input {
 				background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-25.png") repeat-y right -25px #fff !important;
 				border: 1px solid #D9D9D9 !important;
 				border-top: 1px solid silver !important;
@@ -360,7 +361,7 @@
 		/* email list */
 			
 			/* email list main container */
-			#tl_ .Ji {
+			#tl_ .Ti {
 				/* add the scroll functionality part A */
 				position: fixed !important;
 				top: 0px !important;
@@ -370,14 +371,14 @@
 				box-sizing: border-box !important;
 				}
 			/* allow interaction with the toolbar */
-			#tl_ .Ji {
+			#tl_ .Ti {
 				pointer-events: none !important;
 				}
-			#tl_ .Ji * {
+			#tl_ .Ti * {
 				pointer-events: all !important;
 				}
 			/* email list sub container */
-			#tl_ .Ci {
+			#tl_ .Mi {
 				/* add the scroll functionality part B */
 				box-sizing: border-box !important;
 				height: 100% !important;
@@ -389,36 +390,36 @@
 				background-attachment: local, local, scroll, scroll !important;
 				}
 			/* email list last-sub container */
-			#tl_ .go {
+			#tl_ .xo {
 				/* add the scroll functionality part C */
 				background-color: transparent !important;
 				}
 			/* email rows */
 				/* read emails */
-				#tl_ .cj.yn {
+				#tl_ .nj.Nn {
 					background-color:rgba(0,0,0,.03) !important;
 					}
 				/* unread emails */
-				#tl_ .cj.xn {
+				#tl_ .nj.Mn {
 					background-color: transparent !Important;
 					}			
 				
 				/* selected emails */
-				#tl_ .cj.yn.cp, #tl_ .cj.xn.cp {
+				#tl_ .nj.Nn.qp, #tl_ .nj.Mn.qp {
 					background: rgba(255, 255, 0, 0.15) !important;
 					}
 			/* email font style and size */
-			#tl_ .cj {
+			#tl_ .nj {
 				font-family: arial,sans-serif;
 				font-size: 13px;
 				}
 			/* selected mail indicator */
-			.Pn {
+			/*.Pn {
 				background: #4D90F0 !important;
 				height: 100% !important;
 				margin-left: -1px !important;
 				width: 3px !important;
-				}
+				}*/
 			/* checkboxes */
 				
 				/* unselected and selected checkboxes */
@@ -433,11 +434,11 @@
 			/* stars */
 				
 				/* starred */
-				.wo {
+				.Lo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -42px -42px !important;
 					}
 				/* unstarred */
-				.xo {
+				.Mo {
 					background: url("chrome-extension://__MSG_@@extension_id__/images/sprite-21.png") no-repeat -21px -42px !important;
 					}
 			/* important tag */
@@ -566,7 +567,7 @@
 				box-sizing: border-box !important;
 				}
 			/* compoase sub container */
-			#co_>.Ji {
+			#co_>.Ti {
 				margin-top: -44px !important;
 				/* add the scroll functionality part B */
 				height: 100% !important;
@@ -656,7 +657,7 @@
 			background: whiteSmoke !important;
 			}
 		/* main menu sub container */
-		#mn_>.Ji {
+		#mn_>.Ti {
 			/* add the scroll functionality part B */
 			height: 100% !important;
 			overflow-y: auto !important;
@@ -771,13 +772,13 @@
 				top: 0px !important;
 				background: whiteSmoke !important;
 				}
-			#cv_ .Ji {
+			#cv_ .Ti {
 				padding-top: 44px !important;
 				width: 100% !important;
 				height: 100% !important;
 				box-sizing: border-box !important;
 				}
-			#cv_ .Ci {
+			#cv_ .Mi {
 				height: 100% !important;
 				overflow-y: scroll !important;
 				}
@@ -954,7 +955,7 @@ z-index: -1 !important;
 top: 44px !important;
 
 }
-#mn_ > .Ji {
+#mn_ > .Ti {
 margin-top: -44px !important;
 }
 				
