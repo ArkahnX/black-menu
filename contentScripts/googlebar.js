@@ -1,3 +1,6 @@
+/* Black Bar Removal Script */
+/* v3.0.4 */
+
 var loc = location
 var originPathname = loc.origin+loc.pathname;
 var href = loc.href
@@ -54,7 +57,9 @@ switch (loc.host){
 		+ "#gb, .gbem#gb, .gbemi#gb, .gbexxl#gb {\nheight: 102px !important;\n}\n"
 		+ ".gbes#gb {\nheight: 76px !important;\n}\n"
 		+ ".gbesi#gb {\nheight: 68px !important;\n}\n"
-		+ ".xla {\ndisplay: block !important;\n}\n";
+		+ ".xla {\ndisplay: block !important;\n}\n"
+		+ ".AYoUUe.Lr1ucd {\nmargin-top: -30px !important;\n}\n"
+		+ ".cVa.dFEfVe {\nmargin-top: -29px !important;\n}\n";
 		break;
 	case "mail.google.com":
 		window.addEventListener("load", function () {
@@ -84,29 +89,5 @@ if( originPathname.indexOf("https://www.google.com/a/") != -1 || originPathname.
 	+ "#gbx3, #gbx4, #gbz {\nvisibility: visible !important;\n}\n"
 	+ "#gb, .gbem#gb, .gbemi#gb {\nheight: 30px !important;\n}\n";
 	};
-			
-chrome.storage.local.get('nogooglebar', function(item) {
-	if(item.nogooglebar=="true"){
-		GM_addStyle(css);		
-		};
-	});
 
-//google plus circles direct link search
-if( originPathname.indexOf("https://plus.google.com/circles") != -1 ){
-	if(location.search.indexOf("q=") != -1){
-		var keyboardEvent = document.createEvent("KeyboardEvent");
-		var initMethod = typeof keyboardEvent.initKeyboardEvent !== 'undefined' ? "initKeyboardEvent" : "initKeyEvent";
-
-		keyboardEvent[initMethod]("keyup");
-		
-		checkInput();
-		
-		function checkInput(){
-			if(document.querySelector("input.Sf") != null){
-				document.querySelector("input.Sf").value = location.search.split("q=")[1].split("&")[0];
-				document.querySelector("input.Sf").dispatchEvent(keyboardEvent);
-				}
-			else setTimeout(checkInput, 20);
-			};
-		};
-	};
+GM_addStyle(css);
